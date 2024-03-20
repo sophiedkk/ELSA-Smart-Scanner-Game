@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AnalysisObjectData" load_steps=2 format=3 uid="uid://be1j8hhuvpn4k"]
+
+[ext_resource type="Script" path="res://Scripts/AnalysisObjectData.gd" id="1_e01qm"]
+
+[resource]
+script = ExtResource("1_e01qm")
+object_type = 3
+object_asset = "res://Assets/Images/pear1.png"
+object_colors = Array[Color]([Color(0, 1, 0, 1)])
+object_defects = false
+object_outline_asset = null

@@ -1,3 +1,79 @@
-[gd_scene format=3 uid="uid://dq7sh851jfvlq"]
+[gd_scene load_steps=11 format=3 uid="uid://dq7sh851jfvlq"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" path="res://Scripts/level_one.gd" id="1_ih4e5"]
+[ext_resource type="PackedScene" uid="uid://bdpufsrllrvpw" path="res://Scenes/Other/object_controller.tscn" id="1_k83uk"]
+[ext_resource type="Texture2D" uid="uid://bhywd7tkco7qb" path="res://Assets/Images/computerdesk.png" id="1_r6fn1"]
+[ext_resource type="PackedScene" uid="uid://c0aric4rnb8no" path="res://Scenes/Other/apple_object.tscn" id="2_84wkp"]
+[ext_resource type="PackedScene" uid="uid://bcetm6jhmnoyd" path="res://Scenes/Other/pear_object.tscn" id="3_0nuqq"]
+[ext_resource type="PackedScene" uid="uid://dgeqsgrxs1eeb" path="res://Scenes/Other/banana_object.tscn" id="6_eeeop"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wx3m6"]
+bg_color = Color(0.964706, 0, 0.145098, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.494118, 0, 0.0509804, 1)
+
+[sub_resource type="Theme" id="Theme_1jxlw"]
+Button/colors/font_color = Color(0.494118, 0, 0.0509804, 1)
+Button/colors/font_focus_color = Color(0.968627, 0.0705882, 0.203922, 1)
+Button/colors/font_hover_color = Color(0.964706, 0, 0.145098, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_wx3m6")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jgcck"]
+bg_color = Color(0.658824, 0.796078, 0.415686, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.368627, 0.458824, 0.196078, 1)
+
+[sub_resource type="Theme" id="Theme_tjxw6"]
+Button/colors/font_color = Color(0.368627, 0.458824, 0.196078, 1)
+Button/colors/font_focus_color = Color(0.368627, 0.458824, 0.196078, 1)
+Button/colors/font_hover_color = Color(0.658824, 0.796078, 0.415686, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_jgcck")
+
+[node name="LevelOne" type="Node2D"]
+script = ExtResource("1_ih4e5")
+
+[node name="BackgroundTable" type="Sprite2D" parent="."]
+position = Vector2(160, 176)
+scale = Vector2(0.545555, 0.545555)
+texture = ExtResource("1_r6fn1")
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+offset_left = 20.0
+offset_top = 139.0
+offset_right = 300.0
+offset_bottom = 162.0
+size_flags_horizontal = 4
+
+[node name="RejectButton" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_1jxlw")
+theme_override_font_sizes/font_size = 12
+text = "REJECT"
+
+[node name="Spacer1" type="Container" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AcceptButton" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_tjxw6")
+theme_override_font_sizes/font_size = 12
+text = "ACCEPT"
+
+[node name="ObjectController" parent="." instance=ExtResource("1_k83uk")]
+unique_name_in_owner = true
+position = Vector2(160, 90)
+level_objects = Array[PackedScene]([ExtResource("2_84wkp"), ExtResource("3_0nuqq"), ExtResource("6_eeeop")])
+
+[connection signal="pressed" from="BoxContainer/RejectButton" to="." method="_on_reject_button_pressed"]
+[connection signal="pressed" from="BoxContainer/AcceptButton" to="." method="_on_accept_button_pressed"]

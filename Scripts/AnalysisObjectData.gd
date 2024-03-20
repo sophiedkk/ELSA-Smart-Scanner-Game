@@ -6,7 +6,7 @@ SANDWICH, JUICE}
 
 @export_group("Level 1 Properties")
 @export var object_type: ObjectTypes
-@export_global_file("*.png", "*.jpg") var object_asset 
+@export var object_suitable: bool = true
 @export var object_colors: Array[Color] = [Color.RED, Color.GREEN, Color.BLUE]
 
 @export_group("Level 2 Properties")
