@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_e01qm")
 object_type = 3
-object_asset = "res://Assets/Images/pear1.png"
+object_suitable = true
 object_colors = Array[Color]([Color(0, 1, 0, 1)])
 object_defects = false
 object_outline_asset = null

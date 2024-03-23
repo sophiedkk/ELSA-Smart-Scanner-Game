@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dq7sh851jfvlq"]
+[gd_scene load_steps=12 format=3 uid="uid://dq7sh851jfvlq"]
 
 [ext_resource type="Script" path="res://Scripts/level_one.gd" id="1_ih4e5"]
 [ext_resource type="PackedScene" uid="uid://bdpufsrllrvpw" path="res://Scenes/Other/object_controller.tscn" id="1_k83uk"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c0aric4rnb8no" path="res://Scenes/Other/apple_object.tscn" id="2_84wkp"]
 [ext_resource type="PackedScene" uid="uid://bcetm6jhmnoyd" path="res://Scenes/Other/pear_object.tscn" id="3_0nuqq"]
 [ext_resource type="PackedScene" uid="uid://dgeqsgrxs1eeb" path="res://Scenes/Other/banana_object.tscn" id="6_eeeop"]
+[ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://Scenes/Other/engineer.tscn" id="7_dp0gm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wx3m6"]
 bg_color = Color(0.964706, 0, 0.145098, 1)
@@ -37,6 +38,10 @@ Button/styles/normal = SubResource("StyleBoxFlat_jgcck")
 
 [node name="LevelOne" type="Node2D"]
 script = ExtResource("1_ih4e5")
+
+[node name="Engineer" parent="." instance=ExtResource("7_dp0gm")]
+unique_name_in_owner = true
+position = Vector2(-60, 48)
 
 [node name="BackgroundTable" type="Sprite2D" parent="."]
 position = Vector2(160, 176)

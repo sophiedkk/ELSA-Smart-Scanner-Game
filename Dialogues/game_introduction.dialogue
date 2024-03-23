@@ -1,0 +1,20 @@
+~ engineer_opening_lines
+
+???: ...
+???: Okay, okay, almost ready.
+???: Booting this up...
+set Global.robot_booted_up = true
+=> END
+
+~ robot_booted_up_first_time
+???: And... voila!
+???: Okay, test, test.
+???: Seems that it's working.
+???: Recodring 1. Now in session.
+???: Greetings, this is Dr. Rensselaer.
+Dr. Rensselaer: I am currently testing the Smart Scanner, version 1.0.
+Dr. Rensselaer: This project was requested by the local hospital for help.
+Dr. Rensselaer: The scanner's goal is to check the quality of the products at the hospital.
+Dr. Rensselaer: This way, we can ensure the health and safety of the patients.
+Dr. Rensselaer: Let me tell you some details about how the scanner works.
+=> END
