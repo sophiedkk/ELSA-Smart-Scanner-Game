@@ -4,10 +4,12 @@ extends Resource
 enum ObjectTypes {NONE, APPLE, BANANA, PEAR, BERRY, CARROT, SALAD, CHOCOLATE,
 SANDWICH, JUICE}
 
+enum ObjectColors {NONE, BLACK, WHITE, RED, GREEN, BLUE, YELLOW, ORANGE, PINK, BEIGE}
+
 @export_group("Level 1 Properties")
 @export var object_type: ObjectTypes
 @export var object_suitable: bool = true
-@export var object_colors: Array[Color] = [Color.RED, Color.GREEN, Color.BLUE]
+@export var object_colors: Array[ObjectColors]
 
 @export_group("Level 2 Properties")
 @export var object_defects = false

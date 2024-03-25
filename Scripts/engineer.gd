@@ -1,4 +1,5 @@
 extends Node2D
+class_name Engineer
 
 @onready var animation_player = $AnimationPlayer
 

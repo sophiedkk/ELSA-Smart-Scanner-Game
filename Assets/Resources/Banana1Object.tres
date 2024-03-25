@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_f4d34")
 object_type = 2
-object_suitable = 0
-object_colors = Array[Color]([Color(1, 0.776471, 0.00784314, 1)])
+object_suitable = false
+object_colors = Array[int]([6, 4])
 object_defects = false
 object_outline_asset = null

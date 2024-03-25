@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AnalysisObjectData" load_steps=2 format=3 uid="uid://03db2b1dpbgm"]
+
+[ext_resource type="Script" path="res://Scripts/AnalysisObjectData.gd" id="1_k5nrs"]
+
+[resource]
+script = ExtResource("1_k5nrs")
+object_type = 4
+object_suitable = false
+object_colors = Array[int]([3, 1, 5, 4])
+object_defects = false
+object_outline_asset = null

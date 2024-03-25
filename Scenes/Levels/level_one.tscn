@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dq7sh851jfvlq"]
+[gd_scene load_steps=13 format=3 uid="uid://dq7sh851jfvlq"]
 
 [ext_resource type="Script" path="res://Scripts/level_one.gd" id="1_ih4e5"]
 [ext_resource type="PackedScene" uid="uid://bdpufsrllrvpw" path="res://Scenes/Other/object_controller.tscn" id="1_k83uk"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bcetm6jhmnoyd" path="res://Scenes/Other/pear_object.tscn" id="3_0nuqq"]
 [ext_resource type="PackedScene" uid="uid://dgeqsgrxs1eeb" path="res://Scenes/Other/banana_object.tscn" id="6_eeeop"]
 [ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://Scenes/Other/engineer.tscn" id="7_dp0gm"]
+[ext_resource type="PackedScene" uid="uid://d1a7h7d6prd3k" path="res://Scenes/Other/berry_object.tscn" id="8_gq4hg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wx3m6"]
 bg_color = Color(0.964706, 0, 0.145098, 1)
@@ -77,8 +78,8 @@ text = "ACCEPT"
 
 [node name="ObjectController" parent="." instance=ExtResource("1_k83uk")]
 unique_name_in_owner = true
-position = Vector2(160, 90)
-level_objects = Array[PackedScene]([ExtResource("2_84wkp"), ExtResource("3_0nuqq"), ExtResource("6_eeeop")])
+position = Vector2(160, 100)
+level_objects = Array[PackedScene]([ExtResource("2_84wkp"), ExtResource("3_0nuqq"), ExtResource("6_eeeop"), ExtResource("8_gq4hg")])
 
 [connection signal="pressed" from="BoxContainer/RejectButton" to="." method="_on_reject_button_pressed"]
 [connection signal="pressed" from="BoxContainer/AcceptButton" to="." method="_on_accept_button_pressed"]
