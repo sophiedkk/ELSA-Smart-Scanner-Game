@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://b450aeeec3w2r"]
 
-[ext_resource type="Script" path="res://Scripts/engineer.gd" id="1_hnd2e"]
+[ext_resource type="Script" path="res://Game/Game Logic & Response/engineer.gd" id="1_hnd2e"]
 [ext_resource type="Texture2D" uid="uid://cnt0mf0iu28rf" path="res://Assets/Images/scientist lady.png" id="2_v3h7m"]
 
 [sub_resource type="Animation" id="Animation_o4i74"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bgybsk3jkqpyt"]
 
-[ext_resource type="Script" path="res://Scenes/Other/color_rectangle.gd" id="1_iuop6"]
+[ext_resource type="Script" path="res://Game/UI & Menus/color_rectangle.gd" id="1_iuop6"]
 
 [node name="OutterButton" type="ColorRect"]
 offset_right = 40.0

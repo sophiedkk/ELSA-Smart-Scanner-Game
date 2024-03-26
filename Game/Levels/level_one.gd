@@ -11,7 +11,7 @@ var accuracy_rate: float
 #enum PossiblePlayerChoices {ACCEPT, REJECT}
 #var player_choice = PossiblePlayerChoices
 func _ready():
-	engineer.show_normal_dialogue("res://Dialogues/game_introduction.dialogue", "engineer_opening_lines")
+	engineer.show_normal_dialogue("res://Game/Dialogues/game_introduction.dialogue", "engineer_opening_lines")
 	# DialogueManager.show_dialogue_balloon(load("res://game_intro.dialogue"), "engineer_scrumbling")
 
 func _process(_delta):
@@ -47,4 +47,4 @@ func _first_robot_introduction():
 	LevelTransition.fade_from_black()
 	await get_tree().create_timer(1.5).timeout
 	engineer.engineer_coming_in()
-	engineer.show_normal_dialogue("res://Dialogues/game_introduction.dialogue", "robot_booted_up_first_time")
+	engineer.show_normal_dialogue("res://Game/Dialogues/game_introduction.dialogue", "robot_booted_up_first_time")

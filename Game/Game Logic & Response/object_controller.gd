@@ -32,6 +32,6 @@ func show_new_object_palette():
 	var color_palette = current_object.object_properties.object_colors
 	for color in color_palette:
 		print(color)
-		var square = load("res://Scenes/Other/color_button.tscn").instantiate()
+		var square = load("res://Game/UI & Menus/color_button.tscn").instantiate()
 		add_child(square)
 		print(square.get_transform())

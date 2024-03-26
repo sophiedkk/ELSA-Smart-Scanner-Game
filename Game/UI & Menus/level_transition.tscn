@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://btwjvce67grp8"]
 
-[ext_resource type="Script" path="res://Scenes/Levels/level_transition.gd" id="1_heuvg"]
+[ext_resource type="Script" path="res://Game/UI & Menus/level_transition.gd" id="1_heuvg"]
 
 [sub_resource type="Animation" id="Animation_7pmnj"]
 length = 0.001

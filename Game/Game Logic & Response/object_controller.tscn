@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bdpufsrllrvpw"]
 
-[ext_resource type="Script" path="res://Scripts/object_controller.gd" id="1_rfcm4"]
+[ext_resource type="Script" path="res://Game/Game Logic & Response/object_controller.gd" id="1_rfcm4"]
 
 [node name="ObjectController" type="Node2D"]
 script = ExtResource("1_rfcm4")

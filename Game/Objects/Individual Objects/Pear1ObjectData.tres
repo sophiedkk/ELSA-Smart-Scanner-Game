@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="AnalysisObjectData" load_steps=2 format=3 uid="uid://be1j8hhuvpn4k"]
 
-[ext_resource type="Script" path="res://Scripts/AnalysisObjectData.gd" id="1_e01qm"]
+[ext_resource type="Script" path="res://Game/Objects/AnalysisObjectData.gd" id="1_ob7nw"]
 
 [resource]
-script = ExtResource("1_e01qm")
+script = ExtResource("1_ob7nw")
 object_type = 3
 object_suitable = true
 object_colors = Array[int]([4, 6])

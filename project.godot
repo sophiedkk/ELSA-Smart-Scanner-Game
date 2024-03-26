@@ -11,15 +11,15 @@ config_version=5
 [application]
 
 config/name="Elsa-smart-scanner-game"
-run/main_scene="res://Scenes/Levels/start_menu.tscn"
+run/main_scene="res://Game/UI & Menus/start_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-Global="*res://global.gd"
-LevelTransition="*res://Scenes/Levels/level_transition.tscn"
+Global="*res://Game/global.gd"
+LevelTransition="*res://Game/UI & Menus/level_transition.tscn"
 
 [display]
 
@@ -47,7 +47,7 @@ next_object_manual={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogues/game_introduction.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Game/Dialogues/game_introduction.dialogue")
 
 [rendering]
 
