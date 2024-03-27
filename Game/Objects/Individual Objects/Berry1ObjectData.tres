@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="AnalysisObjectData" load_steps=2 format=3 uid="uid://03db2b1dpbgm"]
+[gd_resource type="Resource" script_class="AnalysisObjectData" load_steps=3 format=3 uid="uid://03db2b1dpbgm"]
 
 [ext_resource type="Script" path="res://Game/Objects/AnalysisObjectData.gd" id="1_e701u"]
+[ext_resource type="Texture2D" uid="uid://xv5421ogxvct" path="res://Assets/Images/berries1.png" id="1_mid87"]
 
 [resource]
 script = ExtResource("1_e701u")
+object_texture = ExtResource("1_mid87")
 object_type = 4
-object_suitable = false
-object_colors = Array[int]([3, 1, 5, 4])
+object_suitable = true
+object_colors = Array[int]([1, 3, 4, 5])
 object_defects = false
 object_outline_asset = null

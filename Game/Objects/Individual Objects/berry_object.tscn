@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1a7h7d6prd3k"]
+[gd_scene load_steps=3 format=3 uid="uid://d1a7h7d6prd3k"]
 
 [ext_resource type="PackedScene" uid="uid://besa1vfpoeqek" path="res://Game/Objects/base_analysis_object.tscn" id="1_5loc3"]
-[ext_resource type="Texture2D" uid="uid://dy4qkxb4h18v1" path="res://Assets/Images/berry1.png" id="2_cdj5k"]
 [ext_resource type="Resource" uid="uid://03db2b1dpbgm" path="res://Game/Objects/Individual Objects/Berry1ObjectData.tres" id="3_rg2ts"]
 
-[node name="AnalysisObject" instance=ExtResource("1_5loc3")]
-scale = Vector2(0.02, 0.02)
-texture = ExtResource("2_cdj5k")
+[node name="BerryObject" instance=ExtResource("1_5loc3")]
 object_properties = ExtResource("3_rg2ts")

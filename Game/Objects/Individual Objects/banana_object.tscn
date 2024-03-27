@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgeqsgrxs1eeb"]
+[gd_scene load_steps=3 format=3 uid="uid://dgeqsgrxs1eeb"]
 
 [ext_resource type="PackedScene" uid="uid://besa1vfpoeqek" path="res://Game/Objects/base_analysis_object.tscn" id="1_vou8l"]
-[ext_resource type="Texture2D" uid="uid://q1htcxjyc83y" path="res://Assets/Images/banana1.png" id="2_7abk1"]
 [ext_resource type="Resource" uid="uid://ckej8djgek6bb" path="res://Game/Objects/Individual Objects/Banana1Object.tres" id="3_yn6x2"]
 
 [node name="BananaObject" instance=ExtResource("1_vou8l")]
-scale = Vector2(0.02, 0.02)
-texture = ExtResource("2_7abk1")
 object_properties = ExtResource("3_yn6x2")

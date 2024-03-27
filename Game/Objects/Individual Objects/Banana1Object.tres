@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="AnalysisObjectData" load_steps=2 format=3 uid="uid://ckej8djgek6bb"]
+[gd_resource type="Resource" script_class="AnalysisObjectData" load_steps=3 format=3 uid="uid://ckej8djgek6bb"]
 
 [ext_resource type="Script" path="res://Game/Objects/AnalysisObjectData.gd" id="1_kslye"]
+[ext_resource type="Texture2D" uid="uid://usr7r5knvur7" path="res://Assets/Images/banana1.png" id="1_v0a5j"]
 
 [resource]
 script = ExtResource("1_kslye")
+object_texture = ExtResource("1_v0a5j")
 object_type = 2
-object_suitable = false
-object_colors = Array[int]([6, 4])
+object_suitable = true
+object_colors = Array[int]([4, 6])
 object_defects = false
 object_outline_asset = null
