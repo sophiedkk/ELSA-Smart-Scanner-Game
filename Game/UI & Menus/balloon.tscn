@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://13s5spsk34qu"]
+[gd_scene load_steps=11 format=3 uid="uid://13s5spsk34qu"]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_s2gbs"]
+[ext_resource type="Script" path="res://Game/UI & Menus/balloon.gd" id="1_s2gbs"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_hfvdi"]
+[ext_resource type="FontFile" uid="uid://c131bpdjmsgln" path="res://Assets/Fonts/Arial_bold.ttf" id="2_qgkod"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_1j1j0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_235ry"]
@@ -109,9 +110,9 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 3.0
-offset_top = -62.0
-offset_right = -4.0
+offset_left = 72.0
+offset_top = -69.0
+offset_right = -72.0
 offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -132,6 +133,8 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
+theme_override_colors/default_color = Color(0.372549, 0.290196, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_qgkod")
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -141,7 +144,10 @@ scroll_active = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_qgkod")
 text = "Dialogue..."
+pause_at_characters = "?!"
+seconds_per_pause_step = 0.2
 
 [node name="Responses" type="MarginContainer" parent="Balloon"]
 layout_mode = 1

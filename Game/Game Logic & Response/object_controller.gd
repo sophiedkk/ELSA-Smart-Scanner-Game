@@ -9,7 +9,7 @@ var current_object: BaseObject
 var current_object_acceptable: bool
 
 #Reference to the colors in the enumerator of the object
-var color_palette: Array[AnalysisObjectData.ObjectColors]
+var color_palette: Array[AnalysisObjectData.ObjectTypeColors]
 #Reference to the object scene that works as a button
 @onready var color_palette_object: = preload("res://Game/UI & Menus/color_rectangle.tscn")
 #Reference to the object in the scene
@@ -34,7 +34,7 @@ func show_new_object():
 
 func show_new_object_palette():
 	if (current_object != null):
-		color_palette = current_object.object_properties.object_colors
+		color_palette = current_object.object_properties.object_type_colors
 		print(color_palette)
 		for i in range(len(color_palette)):
 			color_palette_square = color_palette_object.instantiate()

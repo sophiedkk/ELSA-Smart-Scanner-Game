@@ -23,7 +23,8 @@ signal got_dialogue(line: DialogueLine)
 signal mutated(mutation: Dictionary)
 
 ## Emitted when some dialogue has reached the end.
-signal dialogue_ended(resource: DialogueResource)
+#signal dialogue_ended(resource: DialogueResource)
+signal dialogue_ended()
 
 ## Used internally.
 signal bridge_get_next_dialogue_line_completed(line: DialogueLine)
@@ -68,7 +69,6 @@ var get_current_scene: Callable = func():
 var autoloads: Dictionary = {}
 
 var _node_properties: Array = []
-
 
 func _ready() -> void:
 	# Cache the known Node2D properties
@@ -125,7 +125,8 @@ func get_next_dialogue_line(resource: DialogueResource, key: String = "", extra_
 
 	# If our dialogue is nothing then we hit the end
 	if not is_valid(dialogue):
-		(func(): dialogue_ended.emit(resource)).call_deferred()
+		(func(): dialogue_ended.emit()).call_deferred()
+		#(func(): dialogue_ended.emit(resource)).call_deferred()
 		return null
 
 	# Run the mutation if it is one
@@ -140,7 +141,8 @@ func get_next_dialogue_line(resource: DialogueResource, key: String = "", extra_
 				pass
 		if actual_next_id in [DialogueConstants.ID_END_CONVERSATION, DialogueConstants.ID_NULL, null]:
 			# End the conversation
-			(func(): dialogue_ended.emit(resource)).call_deferred()
+			(func(): dialogue_ended.emit()).call_deferred()
+			#(func(): dialogue_ended.emit(resource)).call_deferred()
 			return null
 		else:
 			return await get_next_dialogue_line(resource, dialogue.next_id, extra_game_states, mutation_behaviour)

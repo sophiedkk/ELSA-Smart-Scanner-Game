@@ -40,6 +40,28 @@ Button/styles/normal = SubResource("StyleBoxFlat_jgcck")
 [node name="LevelOne" type="Node2D"]
 script = ExtResource("1_nbb1a")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RobotStats" type="VBoxContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 77.0
+offset_bottom = 41.0
+alignment = 1
+
+[node name="Version" type="Label" parent="CanvasLayer/RobotStats"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Version 1.0"
+
+[node name="AccuracyLabel" type="Label" parent="CanvasLayer/RobotStats"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Accuracy rate: "
+
 [node name="Engineer" parent="." instance=ExtResource("2_lshqg")]
 unique_name_in_owner = true
 position = Vector2(-60, 48)
