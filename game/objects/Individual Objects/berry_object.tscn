@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1a7h7d6prd3k"]
+
+[ext_resource type="PackedScene" uid="uid://besa1vfpoeqek" path="res://game/objects/base_analysis_object.tscn" id="1_5loc3"]
+[ext_resource type="Resource" uid="uid://03db2b1dpbgm" path="res://game/objects/Individual Objects/Berry1ObjectData.tres" id="3_rg2ts"]
+
+[node name="BerryObject" instance=ExtResource("1_5loc3")]
+object_properties = ExtResource("3_rg2ts")

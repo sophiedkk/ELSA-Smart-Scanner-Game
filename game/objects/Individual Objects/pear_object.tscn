@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcetm6jhmnoyd"]
+
+[ext_resource type="PackedScene" uid="uid://besa1vfpoeqek" path="res://game/objects/base_analysis_object.tscn" id="1_laynm"]
+[ext_resource type="Resource" uid="uid://be1j8hhuvpn4k" path="res://game/objects/Individual Objects/Pear1ObjectData.tres" id="3_idtwp"]
+
+[node name="PearObject" instance=ExtResource("1_laynm")]
+object_properties = ExtResource("3_idtwp")

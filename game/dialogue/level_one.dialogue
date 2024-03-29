@@ -1,0 +1,29 @@
+~ engineer_opening_lines
+
+???: ...
+???: Okay, okay, almost ready.
+???: Booting this up...
+=> END
+
+~ robot_booted_up
+???: And... voila!
+???: Okay, test, test.
+???: Seems that it's working.
+???: Recodring 1. Now in session.
+???: Greetings, this is Dr. Rensselaer.
+Dr. Rensselaer: I am currently testing the Smart Scanner, version 1.0.
+Dr. Rensselaer: This project was requested by the local hospital for help.
+Dr. Rensselaer: The scanner's goal is to check the quality of the products at the hospital.
+Dr. Rensselaer: This way, we can ensure the health and safety of the patients.
+Dr. Rensselaer: Let me tell you some details about how the scanner works.
+=> END
+
+~ explaining_the_mechanics
+Dr. Rensselaer: So, the overall structure is quite simple.
+Dr. Rensselaer: A stuff member will pass the object to the scanner.
+Dr. Rensselaer: They will pass the object type to the scanner, which will help it create a palette.
+Dr. Rensselaer: That's those squares in the top right.
+Dr. Rensselaer: The scanner then has to analyze if the object colors fit with its palette.
+Dr. Rensselaer: If they do, then they have to choose the appropriate colors and accept the object.
+Dr. Rensselaer: If the object does NOT fit, then the scanner should just reject it.
+Dr. Rensselaer: Let's see if this works.

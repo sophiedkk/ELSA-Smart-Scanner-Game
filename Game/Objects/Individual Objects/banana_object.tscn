@@ -1,7 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgeqsgrxs1eeb"]
-
-[ext_resource type="PackedScene" uid="uid://besa1vfpoeqek" path="res://Game/Objects/base_analysis_object.tscn" id="1_vou8l"]
-[ext_resource type="Resource" uid="uid://ckej8djgek6bb" path="res://Game/Objects/Individual Objects/Banana1Object.tres" id="3_yn6x2"]
-
-[node name="BananaObject" instance=ExtResource("1_vou8l")]
-object_properties = ExtResource("3_yn6x2")
