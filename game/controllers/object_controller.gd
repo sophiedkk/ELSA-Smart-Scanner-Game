@@ -29,7 +29,7 @@ func show_new_object():
 		add_child(current_object)
 		clear_previous_palette()
 		show_new_object_palette()
-		current_object_acceptable = current_object.object_properties.object_suitable
+		current_object_acceptable = current_object.suitable
 		current_object_index = current_object_index + 1
 	else:
 		clear_previous_palette()
@@ -38,9 +38,9 @@ func show_new_object():
 
 func show_new_object_palette():
 	if current_object != null:
-		color_palette = current_object.object_properties.object_type_colors
+		color_palette = current_object.colors
 		print(color_palette)
-		for i in range(len(color_palette)):
+		for i in color_palette.size():
 			color_palette_square = color_palette_object.instantiate()
 			#This is a very bad idea, because this compares two integers
 			#One is in the color rectangle object, another is derived from AnalysisObjectData
