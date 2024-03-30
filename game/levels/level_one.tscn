@@ -1,14 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://dq7sh851jfvlq"]
+[gd_scene load_steps=15 format=3 uid="uid://dq7sh851jfvlq"]
 
 [ext_resource type="Script" path="res://game/levels/level_one.gd" id="1_nbb1a"]
 [ext_resource type="Resource" uid="uid://dvml401vq5j65" path="res://game/dialogue/level_one.dialogue" id="2_2fvla"]
 [ext_resource type="Texture2D" uid="uid://bhywd7tkco7qb" path="res://assets/images/computerdesk.png" id="3_bv4id"]
 [ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://game/controllers/engineer.tscn" id="3_k6shj"]
-[ext_resource type="PackedScene" uid="uid://c0aric4rnb8no" path="res://game/objects/Individual Objects/apple_object.tscn" id="5_1opfw"]
 [ext_resource type="PackedScene" uid="uid://bdpufsrllrvpw" path="res://game/controllers/object_controller.tscn" id="5_n4cc1"]
-[ext_resource type="PackedScene" uid="uid://bcetm6jhmnoyd" path="res://game/objects/Individual Objects/pear_object.tscn" id="6_0eiwm"]
-[ext_resource type="PackedScene" uid="uid://dgeqsgrxs1eeb" path="res://game/objects/Individual Objects/banana_object.tscn" id="7_ylman"]
-[ext_resource type="PackedScene" uid="uid://d1a7h7d6prd3k" path="res://game/objects/Individual Objects/berry_object.tscn" id="8_cxs0l"]
+[ext_resource type="PackedScene" uid="uid://besa1vfpoeqek" path="res://game/objects/base_analysis_object.tscn" id="6_ltpou"]
+[ext_resource type="Resource" uid="uid://did6m2tu8g11x" path="res://game/objects/object_resources/apple_1.tres" id="7_o4hj1"]
+[ext_resource type="Resource" uid="uid://be1j8hhuvpn4k" path="res://game/objects/object_resources/pear_1.tres" id="8_j5cl5"]
+[ext_resource type="Resource" uid="uid://ckej8djgek6bb" path="res://game/objects/object_resources/banana_1.tres" id="9_qriyv"]
+[ext_resource type="Resource" uid="uid://03db2b1dpbgm" path="res://game/objects/object_resources/berry_1.tres" id="10_i67g3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wx3m6"]
 bg_color = Color(0.964706, 0, 0.145098, 1)
@@ -103,7 +104,8 @@ text = "ACCEPT"
 [node name="ObjectController" parent="." instance=ExtResource("5_n4cc1")]
 unique_name_in_owner = true
 position = Vector2(160, 100)
-level_objects = Array[PackedScene]([ExtResource("5_1opfw"), ExtResource("6_0eiwm"), ExtResource("7_ylman"), ExtResource("8_cxs0l")])
+level_object_scene = ExtResource("6_ltpou")
+level_objects = Array[Resource("res://game/objects/analysis_object_data.gd")]([ExtResource("7_o4hj1"), ExtResource("8_j5cl5"), ExtResource("9_qriyv"), ExtResource("10_i67g3")])
 
 [connection signal="pressed" from="BoxContainer/RejectButton" to="." method="_on_reject_button_pressed"]
 [connection signal="pressed" from="BoxContainer/AcceptButton" to="." method="_on_accept_button_pressed"]
