@@ -1,7 +1,6 @@
 class_name PaletteSquare
 extends ColorRect
 
-enum ObjectTypeColors {NONE, BLACK, WHITE, RED, GREEN, BLUE, YELLOW, ORANGE, PINK, BEIGE}
 
 var color_dictionary = {AnalysisObjectData.ObjectTypeColors.NONE: Color.WEB_GRAY,
 	AnalysisObjectData.ObjectTypeColors.BLACK: Color.BLACK,
