@@ -3,6 +3,8 @@ extends Node2D
 
 #Supplementary signals
 signal robot_boot
+signal accept_introduced
+signal reject_introduced
 signal stats_introduced
 
 #These variables control the flow of the dialogue
@@ -39,8 +41,15 @@ func _on_dialogue_finished() -> void:
 					await get_tree().create_timer(2.0).timeout
 					robot_boot.emit()
 				"robot_booted_up":
+					# engineer_going_out()
+					await get_tree().create_timer(0.5).timeout
+					accept_introduced.emit()
+				"tutorial_nice_apple_accepted":
+					await get_tree().create_timer(0.5).timeout
+					reject_introduced.emit()
+				"tutorial_bad_apple_rejected":
 					engineer_going_out()
-					await get_tree().create_timer(1.0).timeout
+					await get_tree().create_timer(1.5).timeout
 					stats_introduced.emit()
 	dialogue_in_progress = false
 

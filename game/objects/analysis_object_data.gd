@@ -6,6 +6,19 @@ SANDWICH, JUICE}
 
 enum ObjectTypeColors {NONE, BLACK, WHITE, RED, GREEN, BLUE, YELLOW, ORANGE, PINK, BEIGE}
 
+var object_types_as_strings = {
+	ObjectTypes.NONE: "None",
+	ObjectTypes.APPLE: "Apple",
+	ObjectTypes.BANANA: "Banana",
+	ObjectTypes.PEAR: "Pear",
+	ObjectTypes.BERRY: "Berry",
+	ObjectTypes.CARROT: "Carrot",
+	ObjectTypes.SALAD: "Salad",
+	ObjectTypes.CHOCOLATE: "Chocolate",
+	ObjectTypes.SANDWICH: "Sandwich",
+	ObjectTypes.JUICE: "Juice"
+}
+
 @export_group("Level 1 Properties")
 @export var object_texture: Texture2D
 @export var object_type: ObjectTypes
@@ -25,3 +38,4 @@ enum ObjectTypeColors {NONE, BLACK, WHITE, RED, GREEN, BLUE, YELLOW, ORANGE, PIN
 @export_group("Level 3 Properties")
 #Potentially some property for the outline itself?
 @export_global_file("*.png", "*.jpg") var object_outline_asset
+

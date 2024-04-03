@@ -11,19 +11,46 @@
 ???: Seems that it's working.
 ???: Recodring 1. Now in session.
 ???: Greetings, this is Dr. Rensselaer.
-Dr. Rensselaer: I am currently testing the Smart Scanner, version 1.0.
+Dr. Rensselaer: I am currently working on the Smart Scanner, version 1.0.
 Dr. Rensselaer: This project was requested by the local hospital for help.
 Dr. Rensselaer: The scanner's goal is to check the quality of the products at the hospital.
 Dr. Rensselaer: This way, we can ensure the health and safety of the patients.
-Dr. Rensselaer: Let me tell you some details about how the scanner works.
+Dr. Rensselaer: Before we can start testing the scanner, however...
+Dr. Rensselaer: We need to do some manual work.
+Dr. Rensselaer: Let me explain.
 => END
 
 ~ explaining_the_mechanics
-Dr. Rensselaer: So, the overall structure is quite simple.
-Dr. Rensselaer: A stuff member will pass the object to the scanner.
-Dr. Rensselaer: They will pass the object type to the scanner, which will help it create a palette.
-Dr. Rensselaer: That's those squares in the top right.
-Dr. Rensselaer: The scanner then has to analyze if the object colors fit with its palette.
-Dr. Rensselaer: If they do, then they have to choose the appropriate colors and accept the object.
-Dr. Rensselaer: If the object does NOT fit, then the scanner should just reject it.
-Dr. Rensselaer: Let's see if this works.
+Dr. Rensselaer: If we want an actual smart scanner, it needs to receive some input from us first.
+Dr. Rensselaer: So in this stage, we will label the data that the scanner will use to get smarter.
+Dr. Rensselaer: Do you see that apple on the table? That's our current object.
+Dr. Rensselaer: It looks pretty normal, so let's tell the scanner that it can accept it.
+=> END
+
+~ tutorial_nice_apple_accepted
+Dr. Rensselaer: Good!
+Dr. Rensselaer: The scanner will now know that this sort of apple was good.
+Dr. Rensselaer: It will not know why it was good, but it will learn it later.
+Dr. Rensselaer: In fact, these squares on the screen will help it.
+Dr. Rensselaer: But we will talk about that part a bit later.
+Dr. Rensselaer: Right now, there is another apple here.
+Dr. Rensselaer: But this one does not look good at all.
+Dr. Rensselaer: So let's reject it.
+=> END
+
+~ tutorial_bad_apple_rejected
+Dr. Rensselaer: Good!
+Dr. Rensselaer: Or, in this case, bad...
+Dr. Rensselaer: Anyways, that was the correct answer.
+Dr. Rensselaer: Our scanner needs more information right now.
+Dr. Rensselaer: Apples are not the only thing you will be checking, so get ready.
+Dr. Rensselaer: I have to leave you for a bit right now, but your task will remain the same.
+Dr. Rensselaer: Look at the object and then pass it through if you think it looks good.
+Dr. Rensselaer: There will be another person double-checking after you, so don't worry too much.
+Dr. Rensselaer: They will also tell you how accurate you were with your evaluations.
+Dr. Rensselaer: I will be back soon. Good luck with your efforts!
+=> END
+
+~ incorrect_blocked_answer
+Dr. Rensselaer: I don't think that's the right answer...
+=> END

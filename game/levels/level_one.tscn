@@ -11,20 +11,6 @@
 [ext_resource type="Resource" uid="uid://ckej8djgek6bb" path="res://game/objects/object_resources/banana_1.tres" id="9_qriyv"]
 [ext_resource type="Resource" uid="uid://03db2b1dpbgm" path="res://game/objects/object_resources/berry_1.tres" id="10_i67g3"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wx3m6"]
-bg_color = Color(0.964706, 0, 0.145098, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.494118, 0, 0.0509804, 1)
-
-[sub_resource type="Theme" id="Theme_1jxlw"]
-Button/colors/font_color = Color(0.494118, 0, 0.0509804, 1)
-Button/colors/font_focus_color = Color(0.968627, 0.0705882, 0.203922, 1)
-Button/colors/font_hover_color = Color(0.964706, 0, 0.145098, 1)
-Button/styles/normal = SubResource("StyleBoxFlat_wx3m6")
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jgcck"]
 bg_color = Color(0.658824, 0.796078, 0.415686, 1)
 border_width_left = 2
@@ -39,6 +25,20 @@ Button/colors/font_focus_color = Color(0.368627, 0.458824, 0.196078, 1)
 Button/colors/font_hover_color = Color(0.658824, 0.796078, 0.415686, 1)
 Button/styles/normal = SubResource("StyleBoxFlat_jgcck")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wx3m6"]
+bg_color = Color(0.964706, 0, 0.145098, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.494118, 0, 0.0509804, 1)
+
+[sub_resource type="Theme" id="Theme_1jxlw"]
+Button/colors/font_color = Color(0.494118, 0, 0.0509804, 1)
+Button/colors/font_focus_color = Color(0.968627, 0.0705882, 0.203922, 1)
+Button/colors/font_hover_color = Color(0.964706, 0, 0.145098, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_wx3m6")
+
 [node name="LevelOne" type="Node2D"]
 script = ExtResource("1_nbb1a")
 level_dialogue = ExtResource("2_2fvla")
@@ -49,21 +49,27 @@ level_dialogue = ExtResource("2_2fvla")
 unique_name_in_owner = true
 visible = false
 offset_left = 1.0
-offset_top = 1.0
-offset_right = 77.0
-offset_bottom = 41.0
+offset_top = 2.0
+offset_right = 128.0
+offset_bottom = 50.0
 alignment = 1
 
 [node name="Version" type="Label" parent="CanvasLayer/RobotStats"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 14
-text = "Version 1.0"
+text = "Version 0.9 [BETA]"
+
+[node name="ObjectTypeLabel" type="Label" parent="CanvasLayer/RobotStats"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Object type: Apple"
 
 [node name="AccuracyLabel" type="Label" parent="CanvasLayer/RobotStats"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 8
-text = "Accuracy rate: "
+text = "Accuracy rate: no data yet!"
 
 [node name="Engineer" parent="." instance=ExtResource("3_k6shj")]
 unique_name_in_owner = true
@@ -74,26 +80,16 @@ position = Vector2(160, 176)
 scale = Vector2(0.545555, 0.545555)
 texture = ExtResource("3_bv4id")
 
-[node name="BoxContainer" type="BoxContainer" parent="."]
-offset_left = 20.0
-offset_top = 139.0
-offset_right = 300.0
-offset_bottom = 162.0
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 247.0
+offset_top = 122.0
+offset_right = 307.0
+offset_bottom = 172.0
 size_flags_horizontal = 4
 
-[node name="RejectButton" type="Button" parent="BoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = SubResource("Theme_1jxlw")
-theme_override_font_sizes/font_size = 12
-text = "REJECT"
-
-[node name="Spacer1" type="Container" parent="BoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="AcceptButton" type="Button" parent="BoxContainer"]
+[node name="AcceptButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -101,11 +97,25 @@ theme = SubResource("Theme_tjxw6")
 theme_override_font_sizes/font_size = 12
 text = "ACCEPT"
 
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RejectButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_1jxlw")
+theme_override_font_sizes/font_size = 12
+text = "REJECT"
+
 [node name="ObjectController" parent="." instance=ExtResource("5_n4cc1")]
 unique_name_in_owner = true
 position = Vector2(160, 100)
 level_object_scene = ExtResource("6_ltpou")
 level_objects = Array[Resource("res://game/objects/analysis_object_data.gd")]([ExtResource("7_o4hj1"), ExtResource("8_j5cl5"), ExtResource("9_qriyv"), ExtResource("10_i67g3")])
 
-[connection signal="pressed" from="BoxContainer/RejectButton" to="." method="_on_reject_button_pressed"]
-[connection signal="pressed" from="BoxContainer/AcceptButton" to="." method="_on_accept_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/AcceptButton" to="." method="_on_accept_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/RejectButton" to="." method="_on_reject_button_pressed"]
