@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AnalysisObjectData" load_steps=3 format=3 uid="uid://dw0qx218ixssk"]
+
+[ext_resource type="Texture2D" uid="uid://bmgp0xt0180gl" path="res://assets/images/apple2.png" id="1_1e2jt"]
+[ext_resource type="Script" path="res://game/objects/analysis_object_data.gd" id="1_bi015"]
+
+[resource]
+script = ExtResource("1_bi015")
+object_texture = ExtResource("1_1e2jt")
+object_type = 1
+object_suitable = false
+object_type_colors = Array[int]([3, 4, 6])
+object_relevant_colors = Array[int]([4, 10])
+object_defects = false
+object_outline_asset = null

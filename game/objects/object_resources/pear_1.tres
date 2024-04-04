@@ -7,7 +7,7 @@
 script = ExtResource("1_ob7nw")
 object_texture = ExtResource("1_2b7kd")
 object_type = 3
-object_suitable = false
+object_suitable = true
 object_type_colors = Array[int]([4, 6])
 object_relevant_colors = Array[int]([4, 6])
 object_defects = false

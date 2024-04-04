@@ -30,9 +30,9 @@ Dr. Rensselaer: It looks pretty normal, so let's tell the scanner that it can ac
 ~ tutorial_nice_apple_accepted
 Dr. Rensselaer: Good!
 Dr. Rensselaer: The scanner will now know that this sort of apple was good.
-Dr. Rensselaer: It will not know why it was good, but it will learn it later.
+Dr. Rensselaer: It will not know exactly why this one was good, but it will learn that later.
 Dr. Rensselaer: In fact, these squares on the screen will help it.
-Dr. Rensselaer: But we will talk about that part a bit later.
+Dr. Rensselaer: But I'm getting ahead of myself.
 Dr. Rensselaer: Right now, there is another apple here.
 Dr. Rensselaer: But this one does not look good at all.
 Dr. Rensselaer: So let's reject it.
@@ -42,7 +42,7 @@ Dr. Rensselaer: So let's reject it.
 Dr. Rensselaer: Good!
 Dr. Rensselaer: Or, in this case, bad...
 Dr. Rensselaer: Anyways, that was the correct answer.
-Dr. Rensselaer: Our scanner needs more information right now.
+Dr. Rensselaer: Our scanner requires more information to work by itself.
 Dr. Rensselaer: Apples are not the only thing you will be checking, so get ready.
 Dr. Rensselaer: I have to leave you for a bit right now, but your task will remain the same.
 Dr. Rensselaer: Look at the object and then pass it through if you think it looks good.

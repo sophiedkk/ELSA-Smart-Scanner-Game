@@ -11,7 +11,9 @@ var color_dictionary = {AnalysisObjectData.ObjectTypeColors.NONE: Color.WEB_GRAY
 	AnalysisObjectData.ObjectTypeColors.YELLOW: Color.YELLOW,
 	AnalysisObjectData.ObjectTypeColors.ORANGE: Color.ORANGE,
 	AnalysisObjectData.ObjectTypeColors.PINK: Color.PINK,
-	AnalysisObjectData.ObjectTypeColors.BEIGE: Color.BEIGE
+	AnalysisObjectData.ObjectTypeColors.BEIGE: Color.BEIGE,
+	AnalysisObjectData.ObjectTypeColors.BROWN: Color.SADDLE_BROWN,
+	AnalysisObjectData.ObjectTypeColors.PURPLE: Color.WEB_PURPLE
 }
 
 var chosen_color: Color

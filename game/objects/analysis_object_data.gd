@@ -4,7 +4,7 @@ extends Resource
 enum ObjectTypes {NONE, APPLE, BANANA, PEAR, BERRY, CARROT, SALAD, CHOCOLATE,
 SANDWICH, JUICE}
 
-enum ObjectTypeColors {NONE, BLACK, WHITE, RED, GREEN, BLUE, YELLOW, ORANGE, PINK, BEIGE}
+enum ObjectTypeColors {NONE, BLACK, WHITE, RED, GREEN, BLUE, YELLOW, ORANGE, PINK, BEIGE, BROWN, PURPLE}
 
 var object_types_as_strings = {
 	ObjectTypes.NONE: "None",
