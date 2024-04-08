@@ -1,6 +1,8 @@
 class_name ObjectController
 extends Node2D
 
+signal all_objects_passed
+
 @export var level_object_scene: PackedScene
 @export var level_objects: Array[AnalysisObjectData]
 
@@ -13,6 +15,7 @@ var color_palette: Array[AnalysisObjectData.ObjectTypeColors]
 var color_palette_square: PaletteSquare
 #An array that stores squares currently presented on screen
 var color_palette_squares: Array[PaletteSquare]
+
 
 #Reference to the object scene that works as a button
 @onready var color_palette_object: = preload("res://game/gui/color_rectangle.tscn")
@@ -33,7 +36,7 @@ func show_new_object():
 		current_object_index = current_object_index + 1
 	else:
 		clear_previous_palette()
-		print(color_palette, color_palette_squares)
+		all_objects_passed.emit()
 
 
 func show_new_object_palette():

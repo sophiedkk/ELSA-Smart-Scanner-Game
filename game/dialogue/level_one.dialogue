@@ -11,7 +11,7 @@
 ???: Seems that it's working.
 ???: Recodring 1. Now in session.
 ???: Greetings, this is Dr. Rensselaer.
-Dr. Rensselaer: I am currently working on the Smart Scanner, version 1.0.
+Dr. Rensselaer: I am currently working on the Smart Scanner, Beta version.
 Dr. Rensselaer: This project was requested by the local hospital for help.
 Dr. Rensselaer: The scanner's goal is to check the quality of the products at the hospital.
 Dr. Rensselaer: This way, we can ensure the health and safety of the patients.
@@ -43,12 +43,32 @@ Dr. Rensselaer: Good!
 Dr. Rensselaer: Or, in this case, bad...
 Dr. Rensselaer: Anyways, that was the correct answer.
 Dr. Rensselaer: Our scanner requires more information to work by itself.
-Dr. Rensselaer: Apples are not the only thing you will be checking, so get ready.
-Dr. Rensselaer: I have to leave you for a bit right now, but your task will remain the same.
-Dr. Rensselaer: Look at the object and then pass it through if you think it looks good.
-Dr. Rensselaer: There will be another person double-checking after you, so don't worry too much.
-Dr. Rensselaer: They will also tell you how accurate you were with your evaluations.
-Dr. Rensselaer: I will be back soon. Good luck with your efforts!
+Dr. Rensselaer: There will be other objects beside apples, as you can already see.
+Dr. Rensselaer: I have to leave you for a bit, but your task stays the same.
+Dr. Rensselaer: Pass the object through if you think it looks good.
+Dr. Rensselaer: One more thing before I go.
+Dr. Rensselaer: We expect you to perform with at least 40% accuracy on this assessment.
+Dr. Rensselaer: That's why there will be another person double-checking after you.
+Dr. Rensselaer: They'll keep track of how well you're doing so far.
+Dr. Rensselaer: I will be back. Good luck with your efforts!
+=> END
+
+~ all_objects_analyzed_correctly
+Dr. Rensselaer: Hi, I'm back.
+Dr. Rensselaer: It seems that you successfully labeled all the data.
+Dr. Rensselaer: We've passed it to the scanner and run our first series of tests.
+Dr. Rensselaer: And it works!
+Dr. Rensselaer: That means that we can move to the next stage of the process.
+Dr. Rensselaer: We'll be simulating the internal logic of the scanner.
+Dr. Rensselaer: This way, you'll be able to look into how it got smart.
+=> END
+
+~ all_objects_analyzed_incorrectly
+Dr. Rensselaer: Hi, I'm back.
+Dr. Rensselaer: It seems that you were unfortunately unable to accurately assess our objects.
+Dr. Rensselaer: While I do understand that the task may have been difficult at times, I think that this job is not suitable for you.
+Dr. Rensselaer: So I'm afraid we'll have to part our ways here.
+Dr. Rensselaer: Goodbye.
 => END
 
 ~ incorrect_blocked_answer

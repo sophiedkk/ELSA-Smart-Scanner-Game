@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://dx58g7kuqi3dh"]
+
+[ext_resource type="Script" path="res://game/levels/level_two.gd" id="1_7rnoy"]
+[ext_resource type="Resource" uid="uid://c5q4sv012qdlu" path="res://game/dialogue/level_two.dialogue" id="2_rnrsj"]
+[ext_resource type="Texture2D" uid="uid://5gq57suc6nsr" path="res://assets/images/conference_room_background.png" id="2_tnefq"]
+[ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://game/controllers/engineer.tscn" id="3_k0yll"]
+
+[node name="LevelTwo" type="Node2D"]
+script = ExtResource("1_7rnoy")
+level_dialogue = ExtResource("2_rnrsj")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(169, 69)
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("2_tnefq")
+
+[node name="Engineer" parent="." instance=ExtResource("3_k0yll")]
+unique_name_in_owner = true
+position = Vector2(-57, 78)

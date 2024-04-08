@@ -6,6 +6,8 @@ signal robot_boot
 signal accept_introduced
 signal reject_introduced
 signal stats_introduced
+signal level_finished
+signal level_restart
 
 #These variables control the flow of the dialogue
 var dialogue_in_progress := false
@@ -32,7 +34,6 @@ func show_normal_dialogue(dialogue_resource: DialogueResource, dialogue_part: St
 
 
 #Dictates what should be done after the dialogue finished.
-#NOTE: cd_part happens BEFORE this script
 func _on_dialogue_finished() -> void:
 	match cd_path.resource_path:
 		"res://game/dialogue/level_one.dialogue":
@@ -40,7 +41,7 @@ func _on_dialogue_finished() -> void:
 				"engineer_opening_lines":
 					await get_tree().create_timer(2.0).timeout
 					robot_boot.emit()
-				"robot_booted_up":
+				"explaining_the_mechanics":
 					# engineer_going_out()
 					await get_tree().create_timer(0.5).timeout
 					accept_introduced.emit()
@@ -51,6 +52,15 @@ func _on_dialogue_finished() -> void:
 					engineer_going_out()
 					await get_tree().create_timer(1.5).timeout
 					stats_introduced.emit()
+				"all_objects_analyzed_correctly":
+					level_finished.emit()
+				"all_objects_analyzed_incorrectly":
+					level_restart.emit()
+		"res://game/dialogue/level_two.dialogue":
+			match cd_part:
+				"rensselaer_opening_lines":
+					pass
+			
 	dialogue_in_progress = false
 
 

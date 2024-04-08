@@ -1,9 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://dq7sh851jfvlq"]
+[gd_scene load_steps=24 format=3 uid="uid://dq7sh851jfvlq"]
 
 [ext_resource type="Script" path="res://game/levels/level_one.gd" id="1_nbb1a"]
 [ext_resource type="Resource" uid="uid://dvml401vq5j65" path="res://game/dialogue/level_one.dialogue" id="2_2fvla"]
-[ext_resource type="Texture2D" uid="uid://bhywd7tkco7qb" path="res://assets/images/computerdesk.png" id="3_bv4id"]
+[ext_resource type="PackedScene" uid="uid://dx58g7kuqi3dh" path="res://game/levels/level_two.tscn" id="2_domx6"]
 [ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://game/controllers/engineer.tscn" id="3_k6shj"]
+[ext_resource type="Texture2D" uid="uid://ceaayvfocuib5" path="res://assets/images/labeling_background.png" id="4_2ydxi"]
+[ext_resource type="Texture2D" uid="uid://b1psoqn81m04h" path="res://assets/images/conveyor_belt.png" id="5_bym74"]
 [ext_resource type="PackedScene" uid="uid://bdpufsrllrvpw" path="res://game/controllers/object_controller.tscn" id="5_n4cc1"]
 [ext_resource type="PackedScene" uid="uid://besa1vfpoeqek" path="res://game/objects/base_analysis_object.tscn" id="6_ltpou"]
 [ext_resource type="Resource" uid="uid://did6m2tu8g11x" path="res://game/objects/object_resources/apple_1.tres" id="7_o4hj1"]
@@ -16,6 +18,7 @@
 [ext_resource type="Resource" uid="uid://d4n0jcw0x1m0o" path="res://game/objects/object_resources/banana_2.tres" id="12_wmx4a"]
 [ext_resource type="Resource" uid="uid://7xvlq48cl8do" path="res://game/objects/object_resources/salad_2.tres" id="14_i1ibt"]
 [ext_resource type="Resource" uid="uid://b65jwjiursrij" path="res://game/objects/object_resources/carrot_1.tres" id="16_d7mwj"]
+[ext_resource type="Texture2D" uid="uid://cu4x0u8g3im23" path="res://assets/images/hospital_cupboard.png" id="18_443bw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jgcck"]
 bg_color = Color(0.658824, 0.796078, 0.415686, 1)
@@ -47,6 +50,7 @@ Button/styles/normal = SubResource("StyleBoxFlat_wx3m6")
 
 [node name="LevelOne" type="Node2D"]
 script = ExtResource("1_nbb1a")
+next_level = ExtResource("2_domx6")
 level_dialogue = ExtResource("2_2fvla")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -57,7 +61,7 @@ visible = false
 offset_left = 1.0
 offset_top = 2.0
 offset_right = 128.0
-offset_bottom = 50.0
+offset_bottom = 54.0
 alignment = 1
 
 [node name="Version" type="Label" parent="CanvasLayer/RobotStats"]
@@ -71,20 +75,27 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 10
 text = "Object type: Apple"
 
-[node name="AccuracyLabel" type="Label" parent="CanvasLayer/RobotStats"]
+[node name="AccuracyLabel" type="RichTextLabel" parent="CanvasLayer/RobotStats"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/font_size = 8
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
 text = "Accuracy rate: no data yet!"
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(161, 76)
+scale = Vector2(0.29, 0.29)
+texture = ExtResource("4_2ydxi")
 
 [node name="Engineer" parent="." instance=ExtResource("3_k6shj")]
 unique_name_in_owner = true
 position = Vector2(-60, 48)
 
-[node name="BackgroundTable" type="Sprite2D" parent="."]
+[node name="ConveyorBelt" type="Sprite2D" parent="."]
 position = Vector2(160, 176)
 scale = Vector2(0.545555, 0.545555)
-texture = ExtResource("3_bv4id")
+texture = ExtResource("5_bym74")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 247.0
@@ -119,9 +130,14 @@ text = "REJECT"
 
 [node name="ObjectController" parent="." instance=ExtResource("5_n4cc1")]
 unique_name_in_owner = true
-position = Vector2(160, 100)
+position = Vector2(160, 112)
 level_object_scene = ExtResource("6_ltpou")
 level_objects = Array[Resource("res://game/objects/analysis_object_data.gd")]([ExtResource("7_o4hj1"), ExtResource("8_aqwdx"), ExtResource("8_j5cl5"), ExtResource("9_qriyv"), ExtResource("11_10rs1"), ExtResource("10_i67g3"), ExtResource("12_gr6pb"), ExtResource("12_wmx4a"), ExtResource("14_i1ibt"), ExtResource("16_d7mwj")])
+
+[node name="HospitalCupboard" type="Sprite2D" parent="."]
+position = Vector2(40, 159)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("18_443bw")
 
 [connection signal="pressed" from="VBoxContainer/AcceptButton" to="." method="_on_accept_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/RejectButton" to="." method="_on_reject_button_pressed"]
