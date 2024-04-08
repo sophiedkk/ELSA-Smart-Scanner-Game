@@ -1,9 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://dx58g7kuqi3dh"]
+[gd_scene load_steps=17 format=3 uid="uid://dx58g7kuqi3dh"]
 
 [ext_resource type="Script" path="res://game/levels/level_two.gd" id="1_7rnoy"]
 [ext_resource type="Resource" uid="uid://c5q4sv012qdlu" path="res://game/dialogue/level_two.dialogue" id="2_rnrsj"]
 [ext_resource type="Texture2D" uid="uid://5gq57suc6nsr" path="res://assets/images/conference_room_background.png" id="2_tnefq"]
 [ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://game/controllers/engineer.tscn" id="3_k0yll"]
+[ext_resource type="Script" path="res://game/controllers/object_analyzer.gd" id="5_rapvh"]
+[ext_resource type="PackedScene" uid="uid://besa1vfpoeqek" path="res://game/objects/base_analysis_object.tscn" id="6_hl472"]
+[ext_resource type="Resource" uid="uid://did6m2tu8g11x" path="res://game/objects/object_resources/apple_1.tres" id="6_t4gly"]
+[ext_resource type="Resource" uid="uid://dw0qx218ixssk" path="res://game/objects/object_resources/apple_2.tres" id="7_e2qet"]
+[ext_resource type="Resource" uid="uid://ckej8djgek6bb" path="res://game/objects/object_resources/banana_1.tres" id="8_a3q16"]
+[ext_resource type="Resource" uid="uid://d4n0jcw0x1m0o" path="res://game/objects/object_resources/banana_2.tres" id="9_xhqnl"]
+[ext_resource type="Resource" uid="uid://03db2b1dpbgm" path="res://game/objects/object_resources/berry_1.tres" id="10_jmlh2"]
+[ext_resource type="Resource" uid="uid://b65jwjiursrij" path="res://game/objects/object_resources/carrot_1.tres" id="11_odrcy"]
+[ext_resource type="Resource" uid="uid://cyov0epsl2j4x" path="res://game/objects/object_resources/carrot_2.tres" id="12_a5xbb"]
+[ext_resource type="Resource" uid="uid://be1j8hhuvpn4k" path="res://game/objects/object_resources/pear_1.tres" id="13_gb8c3"]
+[ext_resource type="Resource" uid="uid://bdhg10ltlqch0" path="res://game/objects/object_resources/salad_1.tres" id="14_2b28v"]
+[ext_resource type="Resource" uid="uid://7xvlq48cl8do" path="res://game/objects/object_resources/salad_2.tres" id="15_iywhv"]
 
 [node name="LevelTwo" type="Node2D"]
 script = ExtResource("1_7rnoy")
@@ -17,3 +29,9 @@ texture = ExtResource("2_tnefq")
 [node name="Engineer" parent="." instance=ExtResource("3_k0yll")]
 unique_name_in_owner = true
 position = Vector2(-57, 78)
+
+[node name="ObjectAnalyzer" type="Node2D" parent="."]
+position = Vector2(133, 144)
+script = ExtResource("5_rapvh")
+all_objects_data = Array[Resource("res://game/objects/analysis_object_data.gd")]([ExtResource("6_t4gly"), ExtResource("7_e2qet"), ExtResource("8_a3q16"), ExtResource("9_xhqnl"), ExtResource("10_jmlh2"), ExtResource("11_odrcy"), ExtResource("12_a5xbb"), ExtResource("13_gb8c3"), ExtResource("14_2b28v"), ExtResource("15_iywhv")])
+base_object_scene = ExtResource("6_hl472")

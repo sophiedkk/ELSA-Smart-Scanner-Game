@@ -21,7 +21,7 @@ LEVEL 2 [VERSION 1.0 - COLOR SEPARATION]:
 		Full Color Palette
 		Version UI
 		Accuracy UI
-	Objs (Arr*Arr) / Obj Color Rectangles / Obj Passability <- Assessor -> Type / Full Color Palette
+	Objs (Arr*Arr) / Obj Color Rectangles / Obj Passability <- Obj Analyzer -> Type / Full Color Palette
 	Engineer <- Dialogue Manager
 	Dialogue (Level Two)
 

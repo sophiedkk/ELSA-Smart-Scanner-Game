@@ -17,7 +17,6 @@ var accuracy_rate: float
 @onready var object_type_label: Label = %ObjectTypeLabel
 @onready var robot_stats: VBoxContainer = %RobotStats
 
-@export var chosen_object: Node
 @export var level_dialogue: DialogueResource
 
 func _ready() -> void:
