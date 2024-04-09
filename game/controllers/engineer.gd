@@ -59,7 +59,7 @@ func _on_dialogue_finished() -> void:
 		"res://game/dialogue/level_two.dialogue":
 			match cd_part:
 				"rensselaer_opening_lines":
-					pass
+					engineer_going_out()
 			
 	dialogue_in_progress = false
 

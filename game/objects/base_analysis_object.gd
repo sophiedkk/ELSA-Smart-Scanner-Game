@@ -21,6 +21,7 @@ func _ready():
 	type = object_properties.object_type
 	object_type_string = object_properties.object_types_as_strings[type]
 	suitable = object_properties.object_suitable
-	colors = object_properties.object_relevant_colors
-	relevant_colors = object_properties.object_relevant_colors
+	colors = object_properties.object_relevant_colors.duplicate(true)
+	relevant_colors = object_properties.object_relevant_colors.duplicate(true)
 	defects = object_properties.object_defects
+	

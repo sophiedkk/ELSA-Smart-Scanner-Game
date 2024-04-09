@@ -1,5 +1,22 @@
 Information on the objects inside different levels
 
+COLOR PALETTES FOR DIFFERENT OBJECTS:
+	Apples:
+		GOOD: RED, GREEN, YELLOW
+		BAD: BROWN (Nobody would even try giving a black apple, let's be honest)
+	Bananas:
+		GOOD: YELLOW, GREEN
+		FLOATING: BROWN
+		BAD: BLACK
+	Pears:
+	Berries:
+	Carrots:
+	Salads:
+	Chocolates:
+	Sandwiches:
+	Juices:
+	
+
 START MENU:
 	Start Menu Scene
 
