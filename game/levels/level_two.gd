@@ -15,3 +15,5 @@ func _process(_delta):
 	if Input.is_action_just_released("trigger_function"):
 		object_analyzer._switching_the_type()
 		object_analyzer._spawning_the_objects()
+		if object_analyzer.current_type == AnalysisObjectData.ObjectTypes.APPLE:
+			engineer.show_normal_dialogue(level_dialogue, "introduction_to_decision_trees")

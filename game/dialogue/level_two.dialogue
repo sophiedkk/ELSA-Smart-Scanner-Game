@@ -1,7 +1,16 @@
 ~ rensselaer_opening_lines
 
-Dr. Rensselaer: Welcome to the test chamber!
-Dr. Rensselaer: We use this place to explain how our scanner works.
-Dr. Rensselaer: And in our opinion, the best way to understand someone is to do what they do.
-Dr. Rensselaer: So, right now we'll see how our scanner managed to get smarter.
+Dr. Rensselaer: Welcome again!
+Dr. Rensselaer: This place is called the test chamber.
+Dr. Rensselaer: Let us now look at what our scanner did.
+Dr. Rensselaer: We'll start with apples because they were the easiest.
+=> END
+
+~ introduction_to_decision_trees
+Dr. Rensselaer: We have all of the apples that we labeled here, as well as their data.
+Dr. Rensselaer: In the corner you can see what is called a decision tree.
+Dr. Rensselaer: It shows the logic of our scanner, like why it decided that some apples were good and others were not.
+Dr. Rensselaer: We kept the structure, but hid the exact details for you to practice.
+Dr. Rensselaer: In this case, our scanner chose only one color as bad for the apple.
+Dr. Rensselaer: Can you look at them and figure out which one it is?
 => END

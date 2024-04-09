@@ -24,6 +24,7 @@ LevelTransition="*res://game/gui/level_transition.tscn"
 [dialogue_manager]
 
 general/balloon_path="res://game/gui/balloon.tscn"
+general/wrap_lines=true
 
 [display]
 

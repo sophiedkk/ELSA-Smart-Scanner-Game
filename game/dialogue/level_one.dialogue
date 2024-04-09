@@ -59,8 +59,9 @@ Dr. Rensselaer: It seems that you successfully labeled all the data.
 Dr. Rensselaer: We've passed it to the scanner and run our first series of tests.
 Dr. Rensselaer: And it works!
 Dr. Rensselaer: That means that we can move to the next stage of the process.
-Dr. Rensselaer: We'll be simulating the internal logic of the scanner.
-Dr. Rensselaer: This way, you'll be able to look into how it got smart.
+Dr. Rensselaer: We're going to look at something called decision trees.
+Dr. Rensselaer: It's something that our scanner created and now uses to check the quality of the objects.
+Dr. Rensselaer: Once we look at them, we'll be able to see how our smart scanner works.
 => END
 
 ~ all_objects_analyzed_incorrectly
