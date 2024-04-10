@@ -21,7 +21,7 @@ Dr. Rensselaer: Let me explain.
 => END
 
 ~ explaining_the_mechanics
-Dr. Rensselaer: If we want an actual smart scanner, it needs to receive some input from us first.
+Dr. Rensselaer: If we want an actual smart scanner, it needs to receive some input from us first. We need to establish the rules.
 Dr. Rensselaer: So in this stage, we will label the data that the scanner will use to get smarter.
 Dr. Rensselaer: Do you see that apple on the table? That's our current object.
 Dr. Rensselaer: It looks pretty normal, so let's tell the scanner that it can accept it.
@@ -31,7 +31,7 @@ Dr. Rensselaer: It looks pretty normal, so let's tell the scanner that it can ac
 Dr. Rensselaer: Good!
 Dr. Rensselaer: The scanner will now know that this sort of apple was good.
 Dr. Rensselaer: It will not know exactly why this one was good, but it will learn that later.
-Dr. Rensselaer: In fact, these squares on the screen will help it.
+Dr. Rensselaer: In fact, these squares that you see will help it understand the color palette of the objects, and thus determine their quality.
 Dr. Rensselaer: But I'm getting ahead of myself.
 Dr. Rensselaer: Right now, there is another apple here.
 Dr. Rensselaer: But this one does not look good at all.
@@ -75,3 +75,27 @@ Dr. Rensselaer: Goodbye.
 ~ incorrect_blocked_answer
 Dr. Rensselaer: I don't think that's the right answer...
 => END
+
+~ first_feedback_incorrect
+Dr. Rensselaer (over the speakers): Hi, it's me again.
+Dr. Rensselaer (over the speakers): I was informed that I can actually see your progress in real times over the cameras.
+Dr. Rensselaer (over the speakers): Technology, huh...
+Dr. Rensselaer (over the speakers): I see that you just made a mistake with the last object.
+Dr. Rensselaer (over the speakers): Well, don't worry about that too much!
+Dr. Rensselaer (over the speakers): Just look a bit harder next time.
+Dr. Rensselaer (over the speakers): Good luck! You can do this!
+=> END
+
+~ first_feedback_correct
+Dr. Rensselaer (over the speakers): Hi, it's me again.
+Dr. Rensselaer (over the speakers): I was informed that I can actually see your progress in real time over the cameras.
+Dr. Rensselaer (over the speakers): Technology, huh...
+Dr. Rensselaer (over the speakers): Anyway, I saw that your last answer was correct. Good job!
+Dr. Rensselaer (over the speakers): Keep it up and see you later again!
+=> END
+
+~ forty_percent_warning
+Dr. Rensselaer (over the speakers): Hello, this is me again.
+Dr. Rensselaer (over the speakers): It seems that you're close to the required accuracy threshold.
+Dr. Rensselaer (over the speakers): I recommend you to be more careful with your answers from this point on.
+Dr. Rensselaer (over the speakers): You can do this if you put in the effort! Good luck!

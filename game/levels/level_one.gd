@@ -6,6 +6,7 @@ var object_accepted: bool
 var objects_scanned_in_total: int
 var objects_scanned_correctly: int
 var accuracy_rate: float
+var accuracy_warning_triggered: bool
 
 @onready var object_controller: ObjectController = %ObjectController
 @onready var engineer: Engineer = %Engineer
@@ -38,12 +39,21 @@ func _establishing_signal_connections():
 	engineer.show_normal_dialogue(level_dialogue, "engineer_opening_lines")
 
 func _making_a_choice(_players_choice):
+	var correct_choice: bool
 	objects_scanned_in_total += 1
 	if (_players_choice == object_controller.current_object_acceptable):
 		print("You are correct!")
+		correct_choice = true
 		objects_scanned_correctly += 1
 	else:
 		print("Wrong answer!")
+		correct_choice = false
+	match objects_scanned_in_total:
+		4:
+			if correct_choice == true:
+				await engineer.show_normal_dialogue(level_dialogue, "first_feedback_correct")
+			else:
+				await engineer.show_normal_dialogue(level_dialogue, "first_feedback_incorrect")
 	#_stats()
 	
 func _introducing_next_object():
@@ -75,8 +85,14 @@ func _object_info_updated():
 		accuracy_label.text = "Accuracy rate: [color=green]%s%%[/color]" % accuracy_rate
 	elif accuracy_rate == 40:
 		accuracy_label.text = "Accuracy rate: [color=orange]%s%%[/color]" % accuracy_rate
+		if accuracy_warning_triggered == false:
+			engineer.show_normal_dialogue(level_dialogue,"forty_percent_warning")
+			accuracy_warning_triggered = true
 	else:
 		accuracy_label.text = "Accuracy rate: [color=red]%s%%[/color]" % accuracy_rate
+		if accuracy_warning_triggered == false:
+			engineer.show_normal_dialogue(level_dialogue,"forty_percent_warning")
+			accuracy_warning_triggered = true
 	_show_object_type()
 
 func _show_object_type():
