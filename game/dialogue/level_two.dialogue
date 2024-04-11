@@ -2,15 +2,21 @@
 
 Dr. Rensselaer: Welcome again!
 Dr. Rensselaer: This place is called the test chamber.
-Dr. Rensselaer: Let us now look at what our scanner did.
-Dr. Rensselaer: We'll start with apples because they were the easiest.
+Dr. Rensselaer: Now...
+Dr. Rensselaer: You were labeling whether an object had good quality or not.
+Dr. Rensselaer: So now the scanner will be able to figure this out on its own.
+Dr. Rensselaer: But did you notice something else?
+Dr. Rensselaer: Every object already had a type assigned, like a pear or an apple.
+Dr. Rensselaer: Well... That's because there was actually one other person before you. That was their task.
+Dr. Rensselaer: We've splitted them so that everyone could focus on their own part.
+Dr. Rensselaer: You helped the scanner distinguish between good and bad products, while the other person "taught" the rules for distinguishing different object types.
+Dr. Rensselaer: How, you might ask? Let's see.
 => END
 
 ~ introduction_to_decision_trees
-Dr. Rensselaer: We have all of the apples that we labeled here, as well as their data.
-Dr. Rensselaer: In the corner you can see what is called a decision tree.
-Dr. Rensselaer: It shows the logic of our scanner, like why it decided that some apples were good and others were not.
-Dr. Rensselaer: We kept the structure, but hid the exact details for you to practice.
-Dr. Rensselaer: In this case, our scanner chose only one color as bad for the apple.
-Dr. Rensselaer: Can you look at them and figure out which one it is?
+Dr. Rensselaer (over the speakers): What you see here is a decision tree.
+Dr. Rensselaer (over the speakers): This one is from the early stage, so it's very simple.
+Dr. Rensselaer (over the speakers): It uses different object of the properties to split them into smaller categories, called branches.
+Dr. Rensselaer (over the speakers): Every branch ends with just one object that fits all of its descriptions.
+Dr. Rensselaer (over the speakers): Now, check this out. (the cards pop up on the screen)
 => END

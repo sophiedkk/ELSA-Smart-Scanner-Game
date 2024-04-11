@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkin357h60654"]
+
+[ext_resource type="Script" path="res://game/objects/constructed_decision_tree.gd" id="1_di0sn"]
+[ext_resource type="Texture2D" uid="uid://f73w72mynhon" path="res://assets/images/tree_circle.png" id="1_fsm04"]
+[ext_resource type="Texture2D" uid="uid://bmi4dkin64m76" path="res://assets/images/tree_arrow.png" id="2_lg282"]
+[ext_resource type="Texture2D" uid="uid://8r8fjbtljqde" path="res://assets/images/tree_rectangle.png" id="3_n3uic"]
+
+[node name="ConstructedDecisionTree" type="Node2D" node_paths=PackedStringArray("tree_roots")]
+position = Vector2(169, 24)
+scale = Vector2(0.035, 0.035)
+script = ExtResource("1_di0sn")
+tree_roots = [null, NodePath("TreeBeginning/Tree1Root"), NodePath("TreeBeginning/Tree2Root")]
+
+[node name="TreeBeginning" type="Node2D" parent="."]
+
+[node name="Tree1Root" type="Node2D" parent="TreeBeginning"]
+unique_name_in_owner = true
+
+[node name="1_0_1_circle" type="Sprite2D" parent="TreeBeginning/Tree1Root"]
+visible = false
+texture = ExtResource("1_fsm04")
+
+[node name="1_1_1_arrow" type="Sprite2D" parent="TreeBeginning/Tree1Root"]
+visible = false
+position = Vector2(-560, 640)
+rotation = 0.698132
+scale = Vector2(1, 1)
+texture = ExtResource("2_lg282")
+
+[node name="1_1_2_arrow" type="Sprite2D" parent="TreeBeginning/Tree1Root"]
+visible = false
+position = Vector2(560, 640)
+rotation = -0.698132
+scale = Vector2(1, 1)
+texture = ExtResource("2_lg282")
+
+[node name="1_2_1_rect" type="Sprite2D" parent="TreeBeginning/Tree1Root"]
+visible = false
+position = Vector2(-840, 1220)
+texture = ExtResource("3_n3uic")
+
+[node name="1_2_2_rect" type="Sprite2D" parent="TreeBeginning/Tree1Root"]
+visible = false
+position = Vector2(920, 1220)
+scale = Vector2(1, 1)
+texture = ExtResource("3_n3uic")
+
+[node name="Tree2Root" type="Node2D" parent="TreeBeginning"]
+unique_name_in_owner = true
+visible = false
+
+[node name="2_0_1_circle" type="Sprite2D" parent="TreeBeginning/Tree2Root"]
+texture = ExtResource("1_fsm04")
+
+[node name="2_1_1_arrow" type="Sprite2D" parent="TreeBeginning/Tree2Root"]
+position = Vector2(-560, 640)
+rotation = 0.698132
+scale = Vector2(1, 1)
+texture = ExtResource("2_lg282")
+
+[node name="2_1_2_arrow" type="Sprite2D" parent="TreeBeginning/Tree2Root"]
+position = Vector2(560, 640)
+rotation = -0.698132
+scale = Vector2(1, 1)
+texture = ExtResource("2_lg282")
+
+[node name="2_2_1_circle" type="Sprite2D" parent="TreeBeginning/Tree2Root"]
+position = Vector2(-942.857, 1371.43)
+texture = ExtResource("1_fsm04")
+
+[node name="2_2_2_rect" type="Sprite2D" parent="TreeBeginning/Tree2Root"]
+position = Vector2(920, 1220)
+scale = Vector2(1, 1)
+texture = ExtResource("3_n3uic")
+
+[node name="2_3_1_arrow" type="Sprite2D" parent="TreeBeginning/Tree2Root"]
+position = Vector2(-1502.86, 2011.43)
+rotation = 0.698132
+scale = Vector2(1, 1)
+texture = ExtResource("2_lg282")
+
+[node name="2_3_2_arrow" type="Sprite2D" parent="TreeBeginning/Tree2Root"]
+position = Vector2(-382.857, 2011.43)
+rotation = -0.698132
+scale = Vector2(1, 1)
+texture = ExtResource("2_lg282")
+
+[node name="2_4_1_rect" type="Sprite2D" parent="TreeBeginning/Tree2Root"]
+position = Vector2(-1828.57, 2600)
+scale = Vector2(1, 1)
+texture = ExtResource("3_n3uic")
+
+[node name="2_4_2_rect" type="Sprite2D" parent="TreeBeginning/Tree2Root"]
+position = Vector2(-28.5715, 2600)
+scale = Vector2(0.999999, 0.999999)
+texture = ExtResource("3_n3uic")

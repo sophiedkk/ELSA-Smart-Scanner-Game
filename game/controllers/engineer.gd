@@ -1,13 +1,16 @@
 class_name Engineer
 extends Node2D
 
-#Supplementary signals
+#Level 1 Signals
 signal robot_boot
 signal accept_introduced
 signal reject_introduced
 signal stats_introduced
 signal level_finished
 signal level_restart
+
+#Level 2 Signals
+signal tree_created
 
 #These variables control the flow of the dialogue
 var dialogue_in_progress := false
@@ -60,6 +63,7 @@ func _on_dialogue_finished() -> void:
 			match cd_part:
 				"rensselaer_opening_lines":
 					engineer_going_out()
+					tree_created.emit()
 			
 	dialogue_in_progress = false
 

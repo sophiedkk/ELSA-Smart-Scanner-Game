@@ -23,6 +23,10 @@ var accuracy_warning_triggered: bool
 func _ready() -> void:
 	_establishing_signal_connections()
 	
+func _process(_delta):
+	if Input.is_action_just_released("skip_level"):
+		_end_the_level()
+	
 #Game logic	
 func _establishing_signal_connections():
 	
@@ -31,8 +35,8 @@ func _establishing_signal_connections():
 	engineer.reject_introduced.connect(_reject_button_activated)
 	engineer.stats_introduced.connect(_stats_activated)
 	
-	engineer.level_finished.connect(_next_level_transition)
-	engineer.level_restart.connect(_end_the_level)
+	engineer.level_finished.connect(_end_the_level)
+	engineer.level_restart.connect(_level_restart)
 	
 	object_controller.all_objects_passed.connect(_object_analysis_finished)
 	
@@ -73,7 +77,7 @@ func _object_analysis_finished():
 		await engineer.show_normal_dialogue(level_dialogue, "all_objects_analyzed_incorrectly")
 		
 
-func _end_the_level():
+func _level_restart():
 	await LevelTransition.fade_to_black()
 	get_tree().change_scene_to_file("res://game/gui/start_menu.tscn")
 		
@@ -98,7 +102,7 @@ func _object_info_updated():
 func _show_object_type():
 	object_type_label.text = "Object type: %s"	% object_controller.current_object.object_type_string
 
-func _next_level_transition():
+func _end_the_level():
 	if not next_level is PackedScene: return
 	await LevelTransition.fade_to_black()
 	get_tree().paused = false
@@ -154,7 +158,8 @@ func _reject_button_activated():
 func _stats_activated():
 	robot_stats.visible = !robot_stats.visible
 
-#Stats
+#Miscellaneous
+
 func _stats():
 	print("Objects scanned in total: ", objects_scanned_in_total)
 	print("Objects scanned correctly: ", objects_scanned_correctly)

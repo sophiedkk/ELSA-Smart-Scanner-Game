@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dx58g7kuqi3dh"]
+[gd_scene load_steps=18 format=3 uid="uid://dx58g7kuqi3dh"]
 
 [ext_resource type="Script" path="res://game/levels/level_two.gd" id="1_7rnoy"]
 [ext_resource type="Resource" uid="uid://c5q4sv012qdlu" path="res://game/dialogue/level_two.dialogue" id="2_rnrsj"]
@@ -16,6 +16,7 @@
 [ext_resource type="Resource" uid="uid://be1j8hhuvpn4k" path="res://game/objects/object_resources/pear_1.tres" id="13_gb8c3"]
 [ext_resource type="Resource" uid="uid://bdhg10ltlqch0" path="res://game/objects/object_resources/salad_1.tres" id="14_2b28v"]
 [ext_resource type="Resource" uid="uid://7xvlq48cl8do" path="res://game/objects/object_resources/salad_2.tres" id="15_iywhv"]
+[ext_resource type="PackedScene" uid="uid://dkin357h60654" path="res://game/objects/constructed_decision_tree.tscn" id="17_w4pm3"]
 
 [node name="LevelTwo" type="Node2D"]
 script = ExtResource("1_7rnoy")
@@ -36,3 +37,7 @@ position = Vector2(133, 110)
 script = ExtResource("5_rapvh")
 all_objects_data = Array[Resource("res://game/objects/analysis_object_data.gd")]([ExtResource("6_t4gly"), ExtResource("7_e2qet"), ExtResource("8_a3q16"), ExtResource("9_xhqnl"), ExtResource("10_jmlh2"), ExtResource("11_odrcy"), ExtResource("12_a5xbb"), ExtResource("13_gb8c3"), ExtResource("14_2b28v"), ExtResource("15_iywhv")])
 base_object_scene = ExtResource("6_hl472")
+
+[node name="ConstructedDecisionTree" parent="." node_paths=PackedStringArray("tree_roots") instance=ExtResource("17_w4pm3")]
+unique_name_in_owner = true
+tree_roots = [null, NodePath("TreeBeginning/Tree1Root"), NodePath("TreeBeginning/Tree2Root")]
