@@ -1,22 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://dx58g7kuqi3dh"]
+[gd_scene load_steps=8 format=3 uid="uid://dx58g7kuqi3dh"]
 
 [ext_resource type="Script" path="res://game/levels/level_two.gd" id="1_7rnoy"]
 [ext_resource type="Resource" uid="uid://c5q4sv012qdlu" path="res://game/dialogue/level_two.dialogue" id="2_rnrsj"]
 [ext_resource type="Texture2D" uid="uid://5gq57suc6nsr" path="res://assets/images/conference_room_background.png" id="2_tnefq"]
 [ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://game/controllers/engineer.tscn" id="3_k0yll"]
-[ext_resource type="Script" path="res://game/controllers/object_analyzer.gd" id="5_rapvh"]
-[ext_resource type="PackedScene" uid="uid://besa1vfpoeqek" path="res://game/objects/base_analysis_object.tscn" id="6_hl472"]
-[ext_resource type="Resource" uid="uid://did6m2tu8g11x" path="res://game/objects/object_resources/apple_1.tres" id="6_t4gly"]
-[ext_resource type="Resource" uid="uid://dw0qx218ixssk" path="res://game/objects/object_resources/apple_2.tres" id="7_e2qet"]
-[ext_resource type="Resource" uid="uid://ckej8djgek6bb" path="res://game/objects/object_resources/banana_1.tres" id="8_a3q16"]
-[ext_resource type="Resource" uid="uid://d4n0jcw0x1m0o" path="res://game/objects/object_resources/banana_2.tres" id="9_xhqnl"]
-[ext_resource type="Resource" uid="uid://03db2b1dpbgm" path="res://game/objects/object_resources/berry_1.tres" id="10_jmlh2"]
-[ext_resource type="Resource" uid="uid://b65jwjiursrij" path="res://game/objects/object_resources/carrot_1.tres" id="11_odrcy"]
-[ext_resource type="Resource" uid="uid://cyov0epsl2j4x" path="res://game/objects/object_resources/carrot_2.tres" id="12_a5xbb"]
-[ext_resource type="Resource" uid="uid://be1j8hhuvpn4k" path="res://game/objects/object_resources/pear_1.tres" id="13_gb8c3"]
-[ext_resource type="Resource" uid="uid://bdhg10ltlqch0" path="res://game/objects/object_resources/salad_1.tres" id="14_2b28v"]
-[ext_resource type="Resource" uid="uid://7xvlq48cl8do" path="res://game/objects/object_resources/salad_2.tres" id="15_iywhv"]
+[ext_resource type="Resource" uid="uid://da32mb8uixdp7" path="res://game/objects/card_resources/apple_1_card.tres" id="7_xnuxe"]
 [ext_resource type="PackedScene" uid="uid://dkin357h60654" path="res://game/objects/constructed_decision_tree.tscn" id="17_w4pm3"]
+[ext_resource type="PackedScene" uid="uid://bk777cogqbox6" path="res://game/objects/object_card.tscn" id="18_7yqjl"]
 
 [node name="LevelTwo" type="Node2D"]
 script = ExtResource("1_7rnoy")
@@ -31,13 +21,13 @@ texture = ExtResource("2_tnefq")
 unique_name_in_owner = true
 position = Vector2(-57, 78)
 
-[node name="ObjectAnalyzer" type="Node2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(133, 110)
-script = ExtResource("5_rapvh")
-all_objects_data = Array[Resource("res://game/objects/analysis_object_data.gd")]([ExtResource("6_t4gly"), ExtResource("7_e2qet"), ExtResource("8_a3q16"), ExtResource("9_xhqnl"), ExtResource("10_jmlh2"), ExtResource("11_odrcy"), ExtResource("12_a5xbb"), ExtResource("13_gb8c3"), ExtResource("14_2b28v"), ExtResource("15_iywhv")])
-base_object_scene = ExtResource("6_hl472")
-
 [node name="ConstructedDecisionTree" parent="." node_paths=PackedStringArray("tree_roots") instance=ExtResource("17_w4pm3")]
 unique_name_in_owner = true
-tree_roots = [null, NodePath("TreeBeginning/Tree1Root"), NodePath("TreeBeginning/Tree2Root")]
+tree_roots = [null, NodePath("TreeBeginning/Tree2Root"), NodePath("TreeBeginning/Tree1Root")]
+
+[node name="ObjectCard" parent="." instance=ExtResource("18_7yqjl")]
+position = Vector2(179, 170)
+
+[node name="ObjectCard2" parent="." instance=ExtResource("18_7yqjl")]
+position = Vector2(115, 169)
+card_properties = ExtResource("7_xnuxe")

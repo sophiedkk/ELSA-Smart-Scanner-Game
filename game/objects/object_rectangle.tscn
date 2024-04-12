@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxoqmml3b1cqd"]
+
+[ext_resource type="Script" path="res://game/objects/object_rectangle.gd" id="1_1x7jl"]
+[ext_resource type="Texture2D" uid="uid://8r8fjbtljqde" path="res://assets/images/tree_rectangle.png" id="2_hl20r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3aflm"]
+size = Vector2(1074, 308)
+
+[node name="ObjectRectangle" type="StaticBody2D" groups=["dropable"]]
+script = ExtResource("1_1x7jl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_3aflm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_hl20r")
+
+[node name="PresenceIndicator" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = -530.0
+offset_top = -145.0
+offset_right = -490.0
+offset_bottom = -105.0
+scale = Vector2(26.5437, 7.23233)
+color = Color(0.694387, 0.54377, 0, 1)
+
+[node name="ObjectTypeLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -262.0
+offset_top = -78.0
+offset_right = 249.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 128
+text = "???????"

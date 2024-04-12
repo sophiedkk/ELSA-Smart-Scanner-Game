@@ -1,7 +1,6 @@
 extends Node2D
 
 @onready var engineer = %Engineer
-@onready var object_analyzer = %ObjectAnalyzer
 @onready var decision_tree = %ConstructedDecisionTree
 
 @export var level_dialogue: DialogueResource
