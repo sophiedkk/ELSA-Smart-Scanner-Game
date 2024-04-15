@@ -16,6 +16,7 @@ unique_name_in_owner = true
 scale = Vector2(0.05, 0.05)
 
 [node name="Area2D" type="Area2D" parent="."]
+priority = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 7.62939e-06)

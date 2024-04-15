@@ -24,6 +24,7 @@ offset_top = -145.0
 offset_right = -490.0
 offset_bottom = -105.0
 scale = Vector2(26.5437, 7.23233)
+mouse_filter = 2
 color = Color(0.694387, 0.54377, 0, 1)
 
 [node name="ObjectTypeLabel" type="Label" parent="."]
