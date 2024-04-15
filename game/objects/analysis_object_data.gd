@@ -2,7 +2,7 @@ class_name AnalysisObjectData
 extends Resource
 
 enum ObjectTypes {NONE, APPLE, BANANA, PEAR, BERRY, CARROT, SALAD, CHOCOLATE,
-SANDWICH, JUICE, GRAPES}
+SANDWICH, JUICE, GRAPES, CHILI, COCONUT}
 
 enum ObjectTypeColors {NONE, BLACK, WHITE, RED, GREEN, BLUE, YELLOW, ORANGE, PINK, BEIGE, BROWN, PURPLE}
 
@@ -17,7 +17,9 @@ var object_types_as_strings = {
 	ObjectTypes.CHOCOLATE: "Chocolate",
 	ObjectTypes.SANDWICH: "Sandwich",
 	ObjectTypes.JUICE: "Juice",
-	ObjectTypes.GRAPES: "Grapes"
+	ObjectTypes.GRAPES: "Grapes",
+	ObjectTypes.CHILI: "Chili",
+	ObjectTypes.COCONUT: "Coconut"
 }
 
 @export_group("Level 1 Properties")

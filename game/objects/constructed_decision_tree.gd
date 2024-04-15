@@ -6,9 +6,19 @@ extends Node2D
 var current_root: int = 0
 var tree_kids: Array[Node]
 
+
+func _process(delta):
+	if Input.is_action_just_released("trigger_function_1"):
+		expose_new_tree()
+	if Input.is_action_just_pressed("trigger_function_2"):
+		remove_current_tree()
+
 #Creates a new tree based on the current root
 func expose_new_tree():
 	current_root += 1
+	if tree_roots[current_root] == null:
+		current_root -= 1
+		return
 	tree_roots[current_root].visible = true
 	tree_kids = tree_roots[current_root].get_children()
 	for tree_element in tree_kids:
