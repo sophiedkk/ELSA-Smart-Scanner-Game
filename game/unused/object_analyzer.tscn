@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bijnntfvdk5b5"]
 
-[ext_resource type="Script" path="res://game/controllers/object_analyzer.gd" id="1_xik5x"]
+[ext_resource type="Script" path="res://game/unused/object_analyzer.gd" id="1_xik5x"]
 
 [node name="ObjectAnalyzer" type="Node2D"]
 position = Vector2(156, 71)

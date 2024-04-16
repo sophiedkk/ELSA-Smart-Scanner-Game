@@ -7,16 +7,43 @@ Dr. Rensselaer: You were labeling whether an object had good quality or not.
 Dr. Rensselaer: So now the scanner will be able to figure this out on its own.
 Dr. Rensselaer: But did you notice something else?
 Dr. Rensselaer: Every object already had a type assigned, like a pear or an apple.
-Dr. Rensselaer: Well... That's because there was actually one other person before you. That was their task.
-Dr. Rensselaer: We've splitted them so that everyone could focus on their own part.
+Dr. Rensselaer: Well... that's because there was actually one other person before you. That was their task.
 Dr. Rensselaer: You helped the scanner distinguish between good and bad products, while the other person "taught" the rules for distinguishing different object types.
-Dr. Rensselaer: How, you might ask? Let's see.
+Dr. Rensselaer: Let's see the results of their work.
 => END
 
 ~ introduction_to_decision_trees
 Dr. Rensselaer (over the speakers): What you see here is a decision tree.
 Dr. Rensselaer (over the speakers): This one is from the early stage, so it's very simple.
-Dr. Rensselaer (over the speakers): It uses different object of the properties to split them into smaller categories, called branches.
-Dr. Rensselaer (over the speakers): Every branch ends with just one object that fits all of its descriptions.
-Dr. Rensselaer (over the speakers): Now, check this out. (the cards pop up on the screen)
+Dr. Rensselaer (over the speakers): Basically, our scanner looks at unique properties such as colors or weight to split our objects into small branches.
+Dr. Rensselaer (over the speakers): Every branch ends with just ONE object that fits the description the best. That's how the scanner knows what it is.
+Dr. Rensselaer (over the speakers): Now, check this out.
+=> END
+
+~ cards_introduced
+Dr. Rensselaer (over the speakers): These cards obviously show different types of objects that our scanner knows.
+Dr. Rensselaer (over the speakers): Our tree figured out how to distinguish them. You can repeat that process by dragging the cards onto those unknown panels.
+Dr. Rensselaer (over the speakers): So, do you think you can fit them all correctly?
+=> END
+
+~ tree_not_filled
+Dr. Rensselaer (over the speakers): Not all objects have been put into the tree yet!
+Dr. Rensselaer (over the speakers): Search for rectangles with question marks!
+=> END
+
+~ tree_filled_incorrectly
+Dr. Rensselaer (over the speakers): Hmm, that doesn't look right.
+Dr. Rensselaer (over the speakers): Look at the tree again.
+=> END
+
+~ tree_filled_correctly
+Dr. Rensselaer (over the speakers): Good!
+Dr. Rensselaer (over the speakers): Onto the next one!
+=> END
+
+~ tree_filled_correctly_first_time
+Dr. Rensselaer (over the speakers): Good!
+Dr. Rensselaer (over the speakers): Seems like you got the gist of it!
+Dr. Rensselaer (over the speakers): The trees will get more complex from now on.
+Dr. Rensselaer (over the speakers): Let's see how.
 => END

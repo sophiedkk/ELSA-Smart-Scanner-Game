@@ -8,7 +8,7 @@
 [node name="ConstructedDecisionTree" type="Node2D" node_paths=PackedStringArray("tree_roots")]
 position = Vector2(169, 24)
 script = ExtResource("1_di0sn")
-tree_roots = [null, NodePath("TreeBeginning/Tree1Root"), NodePath("TreeBeginning/Tree2Root")]
+tree_roots = [null, NodePath("TreeBeginning/Tree1Root"), NodePath("TreeBeginning/Tree2Root"), NodePath("TreeBeginning/Tree3Root")]
 
 [node name="TreeBeginning" type="Node2D" parent="."]
 scale = Vector2(0.035, 0.035)
@@ -68,10 +68,12 @@ text = "CURVE"
 [node name="1_2_1_rect" parent="TreeBeginning/Tree1Root" instance=ExtResource("4_vd220")]
 visible = false
 position = Vector2(-828.571, 1228.57)
+correct_type = 1
 
 [node name="1_2_2_rect" parent="TreeBeginning/Tree1Root" instance=ExtResource("4_vd220")]
 visible = false
 position = Vector2(914.286, 1228.57)
+correct_type = 2
 
 [node name="Tree2Root" type="Node2D" parent="TreeBeginning"]
 visible = false
@@ -82,9 +84,9 @@ texture = ExtResource("1_fsm04")
 
 [node name="2_0_1_label" type="Label" parent="TreeBeginning/Tree2Root"]
 visible = false
-offset_left = -200.0
+offset_left = -228.571
 offset_top = -85.7143
-offset_right = 244.0
+offset_right = 215.429
 offset_bottom = 63.2857
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 128
@@ -142,6 +144,7 @@ text = "SIZE"
 [node name="2_2_2_rect" parent="TreeBeginning/Tree2Root" instance=ExtResource("4_vd220")]
 visible = false
 position = Vector2(914.286, 1228.57)
+correct_type = 2
 
 [node name="2_3_1_arrow" type="Sprite2D" parent="TreeBeginning/Tree2Root"]
 visible = false
@@ -180,7 +183,178 @@ text = ">5CM"
 [node name="2_4_1_rect" parent="TreeBeginning/Tree2Root" instance=ExtResource("4_vd220")]
 visible = false
 position = Vector2(-1771.43, 2571.43)
+correct_type = 10
 
 [node name="2_4_2_rect" parent="TreeBeginning/Tree2Root" instance=ExtResource("4_vd220")]
 visible = false
 position = Vector2(28.572, 2580)
+correct_type = 1
+
+[node name="Tree3Root" type="Node2D" parent="TreeBeginning"]
+visible = false
+
+[node name="3_0_1_circle" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
+visible = false
+texture = ExtResource("1_fsm04")
+
+[node name="3_0_1_label" type="Label" parent="TreeBeginning/Tree3Root"]
+visible = false
+offset_left = -228.571
+offset_top = -85.7143
+offset_right = 215.429
+offset_bottom = 63.2857
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 128
+text = "SHAPE"
+
+[node name="3_1_1_arrow" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
+visible = false
+position = Vector2(-560, 640)
+rotation = 0.698132
+texture = ExtResource("2_lg282")
+
+[node name="3_1_1_label" type="Label" parent="TreeBeginning/Tree3Root"]
+visible = false
+offset_left = -828.571
+offset_top = 628.571
+offset_right = -346.571
+offset_bottom = 777.571
+rotation = -0.872665
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 128
+text = "CIRCLE"
+
+[node name="3_1_2_arrow" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
+visible = false
+position = Vector2(560, 640)
+rotation = -0.698132
+texture = ExtResource("2_lg282")
+
+[node name="3_1_2_label" type="Label" parent="TreeBeginning/Tree3Root"]
+visible = false
+offset_left = 514.286
+offset_top = 228.571
+offset_right = 996.286
+offset_bottom = 377.571
+rotation = 0.872665
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 128
+text = "CURVE"
+
+[node name="3_2_1_circle" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
+visible = false
+position = Vector2(-942.857, 1371.43)
+texture = ExtResource("1_fsm04")
+
+[node name="3_2_1_label" type="Label" parent="TreeBeginning/Tree3Root"]
+visible = false
+offset_left = -1171.43
+offset_top = 1285.71
+offset_right = -711.429
+offset_bottom = 1434.71
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 128
+text = "COLOR"
+
+[node name="3_2_2_circle" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
+visible = false
+position = Vector2(997.143, 1368.57)
+texture = ExtResource("1_fsm04")
+
+[node name="3_2_2_label" type="Label" parent="TreeBeginning/Tree3Root"]
+visible = false
+offset_left = 771.429
+offset_top = 1285.71
+offset_right = 1231.43
+offset_bottom = 1434.71
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 128
+text = "COLOR"
+
+[node name="3_3_1_arrow" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
+visible = false
+position = Vector2(-1600, 1971.43)
+rotation = 0.872665
+texture = ExtResource("2_lg282")
+
+[node name="3_3_1_label" type="Label" parent="TreeBeginning/Tree3Root"]
+visible = false
+offset_left = -2000.0
+offset_top = 1971.43
+offset_right = -1232.0
+offset_bottom = 2120.43
+rotation = -0.694225
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 128
+text = "RED/GREEN"
+
+[node name="3_3_2_arrow" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
+visible = false
+position = Vector2(-628.571, 2171.43)
+rotation = -0.40756
+texture = ExtResource("2_lg282")
+
+[node name="3_3_2_label" type="Label" parent="TreeBeginning/Tree3Root"]
+visible = false
+offset_left = -571.429
+offset_top = 1742.86
+offset_right = -50.4287
+offset_bottom = 1891.86
+rotation = 1.10068
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 128
+text = "PURPLE"
+
+[node name="3_3_3_arrow" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
+visible = false
+position = Vector2(828.571, 2200)
+rotation = 0.109469
+texture = ExtResource("2_lg282")
+
+[node name="3_3_3_label" type="Label" parent="TreeBeginning/Tree3Root"]
+visible = false
+offset_left = 600.0
+offset_top = 2200.0
+offset_right = 1121.0
+offset_bottom = 2349.0
+rotation = -1.40737
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 128
+text = "RED"
+
+[node name="3_3_4_arrow" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
+visible = false
+position = Vector2(1600, 1971.43)
+rotation = -0.750135
+texture = ExtResource("2_lg282")
+
+[node name="3_3_4_label" type="Label" parent="TreeBeginning/Tree3Root"]
+visible = false
+offset_left = 1485.71
+offset_top = 1571.43
+offset_right = 2253.71
+offset_bottom = 1720.43
+rotation = 0.79976
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 128
+text = "YELLOW"
+
+[node name="3_4_1_rect" parent="TreeBeginning/Tree3Root" instance=ExtResource("4_vd220")]
+visible = false
+position = Vector2(-2028.57, 2514.29)
+correct_type = 1
+
+[node name="3_4_2_rect" parent="TreeBeginning/Tree3Root" instance=ExtResource("4_vd220")]
+visible = false
+position = Vector2(-371.428, 2828.57)
+correct_type = 10
+
+[node name="3_4_3_rect" parent="TreeBeginning/Tree3Root" instance=ExtResource("4_vd220")]
+visible = false
+position = Vector2(857.143, 2914.29)
+correct_type = 11
+
+[node name="3_4_4_rect" parent="TreeBeginning/Tree3Root" instance=ExtResource("4_vd220")]
+visible = false
+position = Vector2(2142.86, 2542.86)
+correct_type = 2

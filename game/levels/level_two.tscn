@@ -1,18 +1,34 @@
-[gd_scene load_steps=10 format=3 uid="uid://dx58g7kuqi3dh"]
+[gd_scene load_steps=13 format=3 uid="uid://dx58g7kuqi3dh"]
 
 [ext_resource type="Script" path="res://game/levels/level_two.gd" id="1_7rnoy"]
 [ext_resource type="Resource" uid="uid://c5q4sv012qdlu" path="res://game/dialogue/level_two.dialogue" id="2_rnrsj"]
 [ext_resource type="Texture2D" uid="uid://5gq57suc6nsr" path="res://assets/images/conference_room_background.png" id="2_tnefq"]
 [ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://game/controllers/engineer.tscn" id="3_k0yll"]
+[ext_resource type="Resource" uid="uid://cn7o1k54pcpdx" path="res://game/objects/card_resources/banana_1_card.tres" id="4_5aqit"]
+[ext_resource type="Resource" uid="uid://0khx3v8hjulg" path="res://game/objects/card_resources/grape_1_card.tres" id="5_cqwnp"]
 [ext_resource type="Resource" uid="uid://bhxohrb8avaie" path="res://game/objects/card_resources/coconut_1_card.tres" id="7_rcfnu"]
 [ext_resource type="Resource" uid="uid://da32mb8uixdp7" path="res://game/objects/card_resources/apple_1_card.tres" id="7_xnuxe"]
 [ext_resource type="Resource" uid="uid://dt071tjkjgwjh" path="res://game/objects/card_resources/chili_1_card.tres" id="8_msc7g"]
 [ext_resource type="PackedScene" uid="uid://dkin357h60654" path="res://game/objects/constructed_decision_tree.tscn" id="17_w4pm3"]
-[ext_resource type="PackedScene" uid="uid://bk777cogqbox6" path="res://game/objects/object_card.tscn" id="18_7yqjl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jgcck"]
+bg_color = Color(0.658824, 0.796078, 0.415686, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.368627, 0.458824, 0.196078, 1)
+
+[sub_resource type="Theme" id="Theme_2tylt"]
+Button/colors/font_color = Color(0.368627, 0.458824, 0.196078, 1)
+Button/colors/font_focus_color = Color(0.368627, 0.458824, 0.196078, 1)
+Button/colors/font_hover_color = Color(0.658824, 0.796078, 0.415686, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_jgcck")
 
 [node name="LevelTwo" type="Node2D"]
 script = ExtResource("1_7rnoy")
 level_dialogue = ExtResource("2_rnrsj")
+card_resources = Array[Resource("res://game/objects/card_data.gd")]([ExtResource("7_xnuxe"), ExtResource("4_5aqit"), ExtResource("5_cqwnp"), ExtResource("8_msc7g"), ExtResource("7_rcfnu")])
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(169, 69)
@@ -25,19 +41,23 @@ position = Vector2(-57, 78)
 
 [node name="ConstructedDecisionTree" parent="." node_paths=PackedStringArray("tree_roots") instance=ExtResource("17_w4pm3")]
 unique_name_in_owner = true
-tree_roots = [null, NodePath("TreeBeginning/Tree2Root"), NodePath("TreeBeginning/Tree1Root")]
+tree_roots = [null, NodePath("TreeBeginning/Tree1Root"), NodePath("TreeBeginning/Tree2Root"), NodePath("TreeBeginning/Tree3Root")]
 
-[node name="ObjectCard" parent="." instance=ExtResource("18_7yqjl")]
-position = Vector2(179, 170)
+[node name="CardSpawnLocation" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(87, 154)
 
-[node name="ObjectCard3" parent="." instance=ExtResource("18_7yqjl")]
-position = Vector2(245, 171)
-card_properties = ExtResource("7_rcfnu")
+[node name="SubmitButton" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = 229.0
+offset_top = 4.0
+offset_right = 316.0
+offset_bottom = 23.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_2tylt")
+theme_override_font_sizes/font_size = 12
+text = "SUBMIT TREE"
 
-[node name="ObjectCard4" parent="." instance=ExtResource("18_7yqjl")]
-position = Vector2(301, 171)
-card_properties = ExtResource("8_msc7g")
-
-[node name="ObjectCard2" parent="." instance=ExtResource("18_7yqjl")]
-position = Vector2(115, 169)
-card_properties = ExtResource("7_xnuxe")
+[connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]

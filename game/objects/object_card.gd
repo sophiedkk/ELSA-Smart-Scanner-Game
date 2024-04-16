@@ -12,11 +12,12 @@ var body_ref: ObjectRectangle
 var offset: Vector2
 var initialPos: Vector2
 
+@onready var card_area = %CardArea
 @onready var card_sprite = %ObjectSprite
 
 func _ready():
 	set_process_input(true)
-
+	
 	if not card_properties:
 		return
 	card_sprite.texture = card_properties.card_texture
@@ -35,12 +36,12 @@ func _process(delta):
 		elif Input.is_action_just_released("click_object"):
 			Global.is_dragging = false
 			var tween = get_tree().create_tween()
-			if is_inside_droppable:
-				body_ref.add_object_card(card_type_string)
-				tween.tween_property(self, "position", body_ref.global_position, 0.02).set_ease(Tween.EASE_OUT)
+			if is_inside_droppable && body_ref.rectangle_filled == false:
+				body_ref.add_object_card(card_type, card_type_string, self)
+				tween.tween_property(self, "position", body_ref.global_position, 0.002).set_ease(Tween.EASE_OUT)
 				card_sprite.visible = false
 			else:
-				tween.tween_property(self, "position", initialPos, 0.02).set_ease(Tween.EASE_OUT)
+				tween.tween_property(self, "position", initialPos, 0.002).set_ease(Tween.EASE_OUT)
 
 func _on_area_2d_mouse_entered():
 	if not Global.is_dragging:
@@ -60,4 +61,7 @@ func _on_area_2d_body_entered(body: ObjectRectangle):
 func _on_area_2d_body_exited(body):
 	if body.is_in_group("dropable"):
 		is_inside_droppable = false
-		body.remove_object_card()
+		body.remove_object_card(self)
+
+func change_draggability():
+	card_area.visible = !card_area.visible
