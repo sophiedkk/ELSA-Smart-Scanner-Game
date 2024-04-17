@@ -97,6 +97,25 @@ position = Vector2(160, 176)
 scale = Vector2(0.545555, 0.545555)
 texture = ExtResource("5_bym74")
 
+[node name="CentralPoint" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(176, 124)
+
+[node name="EndPoint" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(345, 171)
+
+[node name="ObjectController" parent="." instance=ExtResource("5_n4cc1")]
+unique_name_in_owner = true
+position = Vector2(-4, 76)
+level_object_scene = ExtResource("6_ltpou")
+level_objects = Array[Resource("res://game/objects/analysis_object_data.gd")]([ExtResource("7_o4hj1"), ExtResource("8_aqwdx"), ExtResource("8_j5cl5"), ExtResource("9_qriyv"), ExtResource("11_10rs1"), ExtResource("10_i67g3"), ExtResource("12_gr6pb"), ExtResource("12_wmx4a"), ExtResource("14_i1ibt"), ExtResource("16_d7mwj")])
+
+[node name="HospitalCupboard" type="Sprite2D" parent="."]
+position = Vector2(40, 159)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("18_443bw")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 247.0
 offset_top = 122.0
@@ -127,17 +146,6 @@ size_flags_vertical = 4
 theme = SubResource("Theme_1jxlw")
 theme_override_font_sizes/font_size = 12
 text = "REJECT"
-
-[node name="ObjectController" parent="." instance=ExtResource("5_n4cc1")]
-unique_name_in_owner = true
-position = Vector2(160, 112)
-level_object_scene = ExtResource("6_ltpou")
-level_objects = Array[Resource("res://game/objects/analysis_object_data.gd")]([ExtResource("7_o4hj1"), ExtResource("8_aqwdx"), ExtResource("8_j5cl5"), ExtResource("9_qriyv"), ExtResource("11_10rs1"), ExtResource("10_i67g3"), ExtResource("12_gr6pb"), ExtResource("12_wmx4a"), ExtResource("14_i1ibt"), ExtResource("16_d7mwj")])
-
-[node name="HospitalCupboard" type="Sprite2D" parent="."]
-position = Vector2(40, 159)
-scale = Vector2(0.28, 0.28)
-texture = ExtResource("18_443bw")
 
 [connection signal="pressed" from="VBoxContainer/AcceptButton" to="." method="_on_accept_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/RejectButton" to="." method="_on_reject_button_pressed"]

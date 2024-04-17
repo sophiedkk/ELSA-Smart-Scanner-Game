@@ -8,6 +8,7 @@ signal all_objects_passed
 
 var current_object_index = 0
 var current_object: BaseObject
+var current_object_moving: bool = false
 var current_object_acceptable: bool
 #Reference to the colors in the enumerator of the object
 var color_palette: Array[AnalysisObjectData.ObjectTypeColors]
@@ -34,10 +35,21 @@ func show_new_object():
 		show_new_object_palette()
 		current_object_acceptable = current_object.suitable
 		current_object_index = current_object_index + 1
+		current_object_moving = true
 	else:
 		clear_previous_palette()
 		all_objects_passed.emit()
 
+func move_current_object(delta, intended_destination: Node, move_speed: int, midi_point: bool):
+	if current_object == null:
+		return
+	if current_object_moving:
+		current_object.global_position = current_object.global_position.move_toward(intended_destination.global_position, delta*move_speed)
+	if current_object.global_position == intended_destination.global_position:
+		current_object_moving = false
+		if midi_point == true:
+			for palette in color_palette_squares:
+				palette.visible = true
 
 func show_new_object_palette():
 	if current_object != null:
@@ -45,14 +57,10 @@ func show_new_object_palette():
 		print(color_palette)
 		for i in color_palette.size():
 			color_palette_square = color_palette_object.instantiate()
-			#This is a very bad idea, because this compares two integers
-			#One is in the color rectangle object, another is derived from AnalysisObjectData
-			#These, therefore, rely on the idea that the order of colors is the same
-			#I cannot figure out a way to solve this with a dictionary because of how enums work
 			color_palette_square.create_design(color_palette[i])
 			add_child(color_palette_square)
 			#Will reorganize into a grid later
-			color_palette_square.position = Vector2(i * 40, -70)
+			color_palette_square.global_position = Vector2(130 + (i * 40), 40)
 			color_palette_squares.push_back(color_palette_square)
 
 

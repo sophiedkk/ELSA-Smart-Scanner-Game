@@ -22,7 +22,6 @@ var chosen_color: Color
 func create_design(determined_color: AnalysisObjectData.ObjectTypeColors):
 	chosen_color = color_dictionary[determined_color]
 	$InnerButton.color = chosen_color
-	visible = true
 
 func _on_gui_input(_event):
 	if _event is InputEventMouseButton and _event.button_index == MOUSE_BUTTON_LEFT:
