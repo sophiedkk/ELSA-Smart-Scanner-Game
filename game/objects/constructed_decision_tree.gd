@@ -16,10 +16,14 @@ var tree_correct_fill: bool
 #Creates a new tree based on the current root
 func expose_new_tree():
 	current_root += 1
-	#This causes an error when it goes out of bounds, will fix later
-	if tree_roots[current_root] == null:
+	if current_root >= tree_roots.size():
 		current_root -= 1
+		print("Duh")
 		return
+	#This causes an error when it goes out of bounds, will fix later
+	#if tree_roots[current_root] == null:
+		#current_root -= 1
+		#return
 	tree_roots[current_root].visible = true
 	tree_kids = tree_roots[current_root].get_children()
 	for tree_element in tree_kids:

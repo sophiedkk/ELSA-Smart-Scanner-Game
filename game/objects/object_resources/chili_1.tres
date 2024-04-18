@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AnalysisObjectData" load_steps=3 format=3 uid="uid://dd6dwm8fpss00"]
+
+[ext_resource type="Texture2D" uid="uid://c2txb0htbcvhw" path="res://assets/images/chili1.png" id="1_emu3k"]
+[ext_resource type="Script" path="res://game/objects/analysis_object_data.gd" id="2_0fa2g"]
+
+[resource]
+script = ExtResource("2_0fa2g")
+object_texture = ExtResource("1_emu3k")
+object_type = 11
+object_suitable = true
+object_type_colors = Array[int]([3, 4])
+object_relevant_colors = Array[int]([3, 4])
+object_defects = false
+object_outline_asset = null

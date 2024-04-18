@@ -9,6 +9,8 @@ var card_type_string: String
 var draggable: bool = false
 var is_inside_droppable: bool = false
 var body_ref: ObjectRectangle
+var overlap_count: int = 0
+
 var offset: Vector2
 var initialPos: Vector2
 
@@ -27,6 +29,7 @@ func _ready():
 	
 func _process(delta):
 	if draggable:
+		print(is_inside_droppable)
 		if Input.is_action_just_pressed("click_object"):
 			card_sprite.visible = true
 			offset = get_global_mouse_position() - global_position
@@ -41,6 +44,8 @@ func _process(delta):
 				tween.tween_property(self, "position", body_ref.global_position, 0.002).set_ease(Tween.EASE_OUT)
 				card_sprite.visible = false
 			else:
+				#print("Is inside droppable: ", is_inside_droppable)
+				#print("Rect filled: ", body_ref.rectangle_filled)
 				tween.tween_property(self, "position", initialPos, 0.002).set_ease(Tween.EASE_OUT)
 
 func _on_area_2d_mouse_entered():
@@ -55,12 +60,15 @@ func _on_area_2d_mouse_exited():
 
 func _on_area_2d_body_entered(body: ObjectRectangle):
 	if body.is_in_group("dropable") && body.visible:
+		overlap_count += 1
 		is_inside_droppable = true
 		body_ref = body
 
-func _on_area_2d_body_exited(body):
-	if body.is_in_group("dropable"):
-		is_inside_droppable = false
+func _on_area_2d_body_exited(body: ObjectRectangle):
+	if body.is_in_group("dropable") && body.visible:
+		overlap_count -= 1
+		if overlap_count == 0:
+			is_inside_droppable = false
 		body.remove_object_card(self)
 
 func change_draggability():

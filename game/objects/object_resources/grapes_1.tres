@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AnalysisObjectData" load_steps=3 format=3 uid="uid://beyr4fwee3jyn"]
+
+[ext_resource type="Texture2D" uid="uid://dyhtddqrwtham" path="res://assets/images/grapes1.png" id="1_140ns"]
+[ext_resource type="Script" path="res://game/objects/analysis_object_data.gd" id="2_scshg"]
+
+[resource]
+script = ExtResource("2_scshg")
+object_texture = ExtResource("1_140ns")
+object_type = 10
+object_suitable = true
+object_type_colors = Array[int]([3, 4, 11])
+object_relevant_colors = Array[int]([4, 11])
+object_defects = false
+object_outline_asset = null

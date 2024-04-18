@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var next_level: PackedScene
+
 @onready var engineer = %Engineer
 @onready var decision_tree = %ConstructedDecisionTree
 @onready var card_spawn_location = %CardSpawnLocation
@@ -7,13 +9,13 @@ extends Node2D
 
 var spawn_location: Vector2
 
-@onready var base_card_object = preload("res://game/objects/object_card.tscn")
-
 @export var level_dialogue: DialogueResource
 @export var card_resources: Array[CardData]
 
 var current_deck_length: int = 2
 var current_cards: Array[Node]
+
+@onready var base_card_object = preload("res://game/objects/object_card.tscn")
 
 func _ready():
 	_establishing_signal_connections()
@@ -23,6 +25,10 @@ func _ready():
 	await get_tree().create_timer(0.5).timeout
 	await engineer.show_normal_dialogue(level_dialogue, "rensselaer_opening_lines")
 	engineer.engineer_coming_in()
+	
+func _process(_delta):
+	if Input.is_action_just_released("skip_level"):
+		_end_the_level()
 
 #Game logic
 func _establishing_signal_connections():
@@ -81,6 +87,12 @@ func _change_deck_length(increase: bool):
 		current_deck_length += 1
 	else:
 		current_deck_length -= 1
+		
+func _end_the_level():
+	if not next_level is PackedScene: return
+	await LevelTransition.fade_to_black()
+	get_tree().paused = false
+	get_tree().change_scene_to_packed(next_level)
 
 #Level story
 func _show_first_deck():
