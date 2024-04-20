@@ -35,12 +35,16 @@ func _establishing_signal_connections():
 	engineer.tree_created.connect(_create_first_decision_tree)
 	engineer.deck_introduced.connect(_show_first_deck)
 	engineer.new_tree_construction.connect(_reconstruction)
+	engineer.level_finished.connect(_end_the_level)
 	
 	decision_tree.tree_not_filled.connect(_missing_rectangles)
 	decision_tree.tree_filled_correctly.connect(_tree_fill_success)
 	decision_tree.tree_filled_incorrectly.connect(_tree_fill_failure)
 	
 func _show_deck():
+	if decision_tree.current_root > decision_tree.tree_roots.size() - 1:
+		_final_dialogue()
+		return
 	await get_tree().create_timer(1.0).timeout
 	for i in current_deck_length:
 		var current_card: BaseCard = base_card_object.instantiate()
@@ -105,6 +109,9 @@ func _create_first_decision_tree():
 	if (decision_tree.current_root == 1):
 		await engineer.show_normal_dialogue(level_dialogue, "introduction_to_decision_trees")
 
+func _final_dialogue():
+	await engineer.engineer_coming_in()
+	await engineer.show_normal_dialogue(level_dialogue, "all_trees_finished")
 #UI
 func _on_submit_button_pressed():
 	decision_tree.check_correctness()

@@ -29,7 +29,6 @@ func _ready():
 	
 func _process(delta):
 	if draggable:
-		print(is_inside_droppable)
 		if Input.is_action_just_pressed("click_object"):
 			card_sprite.visible = true
 			offset = get_global_mouse_position() - global_position

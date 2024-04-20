@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://dx58g7kuqi3dh"]
+[gd_scene load_steps=14 format=3 uid="uid://dx58g7kuqi3dh"]
 
 [ext_resource type="Script" path="res://game/levels/level_two.gd" id="1_7rnoy"]
+[ext_resource type="PackedScene" uid="uid://bx0p7ribsnw20" path="res://game/gui/start_menu.tscn" id="2_b4aoy"]
 [ext_resource type="Resource" uid="uid://c5q4sv012qdlu" path="res://game/dialogue/level_two.dialogue" id="2_rnrsj"]
 [ext_resource type="Texture2D" uid="uid://5gq57suc6nsr" path="res://assets/images/conference_room_background.png" id="2_tnefq"]
 [ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://game/controllers/engineer.tscn" id="3_k0yll"]
@@ -27,6 +28,7 @@ Button/styles/normal = SubResource("StyleBoxFlat_jgcck")
 
 [node name="LevelTwo" type="Node2D"]
 script = ExtResource("1_7rnoy")
+next_level = ExtResource("2_b4aoy")
 level_dialogue = ExtResource("2_rnrsj")
 card_resources = Array[Resource("res://game/objects/card_data.gd")]([ExtResource("7_xnuxe"), ExtResource("4_5aqit"), ExtResource("5_cqwnp"), ExtResource("8_msc7g"), ExtResource("7_rcfnu")])
 

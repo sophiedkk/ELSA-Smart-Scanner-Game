@@ -60,7 +60,7 @@ func show_new_object_palette():
 			color_palette_square.create_design(color_palette[i])
 			add_child(color_palette_square)
 			#Will reorganize into a grid later
-			color_palette_square.global_position = Vector2(130 + (i * 40), 40)
+			color_palette_square.global_position = Vector2(190 + (i * 30), 25)
 			color_palette_squares.push_back(color_palette_square)
 
 

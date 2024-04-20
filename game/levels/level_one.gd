@@ -21,7 +21,7 @@ var mid_point_reached: bool
 
 @onready var accuracy_label: RichTextLabel = %AccuracyLabel
 @onready var object_type_label: Label = %ObjectTypeLabel
-@onready var robot_stats: VBoxContainer = %RobotStats
+@onready var robot_stats = %RobotStats
 
 @export var level_dialogue: DialogueResource
 

@@ -69,6 +69,8 @@ func _on_dialogue_finished() -> void:
 					new_tree_construction.emit()
 				"tree_filled_correctly":
 					new_tree_construction.emit()
+				"all_trees_finished":
+					level_finished.emit()
 	dialogue_in_progress = false
 
 func engineer_coming_in():
