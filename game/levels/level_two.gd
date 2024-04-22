@@ -96,7 +96,7 @@ func _end_the_level():
 	if not next_level is PackedScene: return
 	await LevelTransition.fade_to_black()
 	get_tree().paused = false
-	get_tree().change_scene_to_packed(next_level)
+	get_tree().change_scene_to_file("res://game/gui/start_menu.tscn")
 
 #Level story
 func _show_first_deck():

@@ -23,7 +23,7 @@ var cd_part: String
 
 func _ready() -> void:
 	DialogueManager.dialogue_ended.connect(_on_dialogue_finished)
-
+	
 func show_normal_dialogue(dialogue_resource: DialogueResource, dialogue_part: String):
 	#This section defers the next (automatic) dialogue section if the current one is still in progress
 	#I am NOT sure if this is the optimal way to do that

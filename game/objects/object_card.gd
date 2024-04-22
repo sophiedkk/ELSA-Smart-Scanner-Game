@@ -27,7 +27,7 @@ func _ready():
 	card_type_string = card_properties.card_types_as_strings[card_type]
 	initialPos = global_position
 	
-func _process(delta):
+func _process(_delta):
 	if draggable:
 		if Input.is_action_just_pressed("click_object"):
 			card_sprite.visible = true
