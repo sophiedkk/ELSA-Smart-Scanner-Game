@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cfkefh6krsawm"
+
+[deps]
+
+files=["res://game/dialogue/level_one.en.translation", "res://game/dialogue/level_one.nl.translation"]
+
+source_file="res://game/dialogue/level_one.csv"
+dest_files=["res://game/dialogue/level_one.en.translation", "res://game/dialogue/level_one.nl.translation"]
+
+[params]
+
+compress=true
+delimiter=0

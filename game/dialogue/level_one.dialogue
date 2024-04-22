@@ -1,101 +1,101 @@
 ~ engineer_opening_lines
 
-???: ...
-???: Okay, okay, almost ready.
-???: Booting this up...
+???: ... [ID:t0b10ff1694]
+???: Okay, okay, almost ready. [ID:td99fba69ae]
+???: Booting this up... [ID:t5640678064]
 => END
 
 ~ robot_booted_up
-???: And... voila!
-???: Okay, test, test.
-???: Seems that it's working.
-???: Recodring 1. Now in session.
-???: Greetings, this is Dr. Rensselaer.
-Dr. Rensselaer: I am currently working on the Smart Scanner, Beta version.
-Dr. Rensselaer: This project was requested by the local hospital for help.
-Dr. Rensselaer: The scanner's goal is to check the quality of the products at the hospital.
-Dr. Rensselaer: This way, we can ensure the health and safety of the patients.
-Dr. Rensselaer: Before we can start testing the scanner, however...
-Dr. Rensselaer: We need to do some manual work.
-Dr. Rensselaer: Let me explain.
+???: And... voila! [ID:t89d5ed2e72]
+???: Okay, test, test. [ID:t197ccd47dd]
+???: Seems that it's working. [ID:t31e81bac6f]
+???: Recodring 1. Now in session. [ID:t3c75e53500]
+???: Greetings, this is Dr. Rensselaer. [ID:tb03a522efd]
+Dr. Rensselaer: I am currently working on the Smart Scanner, Beta version. [ID:t3a84426980]
+Dr. Rensselaer: This project was requested by the local hospital for help. [ID:t527c1d927c]
+Dr. Rensselaer: The scanner's goal is to check the quality of the products at the hospital. [ID:tf96513d022]
+Dr. Rensselaer: This way, we can ensure the health and safety of the patients. [ID:t8dd8088487]
+Dr. Rensselaer: Before we can start testing the scanner, however... [ID:tc11139e837]
+Dr. Rensselaer: We need to do some manual work. [ID:t5cede7344b]
+Dr. Rensselaer: Let me explain. [ID:t510f87a953]
 => END
 
 ~ explaining_the_mechanics
-Dr. Rensselaer: If we want an actual smart scanner, it needs to receive some input from us first. We need to establish the rules.
-Dr. Rensselaer: So in this stage, we will label the data that the scanner will use to get smarter.
-Dr. Rensselaer: Do you see that apple on the table? That's our current object.
-Dr. Rensselaer: It looks pretty normal, so let's tell the scanner that it can accept it.
+Dr. Rensselaer: If we want an actual smart scanner, it needs to receive some input from us first. We need to establish the rules. [ID:t7d0a05933d]
+Dr. Rensselaer: So in this stage, we will label the data that the scanner will use to get smarter. [ID:td3a942c922]
+Dr. Rensselaer: Do you see that apple on the table? That's our current object. [ID:t739b27a71f]
+Dr. Rensselaer: It looks pretty normal, so let's tell the scanner that it can accept it. [ID:t92e1029465]
 => END
 
 ~ tutorial_nice_apple_accepted
-Dr. Rensselaer: Good!
-Dr. Rensselaer: The scanner will now know that this sort of apple was good.
-Dr. Rensselaer: It will not know exactly why this one was good, but it will learn that later.
-Dr. Rensselaer: In fact, these squares that you see will help it understand the color palette of the objects, and thus determine their quality.
-Dr. Rensselaer: But I'm getting ahead of myself.
-Dr. Rensselaer: Right now, there is another apple here.
-Dr. Rensselaer: But this one does not look good at all.
-Dr. Rensselaer: So let's reject it.
+Dr. Rensselaer: Good! [ID:t9958fcea37]
+Dr. Rensselaer: The scanner will now know that this sort of apple was good. [ID:t304e80bfec]
+Dr. Rensselaer: It will not know exactly why this one was good, but it will learn that later. [ID:tb94f69ec36]
+Dr. Rensselaer: In fact, these squares that you see will help it understand the color palette of the objects, and thus determine their quality. [ID:te89010bf91]
+Dr. Rensselaer: But I'm getting ahead of myself. [ID:t57edc984f6]
+Dr. Rensselaer: Right now, there is another apple here. [ID:t2709ebce9f]
+Dr. Rensselaer: But this one does not look good at all. [ID:t376a379052]
+Dr. Rensselaer: So let's reject it. [ID:ta71cc05709]
 => END
 
 ~ tutorial_bad_apple_rejected
-Dr. Rensselaer: Good!
-Dr. Rensselaer: Or, in this case, bad...
-Dr. Rensselaer: Anyways, that was the correct answer.
-Dr. Rensselaer: Our scanner requires more information to work by itself.
-Dr. Rensselaer: There will be other objects beside apples, as you can already see.
-Dr. Rensselaer: I have to leave you for a bit, but your task stays the same.
-Dr. Rensselaer: Pass the object through if you think it looks good.
-Dr. Rensselaer: One more thing before I go.
-Dr. Rensselaer: We expect you to perform with at least 40% accuracy on this assessment.
-Dr. Rensselaer: That's why there will be another person double-checking after you.
-Dr. Rensselaer: They'll keep track of how well you're doing so far.
-Dr. Rensselaer: I will be back. Good luck with your efforts!
+Dr. Rensselaer: Good! [ID:t35b0a4c813]
+Dr. Rensselaer: Or, in this case, bad... [ID:t7228973bee]
+Dr. Rensselaer: Anyways, that was the correct answer. [ID:tc9224103fd]
+Dr. Rensselaer: Our scanner requires more information to work by itself. [ID:t40a1167c06]
+Dr. Rensselaer: There will be other objects beside apples, as you can already see. [ID:tb307f0c742]
+Dr. Rensselaer: I have to leave you for a bit, but your task stays the same. [ID:t6419a9d48f]
+Dr. Rensselaer: Pass the object through if you think it looks good. [ID:t03ea879b45]
+Dr. Rensselaer: One more thing before I go. [ID:t4ce1c099e4]
+Dr. Rensselaer: We expect you to perform with at least 40% accuracy on this assessment. [ID:t8b060eb7d2]
+Dr. Rensselaer: That's why there will be another person double-checking after you. [ID:t45065c2fc6]
+Dr. Rensselaer: They'll keep track of how well you're doing so far. [ID:t6753e48ec1]
+Dr. Rensselaer: I will be back. Good luck with your efforts! [ID:td0ae9dcc21]
 => END
 
 ~ all_objects_analyzed_correctly
-Dr. Rensselaer: Hi, I'm back.
-Dr. Rensselaer: It seems that you successfully labeled all the data.
-Dr. Rensselaer: We've passed it to the scanner and run our first series of tests.
-Dr. Rensselaer: And it works!
-Dr. Rensselaer: That means that we can move to the next stage of the process.
-Dr. Rensselaer: We're going to look at something called decision trees.
-Dr. Rensselaer: It's something that our scanner created and now uses to check the quality of the objects.
-Dr. Rensselaer: Once we look at them, we'll be able to see how our smart scanner works.
+Dr. Rensselaer: Hi, I'm back. [ID:tb809640476]
+Dr. Rensselaer: It seems that you successfully labeled all the data. [ID:t7cfb9a3567]
+Dr. Rensselaer: We've passed it to the scanner and run our first series of tests. [ID:t618302792b]
+Dr. Rensselaer: And it works! [ID:t162c7b57d9]
+Dr. Rensselaer: That means that we can move to the next stage of the process. [ID:t028752734e]
+Dr. Rensselaer: We're going to look at something called decision trees. [ID:tb5bcf2d265]
+Dr. Rensselaer: It's something that our scanner created and now uses to check the quality of the objects. [ID:t4788b63a1f]
+Dr. Rensselaer: Once we look at them, we'll be able to see how our smart scanner works. [ID:t41c8d0fb43]
 => END
 
 ~ all_objects_analyzed_incorrectly
-Dr. Rensselaer: Hi, I'm back.
-Dr. Rensselaer: It seems that you were unfortunately unable to accurately assess our objects.
-Dr. Rensselaer: While I do understand that the task may have been difficult at times, I think that this job is not suitable for you.
-Dr. Rensselaer: So I'm afraid we'll have to part our ways here.
-Dr. Rensselaer: Goodbye.
+Dr. Rensselaer: Hi, I'm back. [ID:t7e4d3d3b08]
+Dr. Rensselaer: It seems that you were unfortunately unable to accurately assess our objects. [ID:tf4fa8a39b8]
+Dr. Rensselaer: While I do understand that the task may have been difficult at times, I think that this job is not suitable for you. [ID:tb8f0334412]
+Dr. Rensselaer: So I'm afraid we'll have to part our ways here. [ID:tae8f7c9a01]
+Dr. Rensselaer: Goodbye. [ID:t061cae8269]
 => END
 
 ~ incorrect_blocked_answer
-Dr. Rensselaer: I don't think that's the right answer...
+Dr. Rensselaer: I don't think that's the right answer... [ID:t18bd23c212]
 => END
 
 ~ first_feedback_incorrect
-Dr. Rensselaer (over the speakers): Hi, it's me again.
-Dr. Rensselaer (over the speakers): I was informed that I can actually see your progress in real times over the cameras.
-Dr. Rensselaer (over the speakers): Technology, huh...
-Dr. Rensselaer (over the speakers): I see that you just made a mistake with the last object.
-Dr. Rensselaer (over the speakers): Well, don't worry about that too much!
-Dr. Rensselaer (over the speakers): Just look a bit harder next time.
-Dr. Rensselaer (over the speakers): Good luck! You can do this!
+Dr. Rensselaer (over the speakers): Hi, it's me again. [ID:t72577d0c5c]
+Dr. Rensselaer (over the speakers): I was informed that I can actually see your progress in real times over the cameras. [ID:tcfec615402]
+Dr. Rensselaer (over the speakers): Technology, huh... [ID:t2fe96baad4]
+Dr. Rensselaer (over the speakers): I see that you just made a mistake with the last object. [ID:t4fa5f3ec86]
+Dr. Rensselaer (over the speakers): Well, don't worry about that too much! [ID:t87502c0173]
+Dr. Rensselaer (over the speakers): Just look a bit harder next time. [ID:t29353eb391]
+Dr. Rensselaer (over the speakers): Good luck! You can do this! [ID:tb991d559ae]
 => END
 
 ~ first_feedback_correct
-Dr. Rensselaer (over the speakers): Hi, it's me again.
-Dr. Rensselaer (over the speakers): I was informed that I can actually see your progress in real time over the cameras.
-Dr. Rensselaer (over the speakers): Technology, huh...
-Dr. Rensselaer (over the speakers): Anyway, I saw that your last answer was correct. Good job!
-Dr. Rensselaer (over the speakers): Keep it up and see you later again!
+Dr. Rensselaer (over the speakers): Hi, it's me again. [ID:t6a6342b821]
+Dr. Rensselaer (over the speakers): I was informed that I can actually see your progress in real time over the cameras. [ID:t15f486d54c]
+Dr. Rensselaer (over the speakers): Technology, huh... [ID:t0203ce3771]
+Dr. Rensselaer (over the speakers): Anyway, I saw that your last answer was correct. Good job! [ID:t8b1ea47aef]
+Dr. Rensselaer (over the speakers): Keep it up and see you later again! [ID:t55006e5c10]
 => END
 
 ~ forty_percent_warning
-Dr. Rensselaer (over the speakers): Hello, this is me again.
-Dr. Rensselaer (over the speakers): It seems that you're close to the required accuracy threshold.
-Dr. Rensselaer (over the speakers): I recommend you to be more careful with your answers from this point on.
-Dr. Rensselaer (over the speakers): You can do this if you put in the effort! Good luck!
+Dr. Rensselaer (over the speakers): Hello, this is me again. [ID:ta3c7358946]
+Dr. Rensselaer (over the speakers): It seems that you're close to the required accuracy threshold. [ID:tcacb990097]
+Dr. Rensselaer (over the speakers): I recommend you to be more careful with your answers from this point on. [ID:t47c4bd6dcb]
+Dr. Rensselaer (over the speakers): You can do this if you put in the effort! Good luck! [ID:t54e9b2a025]
