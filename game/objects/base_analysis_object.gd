@@ -11,7 +11,6 @@ var relevant_colors: Array[AnalysisObjectData.ObjectTypeColors]
 var defects: bool
 
 
-
 func _ready():
 	set_process_input(true)
 
@@ -24,4 +23,4 @@ func _ready():
 	colors = object_properties.object_relevant_colors.duplicate(true)
 	relevant_colors = object_properties.object_relevant_colors.duplicate(true)
 	defects = object_properties.object_defects
-	
+

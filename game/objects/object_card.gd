@@ -19,14 +19,14 @@ var initialPos: Vector2
 
 func _ready():
 	set_process_input(true)
-	
+
 	if not card_properties:
 		return
 	card_sprite.texture = card_properties.card_texture
 	card_type = card_properties.card_type
 	card_type_string = card_properties.card_types_as_strings[card_type]
 	initialPos = global_position
-	
+
 func _process(_delta):
 	if draggable:
 		if Input.is_action_just_pressed("click_object"):

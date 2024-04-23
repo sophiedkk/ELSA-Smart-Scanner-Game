@@ -20,12 +20,12 @@ var current_cards: Array[Node]
 func _ready():
 	_establishing_signal_connections()
 	spawn_location = card_spawn_location.position
-	
+
 	await LevelTransition.fade_from_black()
 	await get_tree().create_timer(0.5).timeout
 	await engineer.show_normal_dialogue(level_dialogue, "rensselaer_opening_lines")
 	engineer.engineer_coming_in()
-	
+
 func _process(_delta):
 	if Input.is_action_just_released("skip_level"):
 		_end_the_level()
@@ -36,11 +36,11 @@ func _establishing_signal_connections():
 	engineer.deck_introduced.connect(_show_first_deck)
 	engineer.new_tree_construction.connect(_reconstruction)
 	engineer.level_finished.connect(_end_the_level)
-	
+
 	decision_tree.tree_not_filled.connect(_missing_rectangles)
 	decision_tree.tree_filled_correctly.connect(_tree_fill_success)
 	decision_tree.tree_filled_incorrectly.connect(_tree_fill_failure)
-	
+
 func _show_deck():
 	if decision_tree.current_root > decision_tree.tree_roots.size() - 1:
 		_final_dialogue()
@@ -70,7 +70,7 @@ func _missing_rectangles():
 
 func _tree_fill_failure():
 	engineer.show_normal_dialogue(level_dialogue, "tree_filled_incorrectly")
-	
+
 func _tree_fill_success():
 	if current_deck_length == 2:
 		engineer.show_normal_dialogue(level_dialogue, "tree_filled_correctly_first_time")
@@ -91,7 +91,7 @@ func _change_deck_length(increase: bool):
 		current_deck_length += 1
 	else:
 		current_deck_length -= 1
-		
+
 func _end_the_level():
 	if not next_level is PackedScene: return
 	await LevelTransition.fade_to_black()

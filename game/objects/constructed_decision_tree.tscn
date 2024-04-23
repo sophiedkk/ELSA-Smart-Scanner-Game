@@ -501,7 +501,6 @@ text = "CURVE"
 visible = false
 position = Vector2(1347.82, 2090.68)
 rotation = -0.344608
-scale = Vector2(1, 1)
 texture = ExtResource("2_lg282")
 
 [node name="4_3_3_label" type="Label" parent="TreeBeginning/Tree4Root"]

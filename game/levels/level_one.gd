@@ -27,7 +27,7 @@ var mid_point_reached: bool
 
 func _ready() -> void:
 	_establishing_signal_connections()
-	
+
 func _process(_delta):
 	if chosen_point == central_point:
 		mid_point_reached = true
@@ -36,20 +36,20 @@ func _process(_delta):
 	object_controller.move_current_object(_delta, chosen_point, 80, mid_point_reached)
 	if Input.is_action_just_released("skip_level"):
 		_end_the_level()
-	
-#Game logic	
+
+#Game logic
 func _establishing_signal_connections():
-	
+
 	engineer.robot_boot.connect(_booting_up_the_robot)
 	engineer.accept_introduced.connect(_accept_button_activated.bind(true))
 	#engineer.reject_introduced.connect(_reject_button_activated.bind(true))
 	engineer.stats_introduced.connect(_stats_activated.bind(true))
-	
+
 	engineer.level_finished.connect(_end_the_level)
 	engineer.level_restart.connect(_level_restart)
-	
+
 	object_controller.all_objects_passed.connect(_object_analysis_finished)
-	
+
 	chosen_point = central_point
 	engineer.show_normal_dialogue(level_dialogue, "engineer_opening_lines")
 
@@ -72,7 +72,7 @@ func _making_a_choice(_players_choice):
 			else:
 				await engineer.show_normal_dialogue(level_dialogue, "first_feedback_incorrect")
 	#_stats()
-	
+
 func _introducing_next_object():
 	_accept_button_activated(false)
 	_reject_button_activated(false)
@@ -100,12 +100,12 @@ func _object_analysis_finished():
 	else:
 		#A placeholder that sends player back to main menu
 		await engineer.show_normal_dialogue(level_dialogue, "all_objects_analyzed_incorrectly")
-		
+
 
 func _level_restart():
 	await LevelTransition.fade_to_black()
 	get_tree().change_scene_to_file("res://game/gui/start_menu.tscn")
-		
+
 func _object_info_updated():
 	#var _accuracy_color: Color = Color.WEB_GREEN
 	accuracy_rate = (int(round((float(objects_scanned_correctly) / objects_scanned_in_total) * 100)))
@@ -177,10 +177,10 @@ func _on_reject_button_pressed():
 	_making_a_choice(object_accepted)
 	_tutorial_stage_passed()
 	_introducing_next_object()
-	
+
 func _accept_button_activated(activated: bool):
 	accept_button.visible = activated
-	
+
 func _reject_button_activated(activated: bool):
 	reject_button.visible = activated
 
