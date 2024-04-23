@@ -66,7 +66,7 @@ func _making_a_choice(_players_choice):
 		print("Wrong answer!")
 		correct_choice = false
 	match objects_scanned_in_total:
-		4:
+		7:
 			if correct_choice == true:
 				await engineer.show_normal_dialogue(level_dialogue, "first_feedback_correct")
 			else:

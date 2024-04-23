@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://dq7sh851jfvlq"]
+[gd_scene load_steps=24 format=3 uid="uid://dq7sh851jfvlq"]
 
 [ext_resource type="Script" path="res://game/levels/level_one.gd" id="1_nbb1a"]
 [ext_resource type="Resource" uid="uid://dvml401vq5j65" path="res://game/dialogue/level_one.dialogue" id="2_2fvla"]
+[ext_resource type="PackedScene" uid="uid://dx58g7kuqi3dh" path="res://game/levels/level_two.tscn" id="2_x3pgs"]
 [ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://game/controllers/engineer.tscn" id="3_k6shj"]
 [ext_resource type="Texture2D" uid="uid://ceaayvfocuib5" path="res://assets/images/labeling_background.png" id="4_2ydxi"]
 [ext_resource type="Texture2D" uid="uid://b1psoqn81m04h" path="res://assets/images/conveyor_belt.png" id="5_bym74"]
@@ -49,6 +50,7 @@ Button/styles/normal = SubResource("StyleBoxFlat_wx3m6")
 
 [node name="LevelOne" type="Node2D"]
 script = ExtResource("1_nbb1a")
+next_level = ExtResource("2_x3pgs")
 level_dialogue = ExtResource("2_2fvla")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -94,7 +96,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="CanvasLayer/RobotStats/ColorStats"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 12
-text = "Color:"
+text = "Color(s):"
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(161, 76)

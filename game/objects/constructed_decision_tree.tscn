@@ -28,6 +28,8 @@ offset_top = -85.7143
 offset_right = 215.429
 offset_bottom = 63.2857
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "SHAPE"
 
@@ -45,6 +47,8 @@ offset_right = -375.143
 offset_bottom = 749.0
 rotation = -0.872665
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "CIRCLE"
 
@@ -54,7 +58,7 @@ position = Vector2(560, 640)
 rotation = -0.698132
 texture = ExtResource("2_lg282")
 
-[node name="1_1_1_label2" type="Label" parent="TreeBeginning/Tree1Root"]
+[node name="1_1_2_label" type="Label" parent="TreeBeginning/Tree1Root"]
 visible = false
 offset_left = 485.714
 offset_top = 228.571
@@ -62,6 +66,8 @@ offset_right = 967.714
 offset_bottom = 377.571
 rotation = 0.872665
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "CURVE"
 
@@ -89,6 +95,8 @@ offset_top = -85.7143
 offset_right = 215.429
 offset_bottom = 63.2857
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "SHAPE"
 
@@ -106,6 +114,8 @@ offset_right = -346.571
 offset_bottom = 777.571
 rotation = -0.872665
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "CIRCLE"
 
@@ -123,6 +133,8 @@ offset_right = 996.286
 offset_bottom = 377.571
 rotation = 0.872665
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "CURVE"
 
@@ -138,6 +150,8 @@ offset_top = 1285.71
 offset_right = -771.714
 offset_bottom = 1434.71
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "SIZE"
 
@@ -160,6 +174,8 @@ offset_right = -1289.43
 offset_bottom = 2120.43
 rotation = -0.872665
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "<5CM"
 
@@ -177,6 +193,8 @@ offset_right = 82.0004
 offset_bottom = 1777.57
 rotation = 0.872665
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = ">5CM"
 
@@ -191,7 +209,6 @@ position = Vector2(28.572, 2580)
 correct_type = 1
 
 [node name="Tree3Root" type="Node2D" parent="TreeBeginning"]
-visible = false
 
 [node name="3_0_1_circle" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
 visible = false
@@ -204,6 +221,8 @@ offset_top = -85.7143
 offset_right = 215.429
 offset_bottom = 63.2857
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "SHAPE"
 
@@ -221,6 +240,8 @@ offset_right = -346.571
 offset_bottom = 777.571
 rotation = -0.872665
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "CIRCLE"
 
@@ -238,6 +259,8 @@ offset_right = 996.286
 offset_bottom = 377.571
 rotation = 0.872665
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "CURVE"
 
@@ -253,6 +276,8 @@ offset_top = 1285.71
 offset_right = -711.429
 offset_bottom = 1434.71
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "COLOR"
 
@@ -268,6 +293,8 @@ offset_top = 1285.71
 offset_right = 1231.43
 offset_bottom = 1434.71
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "COLOR"
 
@@ -285,6 +312,8 @@ offset_right = -1232.0
 offset_bottom = 2120.43
 rotation = -0.694225
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "RED/GREEN"
 
@@ -302,6 +331,8 @@ offset_right = -50.4287
 offset_bottom = 1891.86
 rotation = 1.10068
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "PURPLE"
 
@@ -319,6 +350,8 @@ offset_right = 1121.0
 offset_bottom = 2349.0
 rotation = -1.40737
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "RED"
 
@@ -336,6 +369,8 @@ offset_right = 2253.71
 offset_bottom = 1720.43
 rotation = 0.79976
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "YELLOW"
 
@@ -373,6 +408,8 @@ offset_top = -85.7143
 offset_right = 215.429
 offset_bottom = 63.2857
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "COLOR"
 
@@ -390,6 +427,8 @@ offset_right = -553.143
 offset_bottom = 463.286
 rotation = -0.60599
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "BROWN"
 
@@ -407,6 +446,8 @@ offset_right = 149.292
 offset_bottom = 828.578
 rotation = 0.154386
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "GREEN/
 YELLOW"
@@ -425,6 +466,8 @@ offset_right = 996.286
 offset_bottom = 377.571
 rotation = 0.872665
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "RED"
 
@@ -445,6 +488,8 @@ offset_top = 1568.57
 offset_right = 0.000457764
 offset_bottom = 1717.57
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "SHAPE"
 
@@ -460,6 +505,8 @@ offset_top = 1225.71
 offset_right = 1285.71
 offset_bottom = 1374.71
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "SHAPE"
 
@@ -477,6 +524,8 @@ offset_right = -606.857
 offset_bottom = 2386.71
 rotation = -0.73206
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "CIRCLE"
 
@@ -494,6 +543,8 @@ offset_right = 649.602
 offset_bottom = 2243.17
 rotation = 1.18715
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "CURVE"
 
@@ -511,6 +562,8 @@ offset_right = 1936.0
 offset_bottom = 2015.29
 rotation = 1.14916
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "CIRCLE"
 
@@ -528,6 +581,8 @@ offset_right = 2193.14
 offset_bottom = 1643.86
 rotation = 0.516738
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
 text = "CURVE"
 
