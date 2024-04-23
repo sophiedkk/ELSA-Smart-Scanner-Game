@@ -18,6 +18,7 @@ var current_cards: Array[Node]
 @onready var base_card_object = preload("res://game/objects/object_card.tscn")
 
 func _ready():
+	TranslationServer.set_locale("nl")
 	_establishing_signal_connections()
 	spawn_location = card_spawn_location.position
 

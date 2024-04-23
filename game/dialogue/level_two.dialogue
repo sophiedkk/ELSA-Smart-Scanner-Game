@@ -1,56 +1,56 @@
 ~ rensselaer_opening_lines
 
-Dr. Rensselaer: Welcome again!
-Dr. Rensselaer: This place is called the test chamber.
-Dr. Rensselaer: Now...
-Dr. Rensselaer: You were labeling whether an object had good quality or not.
-Dr. Rensselaer: So now the scanner will be able to figure this out on its own.
-Dr. Rensselaer: But did you notice something else?
-Dr. Rensselaer: Every object already had a type assigned, like a pear or an apple.
-Dr. Rensselaer: Well... that's because there was actually one other person before you. That was their task.
-Dr. Rensselaer: You helped the scanner distinguish between good and bad products, while the other person "taught" the rules for distinguishing different object types.
-Dr. Rensselaer: Let's see the results of their work.
+Dr. Rensselaer: Welcome again! [ID:tee3c8ae139]
+Dr. Rensselaer: This place is called the test chamber. [ID:tce0033926c]
+Dr. Rensselaer: Now... [ID:t807ac8cb76]
+Dr. Rensselaer: You were labeling whether an object had good quality or not. [ID:tf0886a7d8c]
+Dr. Rensselaer: So now the scanner will be able to figure this out on its own. [ID:t5fc25b650b]
+Dr. Rensselaer: But did you notice something else? [ID:t9162797555]
+Dr. Rensselaer: Every object already had a type assigned, like a pear or an apple. [ID:t3338a44e07]
+Dr. Rensselaer: Well... that's because there was actually one other person before you. That was their task. [ID:tded7064fd7]
+Dr. Rensselaer: You helped the scanner distinguish between good and bad products, while the other person "taught" the rules for distinguishing different object types. [ID:tf0124bb9dd]
+Dr. Rensselaer: Let's see the results of their work. [ID:t5ff8e4df69]
 => END
 
 ~ introduction_to_decision_trees
-Dr. Rensselaer (over the speakers): What you see here is a decision tree.
-Dr. Rensselaer (over the speakers): This one is from the early stage, so it's very simple.
-Dr. Rensselaer (over the speakers): Basically, our scanner looks at unique properties such as colors or weight to split our objects into small branches.
-Dr. Rensselaer (over the speakers): Every branch ends with just ONE object that fits the description the best. That's how the scanner knows what it is.
-Dr. Rensselaer (over the speakers): Now, check this out.
+Dr. Rensselaer (over the speakers): What you see here is a decision tree. [ID:t71a59a1531]
+Dr. Rensselaer (over the speakers): This one is from the early stage, so it's very simple. [ID:tc02e9860bf]
+Dr. Rensselaer (over the speakers): Basically, our scanner looks at unique properties such as colors or weight to split our objects into small branches. [ID:ta846778a51]
+Dr. Rensselaer (over the speakers): Every branch ends with just ONE object that fits the description the best. That's how the scanner knows what it is. [ID:t64a8887b3b]
+Dr. Rensselaer (over the speakers): Now, check this out. [ID:tfb81b0048f]
 => END
 
 ~ cards_introduced
-Dr. Rensselaer (over the speakers): These cards obviously show different types of objects that our scanner knows.
-Dr. Rensselaer (over the speakers): Our tree figured out how to distinguish them. You can repeat that process by dragging the cards onto those unknown panels.
-Dr. Rensselaer (over the speakers): So, do you think you can fit them all correctly?
+Dr. Rensselaer (over the speakers): These cards obviously show different types of objects that our scanner knows. [ID:tdaef4724b4]
+Dr. Rensselaer (over the speakers): Our tree figured out how to distinguish them. You can repeat that process by dragging the cards onto those unknown panels. [ID:t668f552d00]
+Dr. Rensselaer (over the speakers): So, do you think you can fit them all correctly? [ID:tb79d43150f]
 => END
 
 ~ tree_not_filled
-Dr. Rensselaer (over the speakers): Not all objects have been put into the tree yet!
-Dr. Rensselaer (over the speakers): Search for rectangles with question marks!
+Dr. Rensselaer (over the speakers): Not all objects have been put into the tree yet! [ID:tfa07a1d7b5]
+Dr. Rensselaer (over the speakers): Search for rectangles with question marks! [ID:t606a248a30]
 => END
 
 ~ tree_filled_incorrectly
-Dr. Rensselaer (over the speakers): Hmm, that doesn't look right.
-Dr. Rensselaer (over the speakers): Look at the tree again.
+Dr. Rensselaer (over the speakers): Hmm, that doesn't look right. [ID:t82850b2067]
+Dr. Rensselaer (over the speakers): Look at the tree again. [ID:t1b7eb37139]
 => END
 
 ~ tree_filled_correctly
-Dr. Rensselaer (over the speakers): Good!
-Dr. Rensselaer (over the speakers): Onto the next one!
+Dr. Rensselaer (over the speakers): Good! [ID:tfbde40d96c]
+Dr. Rensselaer (over the speakers): Onto the next one! [ID:t763f96847c]
 => END
 
 ~ tree_filled_correctly_first_time
-Dr. Rensselaer (over the speakers): Good!
-Dr. Rensselaer (over the speakers): Seems like you got the gist of it!
-Dr. Rensselaer (over the speakers): The trees will get more complex from now on.
-Dr. Rensselaer (over the speakers): Let's see how.
+Dr. Rensselaer (over the speakers): Good! [ID:t5a40372398]
+Dr. Rensselaer (over the speakers): Seems like you got the gist of it! [ID:t4b0d720c7f]
+Dr. Rensselaer (over the speakers): The trees will get more complex from now on. [ID:tbec09c1a41]
+Dr. Rensselaer (over the speakers): Let's see how. [ID:tc7e458aae0]
 => END
 
 ~ all_trees_finished
-Dr. Rensselaer: Hi again!
-Dr. Rensselaer: I hope that exercise helped you understand how decision trees work.
-Dr. Rensselaer: These tasks are still relatively simple, and our smart scanner has no choice but to evole further.
-Dr. Rensselaer: Let's go and see what's next, shall we?
+Dr. Rensselaer: Hi again! [ID:tab13a4c7fc]
+Dr. Rensselaer: I hope that exercise helped you understand how decision trees work. [ID:t19ac4fd378]
+Dr. Rensselaer: These tasks are still relatively simple, and our smart scanner has no choice but to evole further. [ID:td4741087e4]
+Dr. Rensselaer: Let's go and see what's next, shall we? [ID:t2861374f1f]
 => END
