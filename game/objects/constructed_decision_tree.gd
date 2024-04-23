@@ -16,6 +16,8 @@ var tree_correct_fill: bool
 #Creates a new tree based on the current root
 func expose_new_tree():
 	current_root += 1
+	print("current root is", current_root)
+	print("tree roots size is", tree_roots.size())
 	if current_root >= tree_roots.size():
 		return
 	#This causes an error when it goes out of bounds, will fix later

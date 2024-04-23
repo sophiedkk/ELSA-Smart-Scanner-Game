@@ -34,8 +34,8 @@ func _process(_delta):
 	else:
 		mid_point_reached = false
 	object_controller.move_current_object(_delta, chosen_point, 80, mid_point_reached)
-	if Input.is_action_just_released("skip_level"):
-		_end_the_level()
+	#if Input.is_action_just_released("skip_level"):
+		#_end_the_level()
 
 #Game logic
 func _establishing_signal_connections():

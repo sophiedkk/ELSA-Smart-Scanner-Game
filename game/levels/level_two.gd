@@ -27,9 +27,9 @@ func _ready():
 	await engineer.show_normal_dialogue(level_dialogue, "rensselaer_opening_lines")
 	engineer.engineer_coming_in()
 
-func _process(_delta):
-	if Input.is_action_just_released("skip_level"):
-		_end_the_level()
+#func _process(_delta):
+	#if Input.is_action_just_released("skip_level"):
+		#_end_the_level()
 
 #Game logic
 func _establishing_signal_connections():
@@ -43,7 +43,7 @@ func _establishing_signal_connections():
 	decision_tree.tree_filled_incorrectly.connect(_tree_fill_failure)
 
 func _show_deck():
-	if decision_tree.current_root > decision_tree.tree_roots.size() - 1:
+	if decision_tree.current_root >= decision_tree.tree_roots.size():
 		_final_dialogue()
 		return
 	await get_tree().create_timer(1.0).timeout
