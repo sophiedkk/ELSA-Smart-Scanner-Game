@@ -6,7 +6,7 @@ signal all_objects_passed
 @export var level_object_scene: PackedScene
 @export var level_objects: Array[AnalysisObjectData]
 
-var current_object_index = 0
+var current_object_index: int = 0
 var current_object: BaseObject
 var current_object_moving: bool = false
 var current_object_acceptable: bool
@@ -16,7 +16,6 @@ var color_palette: Array[AnalysisObjectData.ObjectTypeColors]
 var color_palette_square: PaletteSquare
 #An array that stores squares currently presented on screen
 var color_palette_squares: Array[PaletteSquare]
-
 
 #Reference to the object scene that works as a button
 @onready var color_palette_object: = preload("res://game/gui/color_rectangle.tscn")
@@ -40,6 +39,7 @@ func show_new_object():
 		clear_previous_palette()
 		all_objects_passed.emit()
 
+
 func move_current_object(delta, intended_destination: Node, move_speed: int, midi_point: bool):
 	if current_object == null:
 		return
@@ -50,6 +50,7 @@ func move_current_object(delta, intended_destination: Node, move_speed: int, mid
 		if midi_point == true:
 			for palette in color_palette_squares:
 				palette.visible = true
+
 
 func show_new_object_palette():
 	if current_object != null:

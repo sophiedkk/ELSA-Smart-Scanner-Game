@@ -1,21 +1,19 @@
 extends Node2D
 
 @export var next_level: PackedScene
-
-@onready var engineer = %Engineer
-@onready var decision_tree = %ConstructedDecisionTree
-@onready var card_spawn_location = %CardSpawnLocation
-@onready var submit_button = %SubmitButton
-
-var spawn_location: Vector2
-
 @export var level_dialogue: DialogueResource
 @export var card_resources: Array[CardData]
 
+var spawn_location: Vector2
 var current_deck_length: int = 2
 var current_cards: Array[Node]
 
+@onready var engineer: Engineer = %Engineer
+@onready var decision_tree: ConstructedDecisionTree = %ConstructedDecisionTree
+@onready var card_spawn_location: Marker2D = %CardSpawnLocation
+@onready var submit_button: Button = %SubmitButton
 @onready var base_card_object = preload("res://game/objects/object_card.tscn")
+
 
 func _ready():
 	TranslationServer.set_locale("nl")
@@ -27,9 +25,11 @@ func _ready():
 	await engineer.show_normal_dialogue(level_dialogue, "rensselaer_opening_lines")
 	engineer.engineer_coming_in()
 
+
 #func _process(_delta):
 	#if Input.is_action_just_released("skip_level"):
 		#_end_the_level()
+
 
 #Game logic
 func _establishing_signal_connections():
@@ -41,6 +41,7 @@ func _establishing_signal_connections():
 	decision_tree.tree_not_filled.connect(_missing_rectangles)
 	decision_tree.tree_filled_correctly.connect(_tree_fill_success)
 	decision_tree.tree_filled_incorrectly.connect(_tree_fill_failure)
+
 
 func _show_deck():
 	if decision_tree.current_root >= decision_tree.tree_roots.size():
@@ -60,23 +61,28 @@ func _show_deck():
 		await get_tree().create_timer(1.0).timeout
 	submit_button.visible = true
 
+
 func _clean_deck():
 	for card in current_cards:
 		card.queue_free()
 		await get_tree().create_timer(1.0).timeout
 	current_cards.clear()
 
+
 func _missing_rectangles():
 	engineer.show_normal_dialogue(level_dialogue, "tree_not_filled")
 
+
 func _tree_fill_failure():
 	engineer.show_normal_dialogue(level_dialogue, "tree_filled_incorrectly")
+
 
 func _tree_fill_success():
 	if current_deck_length == 2:
 		engineer.show_normal_dialogue(level_dialogue, "tree_filled_correctly_first_time")
 	else:
 		engineer.show_normal_dialogue(level_dialogue, "tree_filled_correctly")
+
 
 func _reconstruction():
 	submit_button.visible = false
@@ -86,6 +92,7 @@ func _reconstruction():
 	await decision_tree.expose_new_tree()
 	await _show_deck()
 
+
 #Since the deck draws from the same array of resources, this controls how long it is for every step
 func _change_deck_length(increase: bool):
 	if increase:
@@ -93,11 +100,13 @@ func _change_deck_length(increase: bool):
 	else:
 		current_deck_length -= 1
 
+
 func _end_the_level():
 	if not next_level is PackedScene: return
 	await LevelTransition.fade_to_black()
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://game/gui/start_menu.tscn")
+
 
 #Level story
 func _show_first_deck():
@@ -105,14 +114,17 @@ func _show_first_deck():
 	await get_tree().create_timer(0.5).timeout
 	engineer.show_normal_dialogue(level_dialogue, "cards_introduced")
 
+
 func _create_first_decision_tree():
 	decision_tree.expose_new_tree()
 	if (decision_tree.current_root == 1):
 		await engineer.show_normal_dialogue(level_dialogue, "introduction_to_decision_trees")
 
+
 func _final_dialogue():
 	await engineer.engineer_coming_in()
 	await engineer.show_normal_dialogue(level_dialogue, "all_trees_finished")
-#UI
+
+
 func _on_submit_button_pressed():
 	decision_tree.check_correctness()

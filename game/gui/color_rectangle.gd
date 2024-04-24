@@ -18,10 +18,13 @@ var color_dictionary = {AnalysisObjectData.ObjectTypeColors.NONE: Color.WEB_GRAY
 
 var chosen_color: Color
 
+@onready var inner_button: ColorRect = $InnerButton
+
 
 func create_design(determined_color: AnalysisObjectData.ObjectTypeColors):
 	chosen_color = color_dictionary[determined_color]
-	$InnerButton.color = chosen_color
+	inner_button.color = chosen_color
+
 
 func _on_gui_input(_event):
 	if _event is InputEventMouseButton and _event.button_index == MOUSE_BUTTON_LEFT:

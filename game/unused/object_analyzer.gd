@@ -41,7 +41,7 @@ var spawned_objects: Array[BaseObject]
 func _ready():
 	current_type = all_types[0]
 	print(color_palette_object)
-	
+
 func _switching_the_type():
 	if current_type_objects_data != null:
 		current_type_objects_data.clear()
@@ -51,7 +51,7 @@ func _switching_the_type():
 	for object_data in all_objects_data:
 		if object_data.object_type == current_type:
 			current_type_objects_data.push_back(object_data)
-			
+
 func _spawning_the_objects():
 	_clear_previous_objects()
 	for i in current_type_objects_data.size():
@@ -78,10 +78,10 @@ func _spawning_the_objects():
 			passability_sign.texture = cross_sign
 		current_object.add_child(passability_sign)
 		passability_sign.position = Vector2(0, -1200)
-		
+
 
 func _clear_previous_objects():
 		if spawned_objects != null:
 			for object in spawned_objects:
 				object.queue_free()
-		spawned_objects.clear()	
+		spawned_objects.clear()

@@ -112,11 +112,11 @@ position = Vector2(160, 176)
 scale = Vector2(0.545555, 0.545555)
 texture = ExtResource("5_bym74")
 
-[node name="CentralPoint" type="Node2D" parent="."]
+[node name="CentralPoint" type="Marker2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(176, 124)
 
-[node name="EndPoint" type="Node2D" parent="."]
+[node name="EndPoint" type="Marker2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(345, 171)
 
@@ -141,6 +141,7 @@ size_flags_horizontal = 4
 [node name="AcceptButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 visible = false
+custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -155,6 +156,7 @@ size_flags_vertical = 3
 [node name="RejectButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 visible = false
+custom_minimum_size = Vector2(45, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

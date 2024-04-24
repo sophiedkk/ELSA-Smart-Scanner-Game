@@ -4,6 +4,14 @@ BAD,Bad,Slecht
 COLORS,Color(s):,Kleur(en):
 VERSION_LABEL,Version 0.9 [BETA],Versie 0.9 [BETA]
 ACCURACY_EMPTY,Accuracy rate: no data yet!,Accuratie: nog geen data!
+ACCURACY_RATE,Accuracy rate: ,Accuratie: 
 OBJECT_TYPE_EMPTY,Object type: Apple,Object type: Appel
 START_GAME,Start Game,Start Spel
 QUIT_GAME,Quit Game,Stop Spel
+SUBMIT_TREE,SUBMIT TREE,CONTROLEER
+Apple,Apple,Appel
+Pear,Pear,Peer
+Banana,Banana,Banaan
+Carrot,Carrot,Wortel
+Berry,Berry,Bessen
+Salad,Salad,Salade

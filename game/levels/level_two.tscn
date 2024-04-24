@@ -45,7 +45,7 @@ position = Vector2(-57, 78)
 unique_name_in_owner = true
 tree_roots = [null, NodePath("TreeBeginning/Tree1Root"), NodePath("TreeBeginning/Tree2Root"), NodePath("TreeBeginning/Tree3Root"), NodePath("TreeBeginning/Tree4Root")]
 
-[node name="CardSpawnLocation" type="Node2D" parent="."]
+[node name="CardSpawnLocation" type="Marker2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(87, 154)
 
@@ -60,6 +60,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = SubResource("Theme_2tylt")
 theme_override_font_sizes/font_size = 12
-text = "SUBMIT TREE"
+text = "SUBMIT_TREE"
 
 [connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]

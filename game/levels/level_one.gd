@@ -3,23 +3,23 @@ extends Node2D
 @export var next_level: PackedScene
 @export var level_dialogue: DialogueResource
 
-@onready var object_controller: ObjectController = %ObjectController
-@onready var engineer: Engineer = %Engineer
-@onready var central_point: Node2D = %CentralPoint  # TODO: make marker2D
-@onready var end_point: Node2D = %EndPoint
-@onready var reject_button: Button = %RejectButton
-@onready var accept_button: Button = %AcceptButton
-@onready var accuracy_label: RichTextLabel = %AccuracyLabel
-@onready var object_type_label: Label = %ObjectTypeLabel
-@onready var robot_stats: BoxContainer = %RobotStats
-
-var chosen_point: Node2D
+var chosen_point: Marker2D
 var mid_point_reached: bool
 var object_accepted: bool
 var objects_scanned_in_total: int
 var objects_scanned_correctly: int
 var accuracy_rate: float
 var accuracy_warning_triggered: bool
+
+@onready var object_controller: ObjectController = %ObjectController
+@onready var engineer: Engineer = %Engineer
+@onready var central_point: Marker2D = %CentralPoint
+@onready var end_point: Marker2D = %EndPoint
+@onready var reject_button: Button = %RejectButton
+@onready var accept_button: Button = %AcceptButton
+@onready var accuracy_label: RichTextLabel = %AccuracyLabel
+@onready var object_type_label: Label = %ObjectTypeLabel
+@onready var robot_stats: BoxContainer = %RobotStats
 
 
 func _ready() -> void:
@@ -111,14 +111,14 @@ func _object_info_updated():
 	accuracy_rate = int(round((float(objects_scanned_correctly) / objects_scanned_in_total) * 100))
 	#This should probably be refractored to use colors from the function.
 	if accuracy_rate > 40:
-		accuracy_label.text = "Accuracy rate: [color=green]%s%%[/color]" % accuracy_rate
+		accuracy_label.text = tr("ACCURACY_RATE") + "[color=green]%s%%[/color]" % accuracy_rate
 	elif accuracy_rate == 40:
-		accuracy_label.text = "Accuracy rate: [color=orange]%s%%[/color]" % accuracy_rate
+		accuracy_label.text = tr("ACCURACY_RATE") + "[color=orange]%s%%[/color]" % accuracy_rate
 		if accuracy_warning_triggered == false:
 			engineer.show_normal_dialogue(level_dialogue,"forty_percent_warning")
 			accuracy_warning_triggered = true
 	else:
-		accuracy_label.text = "Accuracy rate: [color=red]%s%%[/color]" % accuracy_rate
+		accuracy_label.text = tr("ACCURACY_RATE") + "[color=red]%s%%[/color]" % accuracy_rate
 		if accuracy_warning_triggered == false:
 			engineer.show_normal_dialogue(level_dialogue,"forty_percent_warning")
 			accuracy_warning_triggered = true
@@ -130,14 +130,14 @@ func _show_object_type():
 		await get_tree().create_timer(0.2).timeout
 		_show_object_type()
 	else:
-		object_type_label.text = "Object type: %s"	% object_controller.current_object.object_type_string
+		object_type_label.text = "Object type: %s"	% tr(object_controller.current_object.object_type_string)
 
 
 func _end_the_level():
 	if not next_level is PackedScene: return
 	await LevelTransition.fade_to_black()
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://game/levels/level_two.tscn")
+	get_tree().change_scene_to_packed(next_level)
 
 
 #Level story
