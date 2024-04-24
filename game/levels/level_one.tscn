@@ -70,13 +70,13 @@ layout_mode = 2
 [node name="Version" type="Label" parent="CanvasLayer/RobotStats/MainStats"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 14
-text = "Version 0.9 [BETA]"
+text = "VERSION_LABEL"
 
 [node name="ObjectTypeLabel" type="Label" parent="CanvasLayer/RobotStats/MainStats"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
-text = "Object type: Apple"
+text = "OBJECT_TYPE_EMPTY"
 
 [node name="AccuracyLabel" type="RichTextLabel" parent="CanvasLayer/RobotStats/MainStats"]
 unique_name_in_owner = true
@@ -84,7 +84,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
-text = "Accuracy rate: no data yet!"
+text = "ACCURACY_EMPTY"
 
 [node name="Filler" type="Control" parent="CanvasLayer/RobotStats"]
 layout_mode = 2
@@ -96,7 +96,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="CanvasLayer/RobotStats/ColorStats"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 12
-text = "Color(s):"
+text = "COLORS"
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(161, 76)
@@ -146,7 +146,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = SubResource("Theme_tjxw6")
 theme_override_font_sizes/font_size = 12
-text = "ACCEPT"
+text = "GOOD"
 
 [node name="Control" type="Control" parent="VBoxContainer"]
 layout_mode = 2
@@ -160,7 +160,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = SubResource("Theme_1jxlw")
 theme_override_font_sizes/font_size = 12
-text = "REJECT"
+text = "BAD"
 
 [connection signal="pressed" from="VBoxContainer/AcceptButton" to="." method="_on_accept_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/RejectButton" to="." method="_on_reject_button_pressed"]

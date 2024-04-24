@@ -16,11 +16,11 @@ layout_mode = 2
 [node name="StartGameButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Start Game"
+text = "START_GAME"
 
 [node name="QuitGameButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Quit Game"
+text = "QUIT_GAME"
 
 [connection signal="pressed" from="VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitGameButton" to="." method="_on_quit_game_button_pressed"]
