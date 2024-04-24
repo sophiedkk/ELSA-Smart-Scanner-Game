@@ -1,7 +1,7 @@
 [gd_scene load_steps=24 format=3 uid="uid://dq7sh851jfvlq"]
 
 [ext_resource type="Script" path="res://game/levels/level_one.gd" id="1_nbb1a"]
-[ext_resource type="Resource" uid="uid://dkj4gu88bwnih" path="res://game/dialogue/level_one.dialogue" id="2_2fvla"]
+[ext_resource type="Resource" uid="uid://dvml401vq5j65" path="res://game/dialogue/level_one.dialogue" id="2_2fvla"]
 [ext_resource type="PackedScene" uid="uid://dx58g7kuqi3dh" path="res://game/levels/level_two.tscn" id="2_x3pgs"]
 [ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://game/controllers/engineer.tscn" id="3_k6shj"]
 [ext_resource type="Texture2D" uid="uid://ceaayvfocuib5" path="res://assets/images/labeling_background.png" id="4_2ydxi"]
