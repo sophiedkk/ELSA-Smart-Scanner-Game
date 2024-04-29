@@ -1,17 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://bx0p7ribsnw20"]
+[gd_scene load_steps=3 format=3 uid="uid://bx0p7ribsnw20"]
 
 [ext_resource type="Script" path="res://game/gui/start_menu.gd" id="1_n41ig"]
+[ext_resource type="PackedScene" uid="uid://dq7sh851jfvlq" path="res://game/levels/level_1.tscn" id="2_4woin"]
 
-[node name="StartMenu" type="CenterContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="StartMenu" type="Node"]
 script = ExtResource("1_n41ig")
+next_level = ExtResource("2_4woin")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -30.0
+offset_right = 58.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="StartGameButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true

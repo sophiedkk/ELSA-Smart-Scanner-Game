@@ -1,24 +1,24 @@
 [gd_scene load_steps=24 format=3 uid="uid://dq7sh851jfvlq"]
 
-[ext_resource type="Script" path="res://game/levels/level_one.gd" id="1_nbb1a"]
-[ext_resource type="Resource" uid="uid://dkj4gu88bwnih" path="res://game/dialogue/level_one.dialogue" id="2_2fvla"]
-[ext_resource type="PackedScene" uid="uid://dx58g7kuqi3dh" path="res://game/levels/level_two.tscn" id="2_x3pgs"]
-[ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://game/controllers/engineer.tscn" id="3_k6shj"]
-[ext_resource type="Texture2D" uid="uid://ceaayvfocuib5" path="res://assets/images/labeling_background.png" id="4_2ydxi"]
-[ext_resource type="Texture2D" uid="uid://b1psoqn81m04h" path="res://assets/images/conveyor_belt.png" id="5_bym74"]
-[ext_resource type="PackedScene" uid="uid://bdpufsrllrvpw" path="res://game/controllers/object_controller.tscn" id="5_n4cc1"]
-[ext_resource type="PackedScene" uid="uid://besa1vfpoeqek" path="res://game/objects/base_analysis_object.tscn" id="6_ltpou"]
-[ext_resource type="Resource" uid="uid://did6m2tu8g11x" path="res://game/objects/object_resources/apple_1.tres" id="7_o4hj1"]
-[ext_resource type="Resource" uid="uid://dw0qx218ixssk" path="res://game/objects/object_resources/apple_2.tres" id="8_aqwdx"]
-[ext_resource type="Resource" uid="uid://be1j8hhuvpn4k" path="res://game/objects/object_resources/pear_1.tres" id="8_j5cl5"]
-[ext_resource type="Resource" uid="uid://ckej8djgek6bb" path="res://game/objects/object_resources/banana_1.tres" id="9_qriyv"]
-[ext_resource type="Resource" uid="uid://03db2b1dpbgm" path="res://game/objects/object_resources/berry_1.tres" id="10_i67g3"]
-[ext_resource type="Resource" uid="uid://cyov0epsl2j4x" path="res://game/objects/object_resources/carrot_2.tres" id="11_10rs1"]
-[ext_resource type="Resource" uid="uid://bdhg10ltlqch0" path="res://game/objects/object_resources/salad_1.tres" id="12_gr6pb"]
-[ext_resource type="Resource" uid="uid://d4n0jcw0x1m0o" path="res://game/objects/object_resources/banana_2.tres" id="12_wmx4a"]
-[ext_resource type="Resource" uid="uid://7xvlq48cl8do" path="res://game/objects/object_resources/salad_2.tres" id="14_i1ibt"]
-[ext_resource type="Resource" uid="uid://b65jwjiursrij" path="res://game/objects/object_resources/carrot_1.tres" id="16_d7mwj"]
-[ext_resource type="Texture2D" uid="uid://cu4x0u8g3im23" path="res://assets/images/hospital_cupboard.png" id="18_443bw"]
+[ext_resource type="Script" path="res://game/levels/level_1.gd" id="1_x73tg"]
+[ext_resource type="PackedScene" uid="uid://dx58g7kuqi3dh" path="res://game/levels/level_2.tscn" id="2_d6ww7"]
+[ext_resource type="Resource" uid="uid://dvml401vq5j65" path="res://game/dialogue/level_one.dialogue" id="3_02gh0"]
+[ext_resource type="Texture2D" uid="uid://ceaayvfocuib5" path="res://assets/images/labeling_background.png" id="4_f6t4d"]
+[ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://game/controllers/engineer.tscn" id="5_7skt4"]
+[ext_resource type="Texture2D" uid="uid://b1psoqn81m04h" path="res://assets/images/conveyor_belt.png" id="6_7vf66"]
+[ext_resource type="PackedScene" uid="uid://bdpufsrllrvpw" path="res://game/controllers/object_controller.tscn" id="7_rvy4h"]
+[ext_resource type="PackedScene" uid="uid://besa1vfpoeqek" path="res://game/objects/base_analysis_object.tscn" id="8_bqbmy"]
+[ext_resource type="Resource" uid="uid://did6m2tu8g11x" path="res://game/objects/object_resources/apple_1.tres" id="9_ox7u5"]
+[ext_resource type="Resource" uid="uid://dw0qx218ixssk" path="res://game/objects/object_resources/apple_2.tres" id="10_l67yo"]
+[ext_resource type="Resource" uid="uid://be1j8hhuvpn4k" path="res://game/objects/object_resources/pear_1.tres" id="11_uamqo"]
+[ext_resource type="Resource" uid="uid://ckej8djgek6bb" path="res://game/objects/object_resources/banana_1.tres" id="12_jkwf1"]
+[ext_resource type="Resource" uid="uid://cyov0epsl2j4x" path="res://game/objects/object_resources/carrot_2.tres" id="13_54cn2"]
+[ext_resource type="Resource" uid="uid://03db2b1dpbgm" path="res://game/objects/object_resources/berry_1.tres" id="14_717ep"]
+[ext_resource type="Resource" uid="uid://bdhg10ltlqch0" path="res://game/objects/object_resources/salad_1.tres" id="15_n2se8"]
+[ext_resource type="Resource" uid="uid://d4n0jcw0x1m0o" path="res://game/objects/object_resources/banana_2.tres" id="16_uakej"]
+[ext_resource type="Resource" uid="uid://7xvlq48cl8do" path="res://game/objects/object_resources/salad_2.tres" id="17_sumvs"]
+[ext_resource type="Resource" uid="uid://b65jwjiursrij" path="res://game/objects/object_resources/carrot_1.tres" id="18_a2dgs"]
+[ext_resource type="Texture2D" uid="uid://cu4x0u8g3im23" path="res://assets/images/hospital_cupboard.png" id="19_prr2f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2o1jf"]
 bg_color = Color(0.658824, 0.796078, 0.415686, 1)
@@ -48,10 +48,10 @@ Button/colors/font_focus_color = Color(0.968627, 0.0705882, 0.203922, 1)
 Button/colors/font_hover_color = Color(0.964706, 0, 0.145098, 1)
 Button/styles/normal = SubResource("StyleBoxFlat_wx3m6")
 
-[node name="LevelOne" type="Node2D"]
-script = ExtResource("1_nbb1a")
-next_level = ExtResource("2_x3pgs")
-level_dialogue = ExtResource("2_2fvla")
+[node name="Level_1" type="Node2D"]
+script = ExtResource("1_x73tg")
+next_level = ExtResource("2_d6ww7")
+level_dialogue = ExtResource("3_02gh0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -102,16 +102,16 @@ size_flags_horizontal = 3
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(161, 76)
 scale = Vector2(0.29, 0.29)
-texture = ExtResource("4_2ydxi")
+texture = ExtResource("4_f6t4d")
 
-[node name="Engineer" parent="." instance=ExtResource("3_k6shj")]
+[node name="Engineer" parent="." instance=ExtResource("5_7skt4")]
 unique_name_in_owner = true
 position = Vector2(-60, 48)
 
 [node name="ConveyorBelt" type="Sprite2D" parent="."]
 position = Vector2(160, 176)
 scale = Vector2(0.545555, 0.545555)
-texture = ExtResource("5_bym74")
+texture = ExtResource("6_7vf66")
 
 [node name="CentralPoint" type="Marker2D" parent="."]
 unique_name_in_owner = true
@@ -121,16 +121,16 @@ position = Vector2(176, 124)
 unique_name_in_owner = true
 position = Vector2(345, 171)
 
-[node name="ObjectController" parent="." instance=ExtResource("5_n4cc1")]
+[node name="ObjectController" parent="." instance=ExtResource("7_rvy4h")]
 unique_name_in_owner = true
 position = Vector2(-4, 76)
-level_object_scene = ExtResource("6_ltpou")
-level_objects = Array[Resource("res://game/objects/analysis_object_data.gd")]([ExtResource("7_o4hj1"), ExtResource("8_aqwdx"), ExtResource("8_j5cl5"), ExtResource("9_qriyv"), ExtResource("11_10rs1"), ExtResource("10_i67g3"), ExtResource("12_gr6pb"), ExtResource("12_wmx4a"), ExtResource("14_i1ibt"), ExtResource("16_d7mwj")])
+level_object_scene = ExtResource("8_bqbmy")
+level_objects = Array[Resource("res://game/objects/analysis_object_data.gd")]([ExtResource("9_ox7u5"), ExtResource("10_l67yo"), ExtResource("11_uamqo"), ExtResource("12_jkwf1"), ExtResource("13_54cn2"), ExtResource("14_717ep"), ExtResource("15_n2se8"), ExtResource("16_uakej"), ExtResource("17_sumvs"), ExtResource("18_a2dgs")])
 
 [node name="HospitalCupboard" type="Sprite2D" parent="."]
 position = Vector2(40, 159)
 scale = Vector2(0.28, 0.28)
-texture = ExtResource("18_443bw")
+texture = ExtResource("19_prr2f")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 247.0

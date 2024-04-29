@@ -63,14 +63,14 @@ func _on_area_2d_mouse_exited():
 
 
 func _on_area_2d_body_entered(body: ObjectRectangle):
-	if body.is_in_group("dropable") && body.visible:
+	if body.is_in_group("dropable") and body.visible:
 		overlap_count += 1
 		is_inside_droppable = true
 		body_ref = body
 
 
 func _on_area_2d_body_exited(body: ObjectRectangle):
-	if body.is_in_group("dropable") && body.visible:
+	if body.is_in_group("dropable") and body.visible:
 		overlap_count -= 1
 		if overlap_count == 0:
 			is_inside_droppable = false

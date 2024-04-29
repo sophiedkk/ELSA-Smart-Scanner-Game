@@ -1,7 +1,6 @@
-extends Node2D
+extends Level
 
-@export var next_level: PackedScene
-@export var level_dialogue: DialogueResource
+@export var accuracy_threshold: float = 40
 
 var chosen_point: Marker2D
 var mid_point_reached: bool
@@ -22,10 +21,6 @@ var accuracy_warning_triggered: bool
 @onready var robot_stats: BoxContainer = %RobotStats
 
 
-func _ready() -> void:
-	_establishing_signal_connections()
-
-
 func _process(_delta):
 	mid_point_reached = chosen_point == central_point
 	object_controller.move_current_object(_delta, chosen_point, 80, mid_point_reached)
@@ -34,14 +29,14 @@ func _process(_delta):
 
 
 #Game logic
-func _establishing_signal_connections():
+func _connect_signals():
 	engineer.robot_boot.connect(_booting_up_the_robot)
 	engineer.accept_introduced.connect(_accept_button_activated.bind(true))
 	#engineer.reject_introduced.connect(_reject_button_activated.bind(true))
 	engineer.stats_introduced.connect(_stats_activated.bind(true))
 
-	engineer.level_finished.connect(_end_the_level)
-	engineer.level_restart.connect(_level_restart)
+	engineer.level_finished.connect(_end_level)
+	engineer.level_restart.connect(_restart_level)
 
 	object_controller.all_objects_passed.connect(_object_analysis_finished)
 
@@ -64,7 +59,7 @@ func _making_a_choice(_players_choice):
 		correct_choice = false
 	match objects_scanned_in_total:
 		7:
-			if correct_choice == true:
+			if correct_choice:
 				await engineer.show_normal_dialogue(level_dialogue, "first_feedback_correct")
 			else:
 				await engineer.show_normal_dialogue(level_dialogue, "first_feedback_incorrect")
@@ -83,7 +78,7 @@ func _introducing_next_object():
 	_object_info_updated()
 	await get_tree().create_timer(3.0).timeout
 	#This is a temporary solution to prevent the button from appearing in the final section. There have to be better ways to fix this.
-	if not (robot_stats.visible == false && objects_scanned_in_total > 5):
+	if not (robot_stats.visible == false and objects_scanned_in_total > 5):
 		_accept_button_activated(true)
 		_reject_button_activated(true)
 
@@ -94,25 +89,20 @@ func _object_analysis_finished():
 	_reject_button_activated(false)
 	await engineer.engineer_coming_in()
 	await get_tree().create_timer(1.0).timeout
-	if (accuracy_rate >= 40):
+	if accuracy_rate >= accuracy_threshold:
 		await engineer.show_normal_dialogue(level_dialogue, "all_objects_analyzed_correctly")
 	else:
 		#A placeholder that sends player back to main menu
 		await engineer.show_normal_dialogue(level_dialogue, "all_objects_analyzed_incorrectly")
 
 
-func _level_restart():
-	await LevelTransition.fade_to_black()
-	get_tree().change_scene_to_file("res://game/gui/start_menu.tscn")
-
-
 func _object_info_updated():
 	#var _accuracy_color: Color = Color.WEB_GREEN
 	accuracy_rate = int(round((float(objects_scanned_correctly) / objects_scanned_in_total) * 100))
 	#This should probably be refractored to use colors from the function.
-	if accuracy_rate > 40:
+	if accuracy_rate > accuracy_threshold:
 		accuracy_label.text = tr("ACCURACY_RATE") + "[color=green]%s%%[/color]" % accuracy_rate
-	elif accuracy_rate == 40:
+	elif accuracy_rate == accuracy_threshold:
 		accuracy_label.text = tr("ACCURACY_RATE") + "[color=orange]%s%%[/color]" % accuracy_rate
 		if accuracy_warning_triggered == false:
 			engineer.show_normal_dialogue(level_dialogue,"forty_percent_warning")
@@ -130,14 +120,7 @@ func _show_object_type():
 		await get_tree().create_timer(0.2).timeout
 		_show_object_type()
 	else:
-		object_type_label.text = "Object type: %s"	% tr(object_controller.current_object.object_type_string)
-
-
-func _end_the_level():
-	if not next_level is PackedScene: return
-	await LevelTransition.fade_to_black()
-	get_tree().paused = false
-	get_tree().change_scene_to_packed(next_level)
+		object_type_label.text = "Object type: %s" % tr(object_controller.current_object.object_type_string)
 
 
 #Level story
@@ -165,7 +148,8 @@ func _preventing_initial_mistake():
 		objects_scanned_in_total = objects_scanned_in_total - 1
 		await engineer.show_normal_dialogue(level_dialogue, "incorrect_blocked_answer")
 
-#UI
+
+#region GUI
 func _on_accept_button_pressed():
 	object_accepted = true
 	_making_a_choice(object_accepted)
@@ -195,6 +179,7 @@ func _reject_button_activated(activated: bool):
 
 func _stats_activated(activated: bool):
 	robot_stats.visible = activated
+#endregion
 
 #Miscellaneous
 

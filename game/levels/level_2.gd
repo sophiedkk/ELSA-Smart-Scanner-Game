@@ -1,7 +1,5 @@
-extends Node2D
+extends Level
 
-@export var next_level: PackedScene
-@export var level_dialogue: DialogueResource
 @export var card_resources: Array[CardData]
 
 var spawn_location: Vector2
@@ -16,8 +14,7 @@ var current_cards: Array[Node]
 
 
 func _ready():
-	TranslationServer.set_locale("nl")
-	_establishing_signal_connections()
+	super._ready()
 	spawn_location = card_spawn_location.position
 
 	await LevelTransition.fade_from_black()
@@ -28,15 +25,15 @@ func _ready():
 
 #func _process(_delta):
 	#if Input.is_action_just_released("skip_level"):
-		#_end_the_level()
+		#_end_level()
 
 
 #Game logic
-func _establishing_signal_connections():
+func _connect_signals():
 	engineer.tree_created.connect(_create_first_decision_tree)
 	engineer.deck_introduced.connect(_show_first_deck)
 	engineer.new_tree_construction.connect(_reconstruction)
-	engineer.level_finished.connect(_end_the_level)
+	engineer.level_finished.connect(_end_level)
 
 	decision_tree.tree_not_filled.connect(_missing_rectangles)
 	decision_tree.tree_filled_correctly.connect(_tree_fill_success)
@@ -99,13 +96,6 @@ func _change_deck_length(increase: bool):
 		current_deck_length += 1
 	else:
 		current_deck_length -= 1
-
-
-func _end_the_level():
-	if not next_level is PackedScene: return
-	await LevelTransition.fade_to_black()
-	get_tree().paused = false
-	get_tree().change_scene_to_file("res://game/gui/start_menu.tscn")
 
 
 #Level story

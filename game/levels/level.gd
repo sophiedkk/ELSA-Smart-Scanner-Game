@@ -6,17 +6,22 @@ extends Node
 
 
 func _ready() -> void:
+	TranslationServer.set_locale("nl")  # TODO: implement proper localization selection
 	_connect_signals()
-	await LevelTransition.fade_from_black()
-	await get_tree().create_timer(0.5).timeout
 
 
 func _connect_signals() -> void:
 	pass
 
 
-func _end_the_level():
-	if not next_level: return
+func _end_level():
+	if not next_level:
+		get_tree().change_scene_to_file("res://game/gui/start_menu.tscn")
 	await LevelTransition.fade_to_black()
 	get_tree().paused = false
 	get_tree().change_scene_to_packed(next_level)
+
+
+func _restart_level():
+	await LevelTransition.fade_to_black()
+	get_tree().reload_current_scene()

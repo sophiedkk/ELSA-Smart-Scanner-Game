@@ -1,8 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://dx58g7kuqi3dh"]
+[gd_scene load_steps=13 format=3 uid="uid://dx58g7kuqi3dh"]
 
-[ext_resource type="Script" path="res://game/levels/level_two.gd" id="1_7rnoy"]
-[ext_resource type="PackedScene" uid="uid://bx0p7ribsnw20" path="res://game/gui/start_menu.tscn" id="2_7k7si"]
-[ext_resource type="Resource" uid="uid://dvlba717dvhdl" path="res://game/dialogue/level_two.dialogue" id="2_rnrsj"]
+[ext_resource type="Script" path="res://game/levels/level_2.gd" id="1_7rnoy"]
+[ext_resource type="Resource" uid="uid://c5q4sv012qdlu" path="res://game/dialogue/level_two.dialogue" id="2_rnrsj"]
 [ext_resource type="Texture2D" uid="uid://5gq57suc6nsr" path="res://assets/images/conference_room_background.png" id="2_tnefq"]
 [ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://game/controllers/engineer.tscn" id="3_k0yll"]
 [ext_resource type="Resource" uid="uid://cn7o1k54pcpdx" path="res://game/objects/card_resources/banana_1_card.tres" id="4_5aqit"]
@@ -26,11 +25,10 @@ Button/colors/font_focus_color = Color(0.368627, 0.458824, 0.196078, 1)
 Button/colors/font_hover_color = Color(0.658824, 0.796078, 0.415686, 1)
 Button/styles/normal = SubResource("StyleBoxFlat_jgcck")
 
-[node name="LevelTwo" type="Node2D"]
+[node name="Level_2" type="Node2D"]
 script = ExtResource("1_7rnoy")
-next_level = ExtResource("2_7k7si")
-level_dialogue = ExtResource("2_rnrsj")
 card_resources = Array[Resource("res://game/objects/card_data.gd")]([ExtResource("7_xnuxe"), ExtResource("4_5aqit"), ExtResource("5_cqwnp"), ExtResource("8_msc7g"), ExtResource("7_rcfnu")])
+level_dialogue = ExtResource("2_rnrsj")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(169, 69)
@@ -41,8 +39,9 @@ texture = ExtResource("2_tnefq")
 unique_name_in_owner = true
 position = Vector2(-57, 78)
 
-[node name="ConstructedDecisionTree" parent="." instance=ExtResource("17_w4pm3")]
+[node name="ConstructedDecisionTree" parent="." node_paths=PackedStringArray("tree_roots") instance=ExtResource("17_w4pm3")]
 unique_name_in_owner = true
+tree_roots = [null, NodePath("TreeBeginning/Tree1Root"), NodePath("TreeBeginning/Tree2Root"), NodePath("TreeBeginning/Tree3Root"), NodePath("TreeBeginning/Tree4Root")]
 
 [node name="CardSpawnLocation" type="Marker2D" parent="."]
 unique_name_in_owner = true
