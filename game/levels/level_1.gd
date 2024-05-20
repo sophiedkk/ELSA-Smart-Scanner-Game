@@ -30,6 +30,8 @@ func _process(_delta):
 
 #Game logic
 func _connect_signals():
+	var new_texture = load("res://assets/images/scientist_lady.png")
+	engineer.current_sprite.texture = new_texture
 	engineer.robot_boot.connect(_booting_up_the_robot)
 	engineer.accept_introduced.connect(_accept_button_activated.bind(true))
 	#engineer.reject_introduced.connect(_reject_button_activated.bind(true))

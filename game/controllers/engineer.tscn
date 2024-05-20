@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b450aeeec3w2r"]
 
 [ext_resource type="Script" path="res://game/controllers/engineer.gd" id="1_hnd2e"]
-[ext_resource type="Texture2D" uid="uid://cnt0mf0iu28rf" path="res://assets/images/scientist lady.png" id="2_v3h7m"]
+[ext_resource type="Texture2D" uid="uid://cnt0mf0iu28rf" path="res://assets/images/scientist_lady.png" id="2_nxds3"]
 
 [sub_resource type="Animation" id="Animation_o4i74"]
 length = 0.001
@@ -66,4 +66,4 @@ libraries = {
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("2_v3h7m")
+texture = ExtResource("2_nxds3")

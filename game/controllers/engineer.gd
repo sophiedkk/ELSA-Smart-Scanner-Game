@@ -20,6 +20,8 @@ var cd_path: DialogueResource
 var cd_part: String
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var current_sprite: Sprite2D = $Sprite2D
+
 
 func _ready() -> void:
 	DialogueManager.dialogue_ended.connect(_on_dialogue_finished)
@@ -73,6 +75,10 @@ func _on_dialogue_finished() -> void:
 					new_tree_construction.emit()
 				"all_trees_finished":
 					level_finished.emit()
+		"res://game/dialogue/level_three.dialogue":
+			match cd_part:
+				"doctor_opening_lines":
+					pass
 	dialogue_in_progress = false
 
 

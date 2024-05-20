@@ -75,7 +75,7 @@ trigger_function_2={
 
 locale/translation_remaps={}
 locale/translations=PackedStringArray("res://game/dialogue/level_one.nl.translation", "res://game/dialogue/level_one.en.translation", "res://game/dialogue/level_two.en.translation", "res://game/dialogue/level_two.nl.translation", "res://game/translations.en.translation", "res://game/translations.nl.translation")
-locale/translations_pot_files=PackedStringArray("res://game/dialogue/level_one.dialogue", "res://game/dialogue/level_two.dialogue", "res://game/levels/level_two.tscn", "res://game/controllers/engineer.tscn")
+locale/translations_pot_files=PackedStringArray("res://game/dialogue/level_one.dialogue", "res://game/dialogue/level_two.dialogue", "res://game/levels/level_two.tscn", "res://game/controllers/engineer.tscn", "res://game/dialogue/level_three.dialogue")
 
 [rendering]
 
