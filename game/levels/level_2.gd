@@ -23,9 +23,9 @@ func _ready():
 	engineer.engineer_coming_in()
 
 
-#func _process(_delta):
-	#if Input.is_action_just_released("skip_level"):
-		#_end_level()
+func _process(_delta):
+	if Input.is_action_just_released("skip_level"):
+		_end_level()
 
 
 #Game logic

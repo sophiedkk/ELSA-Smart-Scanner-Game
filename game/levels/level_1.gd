@@ -21,11 +21,17 @@ var accuracy_warning_triggered: bool
 @onready var robot_stats: BoxContainer = %RobotStats
 
 
+#func _ready():
+	#objects_scanned_in_total = 0
+	#objects_scanned_correctly = 0
+	#accuracy_rate = 0
+	#robot_stats.visible = false
+
 func _process(_delta):
 	mid_point_reached = chosen_point == central_point
 	object_controller.move_current_object(_delta, chosen_point, 80, mid_point_reached)
-	#if Input.is_action_just_released("skip_level"):
-		#_end_the_level()
+	if Input.is_action_just_released("skip_level"):
+		_end_level()
 
 
 #Game logic

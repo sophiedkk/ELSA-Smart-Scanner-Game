@@ -30,8 +30,9 @@ func show_new_object():
 		current_object = level_object_scene.instantiate()
 		current_object.object_properties = new_object_properties
 		add_child(current_object)
-		clear_previous_palette()
-		show_new_object_palette()
+		if (current_object_index >= 2):
+			clear_previous_palette()
+			show_new_object_palette()
 		current_object_acceptable = current_object.suitable
 		current_object_index = current_object_index + 1
 		current_object_moving = true
@@ -53,6 +54,10 @@ func move_current_object(delta, intended_destination: Node, move_speed: int, mid
 
 
 func show_new_object_palette():
+	if (current_object_index == 2):
+		await get_tree().create_timer(3.0).timeout
+	else:
+		await get_tree().create_timer(2.5).timeout
 	if current_object != null:
 		color_palette = current_object.colors
 		print(color_palette)

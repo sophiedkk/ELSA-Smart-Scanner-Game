@@ -57,6 +57,7 @@ level_dialogue = ExtResource("3_02gh0")
 
 [node name="RobotStats" type="BoxContainer" parent="CanvasLayer"]
 unique_name_in_owner = true
+visible = false
 offset_left = 1.0
 offset_top = 2.0
 offset_right = 127.0

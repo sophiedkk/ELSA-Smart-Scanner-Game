@@ -16,10 +16,13 @@ func _connect_signals() -> void:
 
 func _end_level():
 	if not next_level:
+		await LevelTransition.fade_to_black()
 		get_tree().change_scene_to_file("res://game/gui/start_menu.tscn")
-	await LevelTransition.fade_to_black()
-	get_tree().paused = false
-	get_tree().change_scene_to_packed(next_level)
+		await LevelTransition.fade_from_black()
+	else:
+		await LevelTransition.fade_to_black()
+		get_tree().paused = false
+		get_tree().change_scene_to_packed(next_level)
 
 
 func _restart_level():
