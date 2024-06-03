@@ -14,6 +14,9 @@ signal tree_created
 signal deck_introduced
 signal new_tree_construction
 
+#Level 3 Signals
+signal initial_patient_dialogue
+
 #These variables control the flow of the dialogue
 var dialogue_in_progress := false
 var cd_path: DialogueResource
@@ -78,7 +81,11 @@ func _on_dialogue_finished() -> void:
 		"res://game/dialogue/level_three.dialogue":
 			match cd_part:
 				"doctor_opening_lines":
-					pass
+					engineer_going_out()
+					await LevelTransition.fade_to_black()
+					initial_patient_dialogue.emit()
+				"hans_de_vries_intro":
+					await LevelTransition.fade_from_black()
 	dialogue_in_progress = false
 
 

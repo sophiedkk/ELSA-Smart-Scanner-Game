@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="PatientData" load_steps=3 format=3 uid="uid://c3gkrqx6x4d5"]
+
+[ext_resource type="Script" path="res://game/objects/patient_data.gd" id="1_gjwkk"]
+[ext_resource type="Texture2D" uid="uid://bx7v63cu7fhkd" path="res://assets/images/hans_de_vries.png" id="1_tc0a8"]
+
+[resource]
+script = ExtResource("1_gjwkk")
+patient_name = "Hans de Vries"
+patient_age = 26
+patient_gender = "M"
+last_gp_visit = "97 days ago"
+chronic_conditions = "absent"
+recent_sugeries = "carpal tunnel release, 52 days ago"
+known_allergies = "none"
+currently_pregnant = 1
+patient_sprite = ExtResource("1_tc0a8")
+patient_complaints = "chills, coughing, migraines, dizziness"
+symptoms_duration = "~2-3 weeks"
+assessed_intensity = "4/10"
+surgery_required = 1
+exotic_or_rare_signs = 1
+inferred_diagnosis = "Type C flu with some complications"

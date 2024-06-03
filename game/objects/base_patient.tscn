@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b160vht0s571l"]
+
+[ext_resource type="Script" path="res://game/objects/base_patient.gd" id="1_bvw0g"]
+
+[node name="Patient" type="Sprite2D"]
+scale = Vector2(0.15, 0.15)
+script = ExtResource("1_bvw0g")

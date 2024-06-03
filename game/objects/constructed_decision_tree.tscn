@@ -209,6 +209,7 @@ position = Vector2(28.572, 2580)
 correct_type = 1
 
 [node name="Tree3Root" type="Node2D" parent="TreeBeginning"]
+visible = false
 
 [node name="3_0_1_circle" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
 visible = false

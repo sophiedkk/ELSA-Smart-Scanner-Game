@@ -2,9 +2,30 @@
 Dr Whatever: Hello!
 Dr Whatever: My name is Doctor Whatever.
 Dr Whatever: It's nice to see you, Smart Scanner.
-Dr Whatever: I have been told that Dr. Rensselaer updated your code, so now you can actually help me with patient diagnosis.
-Dr Whatever: Computer area is not my area of expertise, but I believe the word that they used was... reinforcement learning?
-Dr Whatever: That sounds quite difficult, but hopefully I will see the effects in practice.
+Dr Whatever: Dr. Rensselaer updated your code, so now you can help me with actual patients. Here is how.
+Dr Whatever: I'm going to listen to the patient's complaints and determine their diagnosis.
+Dr Whatever: You will then analyze this data and suggest the best medicine for them.
+Dr Whatever: After that, we will keep in touch with the patient to learn if you made the best choice. We will then pass this data to you to improve your accuracy.
+Dr Whatever: I believe that Dr. Rensselaer called this process... "reinforcement learning"?
+Dr Whatever: That sounds quite difficult to me, but I will probably understand this process in practice.
 Dr Whatever: Speaking of practice, we have a patient who's about to come in with a complaint.
-Dr Whatever: Let's see if I can use some of your help to determine their medication.
+Dr Whatever: For now, I will leave you in listening mode. You will be able to hear our conversation, but that's it.
+Dr Whatever: I will ask you to help once we figure out the diagnosis.
+=> END
+
+~ hans_de_vries_intro
+Dr Whatever: Hmm, okay. I see.
+Dr Whatever: I think I have a pretty good idea about your diagnosis.
+Dr Whatever: However, for the best results I would like to consult our Smart Scanner here.
+Dr Whatever: Is it okay if it processes your healthcare data for better results?
+Hans De Vries: Uh, yeah, sure.
+Dr Whatever: Great! Fill in this consent form then, and we can proceed.
+Hans De Vries: ...
+Hans De Vries: ...
+Hans De Vries: There you go. I didn't even know that analysing patients was a thing that AI can do.
+Hans De Vries: People mostly talk about making images or chatbots. That's interesting.
+Dr Whatever: I understand that!
+Dr Whatever: AI can actually be used for a lot of things, we just need to be careful with how we use it.
+Dr Whatever: That's why I needed you to fill in the consent form.
+Dr Whatever: Smart Scanner, get up! Help us choose the best medication for Hans!
 => END

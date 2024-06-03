@@ -1,12 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://rh38s4mnlbr7"]
+[gd_scene load_steps=9 format=3 uid="uid://rh38s4mnlbr7"]
 
 [ext_resource type="Script" path="res://game/levels/level_3.gd" id="1_fjahl"]
+[ext_resource type="Resource" uid="uid://c3gkrqx6x4d5" path="res://game/objects/patient_resources/hans_de_vries.tres" id="2_1b10a"]
 [ext_resource type="Texture2D" uid="uid://b5xuo1ieioomd" path="res://assets/images/adviser-background.jpg" id="2_5dagn"]
 [ext_resource type="Resource" uid="uid://bmo8vgxmwevk3" path="res://game/dialogue/level_three.dialogue" id="2_6rwa6"]
 [ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://game/controllers/engineer.tscn" id="3_efjwc"]
+[ext_resource type="PackedScene" uid="uid://b160vht0s571l" path="res://game/objects/base_patient.tscn" id="3_t7r23"]
+[ext_resource type="Texture2D" uid="uid://cqoucnromrvix" path="res://assets/images/wooden_table.png" id="5_j3ba3"]
+[ext_resource type="Texture2D" uid="uid://cj18mvjn8jvhq" path="res://assets/images/techy_screen.jpg" id="5_j5k32"]
 
 [node name="Level_3" type="Node2D"]
 script = ExtResource("1_fjahl")
+level_patients = Array[Resource("res://game/objects/patient_data.gd")]([null, ExtResource("2_1b10a"), null, null])
+level_patient_object = ExtResource("3_t7r23")
 level_dialogue = ExtResource("2_6rwa6")
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -14,6 +20,166 @@ position = Vector2(161, 91)
 scale = Vector2(0.126117, 0.127005)
 texture = ExtResource("2_5dagn")
 
+[node name="AnalysisBackground" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(158, 92)
+scale = Vector2(0.171206, 0.171206)
+texture = ExtResource("5_j5k32")
+
 [node name="Engineer" parent="." instance=ExtResource("3_efjwc")]
 unique_name_in_owner = true
-position = Vector2(-58, 58)
+position = Vector2(-85, 89)
+
+[node name="SpawnPosition" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(56, 95)
+
+[node name="PillTable" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 10
+position = Vector2(170, 97)
+scale = Vector2(0.17674, 0.17674)
+texture = ExtResource("5_j3ba3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PatientInformation" type="VBoxContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_left = 37.0
+offset_top = 13.0
+offset_right = 320.0
+offset_bottom = 60.0
+
+[node name="FirstRowContainer" type="HBoxContainer" parent="CanvasLayer/PatientInformation"]
+layout_mode = 2
+
+[node name="PatientName" type="Label" parent="CanvasLayer/PatientInformation/FirstRowContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 7
+text = "Name:"
+
+[node name="Control1" type="Control" parent="CanvasLayer/PatientInformation/FirstRowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PatientAge" type="Label" parent="CanvasLayer/PatientInformation/FirstRowContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 7
+text = "Age:"
+
+[node name="Control2" type="Control" parent="CanvasLayer/PatientInformation/FirstRowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PatientGender" type="Label" parent="CanvasLayer/PatientInformation/FirstRowContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 7
+text = "Gender:"
+
+[node name="Control3" type="Control" parent="CanvasLayer/PatientInformation/FirstRowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PatientLastGPVisit" type="Label" parent="CanvasLayer/PatientInformation/FirstRowContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 7
+text = "Last GP visit:"
+
+[node name="Control4" type="Control" parent="CanvasLayer/PatientInformation/FirstRowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control1" type="Control" parent="CanvasLayer/PatientInformation"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SecondRowContainer" type="HBoxContainer" parent="CanvasLayer/PatientInformation"]
+layout_mode = 2
+
+[node name="ChronicConditions" type="Label" parent="CanvasLayer/PatientInformation/SecondRowContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 7
+text = "Chronic conditions:"
+
+[node name="Control1" type="Control" parent="CanvasLayer/PatientInformation/SecondRowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RecentSurgeries" type="Label" parent="CanvasLayer/PatientInformation/SecondRowContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 7
+text = "Recent surgeries:"
+
+[node name="Control2" type="Control" parent="CanvasLayer/PatientInformation/SecondRowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.5
+
+[node name="Control2" type="Control" parent="CanvasLayer/PatientInformation"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ThirdRowContainer" type="HBoxContainer" parent="CanvasLayer/PatientInformation"]
+layout_mode = 2
+
+[node name="KnownAllergies" type="Label" parent="CanvasLayer/PatientInformation/ThirdRowContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 7
+text = "Known allergies:"
+
+[node name="Control1" type="Control" parent="CanvasLayer/PatientInformation/ThirdRowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CurrentlyPregnant" type="Label" parent="CanvasLayer/PatientInformation/ThirdRowContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 7
+text = "Pregnant:"
+
+[node name="Control2" type="Control" parent="CanvasLayer/PatientInformation/ThirdRowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.5
