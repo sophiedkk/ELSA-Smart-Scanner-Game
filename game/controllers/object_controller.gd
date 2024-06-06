@@ -52,12 +52,14 @@ func move_current_object(delta, intended_destination: Node, move_speed: int, mid
 			for palette in color_palette_squares:
 				palette.visible = true
 
-
 func show_new_object_palette():
 	if (current_object_index == 2):
-		await get_tree().create_timer(3.0).timeout
+		return
 	else:
 		await get_tree().create_timer(2.5).timeout
+	show_object_palette()
+
+func show_object_palette():
 	if current_object != null:
 		color_palette = current_object.colors
 		print(color_palette)
@@ -69,11 +71,9 @@ func show_new_object_palette():
 			color_palette_square.global_position = Vector2(65 + (i * 25), 50)
 			color_palette_squares.push_back(color_palette_square)
 
-
 func clear_previous_palette():
 	if color_palette_squares != null:
 		for square in color_palette_squares:
 			square.queue_free()
 		color_palette.clear()
-		#Not sure if I have to clear the array here
 		color_palette_squares.clear()

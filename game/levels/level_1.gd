@@ -34,7 +34,7 @@ func _process(_delta):
 		_end_level()
 
 
-#Game logic
+#region Game logic
 func _connect_signals():
 	var new_texture = load("res://assets/images/scientist_lady.png")
 	engineer.current_sprite.texture = new_texture
@@ -50,7 +50,6 @@ func _connect_signals():
 
 	chosen_point = central_point
 	engineer.show_normal_dialogue(level_dialogue, "engineer_opening_lines")
-
 
 func _making_a_choice(_players_choice):
 	var correct_choice: bool
@@ -73,7 +72,6 @@ func _making_a_choice(_players_choice):
 				await engineer.show_normal_dialogue(level_dialogue, "first_feedback_incorrect")
 	#_stats()
 
-
 func _introducing_next_object():
 	_accept_button_activated(false)
 	_reject_button_activated(false)
@@ -90,7 +88,6 @@ func _introducing_next_object():
 		_accept_button_activated(true)
 		_reject_button_activated(true)
 
-
 func _object_analysis_finished():
 	_stats_activated(false)
 	_accept_button_activated(false)
@@ -102,7 +99,6 @@ func _object_analysis_finished():
 	else:
 		#A placeholder that sends player back to main menu
 		await engineer.show_normal_dialogue(level_dialogue, "all_objects_analyzed_incorrectly")
-
 
 func _object_info_updated():
 	#var _accuracy_color: Color = Color.WEB_GREEN
@@ -122,16 +118,15 @@ func _object_info_updated():
 			accuracy_warning_triggered = true
 	_show_object_type()
 
-
 func _show_object_type():
 	if object_controller.current_object_moving == true:
 		await get_tree().create_timer(0.2).timeout
 		_show_object_type()
 	else:
 		object_type_label.text = "Object type: %s" % tr(object_controller.current_object.object_type_string)
+#endregion
 
-
-#Level story
+#region Level story
 func _booting_up_the_robot():
 	object_controller.show_new_object()
 	print("This object's index is ", object_controller.current_object_index)
@@ -140,7 +135,6 @@ func _booting_up_the_robot():
 	await engineer.show_normal_dialogue(level_dialogue, "robot_booted_up")
 	await engineer.engineer_coming_in()
 	await engineer.show_normal_dialogue(level_dialogue, "explaining_the_mechanics")
-
 
 func _tutorial_stage_passed():
 	match objects_scanned_in_total:
@@ -151,11 +145,10 @@ func _tutorial_stage_passed():
 			await engineer.show_normal_dialogue(level_dialogue, "tutorial_bad_apple_rejected")
 			return
 
-
 func _preventing_initial_mistake():
 		objects_scanned_in_total = objects_scanned_in_total - 1
 		await engineer.show_normal_dialogue(level_dialogue, "incorrect_blocked_answer")
-
+#endregion
 
 #region GUI
 func _on_accept_button_pressed():
@@ -169,24 +162,22 @@ func _on_accept_button_pressed():
 			return
 	_introducing_next_object()
 
-
 func _on_reject_button_pressed():
 	object_accepted = false
 	_making_a_choice(object_accepted)
 	_tutorial_stage_passed()
 	_introducing_next_object()
 
-
 func _accept_button_activated(activated: bool):
 	accept_button.visible = activated
-
 
 func _reject_button_activated(activated: bool):
 	reject_button.visible = activated
 
-
 func _stats_activated(activated: bool):
 	robot_stats.visible = activated
+	if (objects_scanned_in_total == 2):
+		object_controller.show_object_palette()
 #endregion
 
 #Miscellaneous

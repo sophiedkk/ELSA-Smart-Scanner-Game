@@ -22,5 +22,5 @@ func _ready():
 	suitable = object_properties.object_suitable
 	colors = object_properties.object_relevant_colors.duplicate(true)
 	relevant_colors = object_properties.object_relevant_colors.duplicate(true)
-	defects = object_properties.object_defects
+
 

@@ -10,5 +10,3 @@ object_type = 2
 object_suitable = true
 object_type_colors = Array[int]([4, 6])
 object_relevant_colors = Array[int]([6])
-object_defects = false
-object_outline_asset = null

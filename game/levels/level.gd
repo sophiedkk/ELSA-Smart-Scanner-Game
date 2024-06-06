@@ -24,7 +24,6 @@ func _end_level():
 		get_tree().paused = false
 		get_tree().change_scene_to_packed(next_level)
 
-
 func _restart_level():
 	await LevelTransition.fade_to_black()
 	get_tree().reload_current_scene()

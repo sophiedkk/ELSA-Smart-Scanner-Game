@@ -31,8 +31,6 @@ func _ready() -> void:
 
 
 func show_normal_dialogue(dialogue_resource: DialogueResource, dialogue_part: String):
-	#This section defers the next (automatic) dialogue section if the current one is still in progress
-	#I am NOT sure if this is the optimal way to do that
 	if dialogue_in_progress == true:
 		await get_tree().create_timer(2.0).timeout
 		return await show_normal_dialogue(dialogue_resource, dialogue_part)
