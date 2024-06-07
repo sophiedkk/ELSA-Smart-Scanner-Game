@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cbpwitupu0t6b"]
 
-[ext_resource type="Script" path="res://game/objects/patient_resources/pill_object.gd" id="1_1bysg"]
+[ext_resource type="Script" path="res://game/objects/pill_object.gd" id="1_1bysg"]
 [ext_resource type="Texture2D" uid="uid://bllyxuqwynotk" path="res://assets/images/pill-bottle.png" id="1_hjaqx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pos7w"]
