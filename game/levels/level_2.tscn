@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dx58g7kuqi3dh"]
+[gd_scene load_steps=13 format=3 uid="uid://dx58g7kuqi3dh"]
 
 [ext_resource type="Script" path="res://game/levels/level_2.gd" id="1_7rnoy"]
 [ext_resource type="Resource" uid="uid://dvlba717dvhdl" path="res://game/dialogue/level_two.dialogue" id="2_rnrsj"]
@@ -7,7 +7,6 @@
 [ext_resource type="Resource" uid="uid://cn7o1k54pcpdx" path="res://game/objects/card_resources/banana_1_card.tres" id="4_5aqit"]
 [ext_resource type="Resource" uid="uid://0khx3v8hjulg" path="res://game/objects/card_resources/grape_1_card.tres" id="5_cqwnp"]
 [ext_resource type="Resource" uid="uid://bhxohrb8avaie" path="res://game/objects/card_resources/coconut_1_card.tres" id="7_rcfnu"]
-[ext_resource type="PackedScene" uid="uid://rh38s4mnlbr7" path="res://game/levels/level_3.tscn" id="7_x48bt"]
 [ext_resource type="Resource" uid="uid://da32mb8uixdp7" path="res://game/objects/card_resources/apple_1_card.tres" id="7_xnuxe"]
 [ext_resource type="Resource" uid="uid://dt071tjkjgwjh" path="res://game/objects/card_resources/chili_1_card.tres" id="8_msc7g"]
 [ext_resource type="PackedScene" uid="uid://dkin357h60654" path="res://game/objects/constructed_decision_tree.tscn" id="17_w4pm3"]
@@ -29,7 +28,6 @@ Button/styles/normal = SubResource("StyleBoxFlat_jgcck")
 [node name="Level_2" type="Node2D"]
 script = ExtResource("1_7rnoy")
 card_resources = Array[Resource("res://game/objects/card_data.gd")]([ExtResource("7_xnuxe"), ExtResource("4_5aqit"), ExtResource("5_cqwnp"), ExtResource("8_msc7g"), ExtResource("7_rcfnu")])
-next_level = ExtResource("7_x48bt")
 level_dialogue = ExtResource("2_rnrsj")
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -41,9 +39,8 @@ texture = ExtResource("2_tnefq")
 unique_name_in_owner = true
 position = Vector2(-57, 78)
 
-[node name="ConstructedDecisionTree" parent="." node_paths=PackedStringArray("tree_roots") instance=ExtResource("17_w4pm3")]
+[node name="ConstructedDecisionTree" parent="." instance=ExtResource("17_w4pm3")]
 unique_name_in_owner = true
-tree_roots = [null, NodePath("TreeBeginning/Tree1Root"), NodePath("TreeBeginning/Tree2Root"), NodePath("TreeBeginning/Tree3Root"), NodePath("TreeBeginning/Tree4Root")]
 
 [node name="CardSpawnLocation" type="Marker2D" parent="."]
 unique_name_in_owner = true

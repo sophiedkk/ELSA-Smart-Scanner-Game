@@ -2,7 +2,6 @@ extends Level
 
 @onready var start_game_button: Button = %StartGameButton
 
-
 func _ready():
 	super._ready()
 	if LevelTransition.blacked_out == true:

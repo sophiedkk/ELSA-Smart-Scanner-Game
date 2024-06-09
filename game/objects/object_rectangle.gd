@@ -10,7 +10,6 @@ var rectangle_filled: bool = false
 var current_card_reference: Node = null
 var filled_correctly: bool = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	object_type_label.text = "???????"
 

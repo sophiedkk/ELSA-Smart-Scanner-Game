@@ -28,7 +28,7 @@ func _process(_delta):
 		_end_level()
 
 
-#Game logic
+#region Game logic
 func _connect_signals():
 	engineer.tree_created.connect(_create_first_decision_tree)
 	engineer.deck_introduced.connect(_show_first_deck)
@@ -38,7 +38,6 @@ func _connect_signals():
 	decision_tree.tree_not_filled.connect(_missing_rectangles)
 	decision_tree.tree_filled_correctly.connect(_tree_fill_success)
 	decision_tree.tree_filled_incorrectly.connect(_tree_fill_failure)
-
 
 func _show_deck():
 	if decision_tree.current_root >= decision_tree.tree_roots.size():
@@ -58,28 +57,26 @@ func _show_deck():
 		await get_tree().create_timer(1.0).timeout
 	submit_button.visible = true
 
-
 func _clean_deck():
 	for card in current_cards:
 		card.queue_free()
 		await get_tree().create_timer(1.0).timeout
 	current_cards.clear()
 
+func _on_submit_button_pressed():
+	decision_tree.check_correctness()
 
 func _missing_rectangles():
 	engineer.show_normal_dialogue(level_dialogue, "tree_not_filled")
 
-
 func _tree_fill_failure():
 	engineer.show_normal_dialogue(level_dialogue, "tree_filled_incorrectly")
-
 
 func _tree_fill_success():
 	if current_deck_length == 2:
 		engineer.show_normal_dialogue(level_dialogue, "tree_filled_correctly_first_time")
 	else:
 		engineer.show_normal_dialogue(level_dialogue, "tree_filled_correctly")
-
 
 func _reconstruction():
 	submit_button.visible = false
@@ -89,32 +86,27 @@ func _reconstruction():
 	await decision_tree.expose_new_tree()
 	await _show_deck()
 
-
-#Since the deck draws from the same array of resources, this controls how long it is for every step
 func _change_deck_length(increase: bool):
 	if increase:
 		current_deck_length += 1
 	else:
 		current_deck_length -= 1
 
+#endregion
 
-#Level story
+#region Level story
 func _show_first_deck():
 	await _show_deck()
 	await get_tree().create_timer(0.5).timeout
 	engineer.show_normal_dialogue(level_dialogue, "cards_introduced")
-
 
 func _create_first_decision_tree():
 	decision_tree.expose_new_tree()
 	if (decision_tree.current_root == 1):
 		await engineer.show_normal_dialogue(level_dialogue, "introduction_to_decision_trees")
 
-
 func _final_dialogue():
 	await engineer.engineer_coming_in()
 	await engineer.show_normal_dialogue(level_dialogue, "all_trees_finished")
 
-
-func _on_submit_button_pressed():
-	decision_tree.check_correctness()
+#endregion
