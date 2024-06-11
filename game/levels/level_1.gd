@@ -44,7 +44,7 @@ func _connect_signals():
 	engineer.stats_introduced.connect(_stats_activated.bind(true))
 
 	engineer.level_finished.connect(_end_level)
-	engineer.level_restart.connect(_restart_level)
+	engineer.level_restart.connect(_fail_level)
 
 	object_controller.all_objects_passed.connect(_object_analysis_finished)
 
@@ -148,6 +148,10 @@ func _tutorial_stage_passed():
 func _preventing_initial_mistake():
 		objects_scanned_in_total = objects_scanned_in_total - 1
 		await engineer.show_normal_dialogue(level_dialogue, "incorrect_blocked_answer")
+
+func _fail_level():
+	await LevelTransition.fade_to_black()
+	get_tree().change_scene_to_file("res://game/levels/level_1_fail.tscn")
 #endregion
 
 #region GUI

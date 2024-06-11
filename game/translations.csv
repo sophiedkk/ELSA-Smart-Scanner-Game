@@ -8,6 +8,9 @@ ACCURACY_RATE,Accuracy rate: ,Accuratie:
 OBJECT_TYPE_EMPTY,Object type: Apple,Object type: Appel
 START_GAME,Start Game,Start Spel
 QUIT_GAME,Quit Game,Stop Spel
+LEVEL_FAIL,Level Failed!,Spel Verloren!
+TO_MENU,To Main Menu,Naar Hoofdmenu
+SPACE_TO_CONT,Space to continue,Space om door te gaan
 SUBMIT_TREE,SUBMIT TREE,CONTROLEER
 Apple,Apple,Appel
 Pear,Pear,Peer
@@ -15,3 +18,8 @@ Banana,Banana,Banaan
 Carrot,Carrot,Wortel
 Berry,Berry,Bessen
 Salad,Salad,Salade
+Grapes,Grapes,Druiven
+Sandwich,Sandwich,Sandwich
+Juice,Juice,Sap
+Chili,Chili,Chilipeper
+Coconut,Coconut,Kokosnoot

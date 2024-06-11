@@ -1,0 +1,108 @@
+[gd_scene load_steps=8 format=3 uid="uid://ddf2rvk5kgjc6"]
+
+[ext_resource type="Script" path="res://game/levels/level_1_fail.gd" id="1_ni8wd"]
+[ext_resource type="Texture2D" uid="uid://cw7wm882vfgjs" path="res://assets/images/scientist_lady_disappointed.png" id="2_6lcke"]
+[ext_resource type="PackedScene" uid="uid://bx0p7ribsnw20" path="res://game/gui/start_menu.tscn" id="2_c5ko0"]
+[ext_resource type="Texture2D" uid="uid://davhmb2bsrbef" path="res://assets/images/hospital_cafeteria.jpg" id="3_cmc7q"]
+[ext_resource type="Texture2D" uid="uid://c3erhs7lj76jg" path="res://assets/images/carrot2.png" id="5_7myci"]
+[ext_resource type="Texture2D" uid="uid://bmgp0xt0180gl" path="res://assets/images/apple2.png" id="6_mdwct"]
+[ext_resource type="Texture2D" uid="uid://ja3nivi4hdxx" path="res://assets/images/banana2.png" id="6_mm5xq"]
+
+[node name="Level_1_Fail" type="Node2D"]
+script = ExtResource("1_ni8wd")
+next_level = ExtResource("2_c5ko0")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(161, 104)
+scale = Vector2(0.324737, 0.324737)
+texture = ExtResource("3_cmc7q")
+
+[node name="Engineer" type="Sprite2D" parent="."]
+position = Vector2(81, 126)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_6lcke")
+
+[node name="FailLabel" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 34.0
+offset_right = 147.0
+offset_bottom = 54.0
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "LEVEL_FAIL"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 174.0
+offset_top = 22.0
+offset_right = 278.0
+offset_bottom = 68.0
+
+[node name="MainMenuButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "TO_MENU"
+
+[node name="QuitGameButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "QUIT_GAME"
+
+[node name="BadFood1" type="Sprite2D" parent="."]
+position = Vector2(213, 148)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("5_7myci")
+
+[node name="BadFood2" type="Sprite2D" parent="."]
+position = Vector2(147, 125)
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("5_7myci")
+
+[node name="BadFood3" type="Sprite2D" parent="."]
+position = Vector2(256, 122)
+scale = Vector2(0.0173601, 0.0173601)
+texture = ExtResource("5_7myci")
+
+[node name="BadFood8" type="Sprite2D" parent="."]
+position = Vector2(188, 147)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("6_mm5xq")
+
+[node name="BadFood4" type="Sprite2D" parent="."]
+position = Vector2(196, 146)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("6_mdwct")
+
+[node name="BadFood10" type="Sprite2D" parent="."]
+position = Vector2(213, 128)
+scale = Vector2(0.0143254, 0.0143254)
+texture = ExtResource("5_7myci")
+
+[node name="BadFood5" type="Sprite2D" parent="."]
+position = Vector2(218, 128)
+scale = Vector2(0.008, 0.008)
+texture = ExtResource("6_mdwct")
+
+[node name="BadFood6" type="Sprite2D" parent="."]
+position = Vector2(145, 117)
+scale = Vector2(0.005, 0.005)
+texture = ExtResource("6_mdwct")
+
+[node name="BadFood7" type="Sprite2D" parent="."]
+position = Vector2(224, 147)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("6_mm5xq")
+
+[node name="BadFood9" type="Sprite2D" parent="."]
+position = Vector2(190, 119)
+scale = Vector2(0.00738402, 0.00738402)
+texture = ExtResource("6_mm5xq")
+
+[node name="BadFood11" type="Sprite2D" parent="."]
+position = Vector2(151, 123)
+scale = Vector2(0.00997332, 0.00997332)
+texture = ExtResource("6_mm5xq")
+
+[connection signal="pressed" from="VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitGameButton" to="." method="_on_quit_game_button_pressed"]

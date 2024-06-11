@@ -112,8 +112,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 11.0
 offset_top = -69.0
-offset_right = -98.0
-offset_bottom = -4.0
+offset_right = -12.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -122,6 +122,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -148,6 +149,16 @@ theme_override_fonts/normal_font = ExtResource("2_qgkod")
 text = "Dialogue..."
 pause_at_characters = "?!"
 seconds_per_pause_step = 0.2
+
+[node name="SpaceToContinue" type="Label" parent="Balloon/Panel"]
+offset_left = 100.0
+offset_top = 55.0
+offset_right = 170.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.129412, 0, 0.462745, 1)
+theme_override_font_sizes/font_size = 8
+text = "SPACE_TO_CONT"
+horizontal_alignment = 1
 
 [node name="Responses" type="MarginContainer" parent="Balloon"]
 layout_mode = 1

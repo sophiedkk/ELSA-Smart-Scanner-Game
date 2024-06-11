@@ -21,7 +21,7 @@ func add_object_card(suggested_type, suggested_type_string, card_ref):
 		current_card_reference = card_ref
 	rectangle_filled = true
 	presence_indicator.visible = true
-	object_type_label.text = suggested_type_string
+	object_type_label.text = tr(suggested_type_string)
 
 func remove_object_card(card_ref):
 	if card_ref == current_card_reference:
