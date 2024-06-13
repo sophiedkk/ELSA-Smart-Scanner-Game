@@ -12,6 +12,8 @@ LEVEL_FAIL,Level Failed!,Spel Verloren!
 TO_MENU,To Main Menu,Naar Hoofdmenu
 SPACE_TO_CONT,Space to continue,Space om door te gaan
 SUBMIT_TREE,SUBMIT TREE,CONTROLEER
+TO_DATABASE, ANALYSE DATABASE, DATABASE ANALYSEER
+GO_BACK, GO BACK, GA TERUG
 Apple,Apple,Appel
 Pear,Pear,Peer
 Banana,Banana,Banaan

@@ -8,6 +8,7 @@ extends Level
 @onready var analysis_background = %AnalysisBackground
 @onready var patient_information = %PatientInformation
 @onready var spawn_position = %SpawnPosition
+@onready var pill_controller = %PillController
 
 @onready var patient_name = %PatientName
 @onready var patient_age = %PatientAge
@@ -31,12 +32,13 @@ func _ready():
 	await engineer.show_normal_dialogue(level_dialogue, "doctor_opening_lines")
 	engineer.engineer_coming_in()
 
-func _process(_delta):
-	if Input.is_action_just_released("skip_level"):
-		_end_level()
+#func _process(_delta):
+	#if Input.is_action_just_released("skip_level"):
+		#_end_level()
 
 func _connect_signals():
 	engineer.initial_patient_dialogue.connect(_patient_pre_assessment_dialogue)
+	engineer.spawn_the_pills.connect(_show_the_pills)
 	
 func _patient_pre_assessment_dialogue():
 	current_patient_index += 1
@@ -58,6 +60,9 @@ func _patient_pre_assessment_dialogue():
 		1:
 			await engineer.show_normal_dialogue(level_dialogue, "hans_de_vries_intro")
 	pass
+
+func _show_the_pills():
+	pill_controller.visible = true
 
 func _refresh_sprite():
 	var new_texture = load("res://assets/images/doctor_lady.png")

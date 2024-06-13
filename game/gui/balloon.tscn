@@ -151,6 +151,7 @@ pause_at_characters = "?!"
 seconds_per_pause_step = 0.2
 
 [node name="SpaceToContinue" type="Label" parent="Balloon/Panel"]
+layout_mode = 0
 offset_left = 100.0
 offset_top = 55.0
 offset_right = 170.0

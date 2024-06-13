@@ -16,6 +16,7 @@ signal new_tree_construction
 
 #Level 3 Signals
 signal initial_patient_dialogue
+signal spawn_the_pills
 
 #These variables control the flow of the dialogue
 var dialogue_in_progress := false
@@ -84,6 +85,7 @@ func _on_dialogue_finished() -> void:
 					initial_patient_dialogue.emit()
 				"hans_de_vries_intro":
 					await LevelTransition.fade_from_black()
+					spawn_the_pills.emit()
 	dialogue_in_progress = false
 
 
