@@ -86,6 +86,15 @@ func _on_dialogue_finished() -> void:
 				"hans_de_vries_intro":
 					await LevelTransition.fade_from_black()
 					spawn_the_pills.emit()
+				#This can definitely be refactored
+				"hans_de_vries_choice_1":
+					await LevelTransition.fade_from_black()
+				"hans_de_vries_choice_2":
+					await LevelTransition.fade_from_black()
+				"hans_de_vries_choice_3":
+					await LevelTransition.fade_from_black()
+				"hans_de_vries_choice_4":
+					await LevelTransition.fade_from_black()
 	dialogue_in_progress = false
 
 

@@ -29,3 +29,23 @@ Dr Van Bommel: AI can actually be used for a lot of things, we just need to be c
 Dr Van Bommel: That's why I needed you to fill in the consent form.
 Dr Van Bommel: Smart Scanner, get up! Help us choose the best medication for Hans!
 => END
+
+~ hans_de_vries_choice_1
+Hans De Vries: Wrong choice!
+Dr Van Bommel: Oops!
+=> END
+
+~ hans_de_vries_choice_2
+Hans De Vries: Also wrong!
+Dr Van Bommel: Oh no!
+=> END
+
+~ hans_de_vries_choice_3
+Hans De Vries: This one is right!
+Dr Van Bommel: I'm, in fact, very smart.
+=> END
+
+~ hans_de_vries_choice_4
+Hans De Vries: Wrong! Doctor, why??
+Dr Van Bommel: I don't know but I can offer you alternative medicine.
+=> END

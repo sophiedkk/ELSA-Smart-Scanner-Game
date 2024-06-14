@@ -44,6 +44,7 @@ shape = SubResource("RectangleShape2D_pos7w")
 
 [node name="CurrentRatingDisplay" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
+visible = false
 offset_left = -22.0
 offset_top = -39.0
 offset_right = 47.0
@@ -92,4 +93,5 @@ shape = SubResource("CircleShape2D_h8ymo")
 
 [connection signal="value_changed" from="." to="." method="_on_value_changed"]
 [connection signal="input_event" from="PillSpriteArea2D" to="." method="_on_pill_sprite_area_2d_input_event"]
+[connection signal="pressed" from="DatabaseAnalysisButton" to="." method="_on_database_analysis_button_pressed"]
 [connection signal="input_event" from="CloseButton/CloseButtonArea" to="." method="_on_close_button_area_input_event"]

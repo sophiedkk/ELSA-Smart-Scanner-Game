@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6krxbgvvkckn"]
+
+[ext_resource type="Script" path="res://submit_button.gd" id="1_35ihw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7gux5"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[node name="SubmitButton" type="Button"]
+offset_left = 18.0
+offset_top = 164.0
+offset_right = 85.0
+offset_bottom = 177.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_7gux5")
+text = "SUBMIT_PILL"
+script = ExtResource("1_35ihw")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

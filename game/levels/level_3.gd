@@ -1,6 +1,10 @@
 extends Level
 
+#All patient data for UI
 @export var level_patients: Array[PatientData]
+#Control of the Submit Buttons
+@export var hand_in_buttons: Array[SubmitButton]
+#Patient container
 @export var level_patient_object: PackedScene
 
 @onready var engineer: Engineer = %Engineer
@@ -8,8 +12,9 @@ extends Level
 @onready var analysis_background = %AnalysisBackground
 @onready var patient_information = %PatientInformation
 @onready var spawn_position = %SpawnPosition
-@onready var pill_controller = %PillController
+@onready var pill_controller: PillController = %PillController
 
+#region Patient Data UI
 @onready var patient_name = %PatientName
 @onready var patient_age = %PatientAge
 @onready var patient_gender = %PatientGender
@@ -18,7 +23,7 @@ extends Level
 @onready var recent_surgeries = %RecentSurgeries
 @onready var known_allergies = %KnownAllergies
 @onready var currently_pregnant = %CurrentlyPregnant
-
+#endregion
 
 var current_patient_index: int = 0
 var current_patient: Patient
@@ -38,7 +43,10 @@ func _ready():
 
 func _connect_signals():
 	engineer.initial_patient_dialogue.connect(_patient_pre_assessment_dialogue)
-	engineer.spawn_the_pills.connect(_show_the_pills)
+	engineer.spawn_the_pills.connect(_show_the_pills.bind(true))
+	pill_controller.all_pills_analysed.connect(_show_the_hand_ins.bind(true))
+	for button in hand_in_buttons:
+		button.relay_index.connect(make_a_pill_choice.bind(button.button_index))
 	
 func _patient_pre_assessment_dialogue():
 	current_patient_index += 1
@@ -61,12 +69,41 @@ func _patient_pre_assessment_dialogue():
 			await engineer.show_normal_dialogue(level_dialogue, "hans_de_vries_intro")
 	pass
 
-func _show_the_pills():
-	pill_controller.visible = true
+func _show_the_pills(status: bool):
+	pill_controller.visible = status
+
+func _show_the_hand_ins(status: bool):
+	if (status):
+		await get_tree().create_timer(1.5).timeout
+	for button in hand_in_buttons:
+		button.visible = status
 
 func _refresh_sprite():
 	var new_texture = load("res://assets/images/doctor_lady.png")
 	engineer.current_sprite.texture = new_texture
+
+func make_a_pill_choice(chosen_button_index: int):
+	await LevelTransition.fade_to_black()
+	for pill in pill_controller.children_pill_objects:
+		pill.current_rating_display.visible = false
+	_show_the_pills(false)
+	_show_the_hand_ins(false)
+	await get_tree().create_timer(1.5).timeout
+	match current_patient_index:
+		1:
+			match chosen_button_index:
+				1:
+					await engineer.show_normal_dialogue(level_dialogue, "hans_de_vries_choice_1")
+				2:
+					await engineer.show_normal_dialogue(level_dialogue, "hans_de_vries_choice_2")
+				3:
+					await engineer.show_normal_dialogue(level_dialogue, "hans_de_vries_choice_3")
+				4:
+					await engineer.show_normal_dialogue(level_dialogue, "hans_de_vries_choice_4")
+	analysis_background.visible = false
+	pill_table.visible = false
+	patient_information.visible = false
+	current_patient.queue_free()
 
 func update_patient_card(current_data: PatientData):
 	patient_name.text = "Name: " + current_data.patient_name

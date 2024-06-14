@@ -3,13 +3,25 @@ extends Node2D
 
 @export var children_pill_objects: Array[PillObject]
 
-var current_patient_index: int = 0
+signal all_pills_analysed
 
-#func _process(delta):
-	#if Input.is_action_just_pressed("skip_level"):
-		#update_all_pill_info()
+var current_patient_index: int = 0
+var total_pills_analysed: int = 0
+
+func _ready():
+	for pill in children_pill_objects:
+		pill.pill_analysed.connect(check_pills_status)
 
 #Definitely controls whether all of the pills have been checked
+func check_pills_status():
+	total_pills_analysed = 0
+	for pill in children_pill_objects:
+		if pill.has_been_analyzed:
+			total_pills_analysed += 1
+	if total_pills_analysed < children_pill_objects.size():
+		return
+	else:
+		all_pills_analysed.emit()
 
 #UNDER CONSTRUCTION!
 func update_all_pill_info():
