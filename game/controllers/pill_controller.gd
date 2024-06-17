@@ -4,6 +4,7 @@ extends Node2D
 @export var children_pill_objects: Array[PillObject]
 
 signal all_pills_analysed
+signal trigger_pill_dialogue(pill_level_index: int)
 
 var current_patient_index: int = 0
 var total_pills_analysed: int = 0
@@ -11,6 +12,7 @@ var total_pills_analysed: int = 0
 func _ready():
 	for pill in children_pill_objects:
 		pill.pill_analysed.connect(check_pills_status)
+		pill.pill_simulated.connect(display_simulation_results.bind(pill.pill_level_index))
 
 #Definitely controls whether all of the pills have been checked
 func check_pills_status():
@@ -21,8 +23,13 @@ func check_pills_status():
 	if total_pills_analysed < children_pill_objects.size():
 		return
 	else:
+		print("all pills analysed!!!")
 		all_pills_analysed.emit()
 
+#Midpoint in passing the pill information to the Engineer for dialogue
+func display_simulation_results(pill_index: int):
+	trigger_pill_dialogue.emit(pill_index)
+	
 #UNDER CONSTRUCTION!
 func update_all_pill_info():
 	current_patient_index += 1

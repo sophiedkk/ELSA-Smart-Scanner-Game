@@ -15,6 +15,8 @@ SUBMIT_TREE,SUBMIT TREE,CONTROLEER
 TO_DATABASE, ANALYSE DATABASE, DATABASE ANALYSEER
 GO_BACK, GO BACK, GA TERUG
 SUBMIT_PILL, HAND IN, INLEVER
+ANALYSING_DATABASE, Analysing database..., Analyseren...
+PREDICTED_OUTCOME, Predicted outcome:, Voorspelde resultaat:
 Apple,Apple,Appel
 Pear,Pear,Peer
 Banana,Banana,Banaan

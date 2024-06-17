@@ -10,9 +10,11 @@ extends Level
 @onready var engineer: Engineer = %Engineer
 @onready var pill_table = %PillTable
 @onready var analysis_background = %AnalysisBackground
+@onready var all_patient_information = %AllPatientInformation
 @onready var patient_information = %PatientInformation
 @onready var spawn_position = %SpawnPosition
 @onready var pill_controller: PillController = %PillController
+@onready var analysis_status_UI = %AnalysisStatus
 
 #region Patient Data UI
 @onready var patient_name = %PatientName
@@ -44,7 +46,9 @@ func _ready():
 func _connect_signals():
 	engineer.initial_patient_dialogue.connect(_patient_pre_assessment_dialogue)
 	engineer.spawn_the_pills.connect(_show_the_pills.bind(true))
+	engineer.restore_UI.connect(restore_UI_elements)
 	pill_controller.all_pills_analysed.connect(_show_the_hand_ins.bind(true))
+	pill_controller.trigger_pill_dialogue.connect(_show_pill_analysis_dialogue)
 	for button in hand_in_buttons:
 		button.relay_index.connect(make_a_pill_choice.bind(button.button_index))
 	
@@ -63,7 +67,7 @@ func _patient_pre_assessment_dialogue():
 	update_patient_card(current_patient.patient_information)
 	
 	await get_tree().create_timer(2.0).timeout
-	patient_information.visible = true
+	all_patient_information.visible = true
 	match current_patient_index:
 		1:
 			await engineer.show_normal_dialogue(level_dialogue, "hans_de_vries_intro")
@@ -77,6 +81,35 @@ func _show_the_hand_ins(status: bool):
 		await get_tree().create_timer(1.5).timeout
 	for button in hand_in_buttons:
 		button.visible = status
+
+func _show_pill_analysis_dialogue(analysed_pill_index: int):
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	all_patient_information.visible = false
+	analysis_status_UI.text = "ANALYSING_DATABASE"
+	analysis_status_UI.visible = true
+	await get_tree().create_timer(2.5).timeout
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	analysis_status_UI.text = "PREDICTED_OUTCOME"
+	for pill in pill_controller.children_pill_objects:
+		if pill.pill_level_index == analysed_pill_index:
+			pill.post_analysis_results()
+	match current_patient_index:
+		1:
+			match analysed_pill_index:
+				#Refactor, possibly through string concatenation
+				1:
+					await engineer.show_normal_dialogue(level_dialogue,"hans_de_vries_expected_result_1")
+				2:
+					await engineer.show_normal_dialogue(level_dialogue,"hans_de_vries_expected_result_2")
+				3:
+					await engineer.show_normal_dialogue(level_dialogue,"hans_de_vries_expected_result_3")
+				4:
+					await engineer.show_normal_dialogue(level_dialogue,"hans_de_vries_expected_result_4")
+
+func restore_UI_elements():
+	analysis_status_UI.visible = false
+	all_patient_information.visible = true
+	pass
 
 func _refresh_sprite():
 	var new_texture = load("res://assets/images/doctor_lady.png")
@@ -102,7 +135,7 @@ func make_a_pill_choice(chosen_button_index: int):
 					await engineer.show_normal_dialogue(level_dialogue, "hans_de_vries_choice_4")
 	analysis_background.visible = false
 	pill_table.visible = false
-	patient_information.visible = false
+	all_patient_information.visible = false
 	current_patient.queue_free()
 
 func update_patient_card(current_data: PatientData):

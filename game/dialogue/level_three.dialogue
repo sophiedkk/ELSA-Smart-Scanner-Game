@@ -30,6 +30,24 @@ Dr Van Bommel: That's why I needed you to fill in the consent form.
 Dr Van Bommel: Smart Scanner, get up! Help us choose the best medication for Hans!
 => END
 
+~ hans_de_vries_expected_result_1
+Hans De Vries: I feel so-so, to be honest.
+Hans De Vries: It helped just a tiny bit.
+=> END
+
+~ hans_de_vries_expected_result_2
+Hans De Vries: I feel noticeably better, but there are still some side effects.
+=> END
+
+~ hans_de_vries_expected_result_3
+Hans De Vries: I feel much, much better! The illness is fully gone!
+=> END
+
+~ hans_de_vries_expected_result_4
+Hans De Vries: When I started taking pills, I felt even worse.
+Hans De Vries: This is horrible.
+=> END
+
 ~ hans_de_vries_choice_1
 Hans De Vries: Wrong choice!
 Dr Van Bommel: Oops!

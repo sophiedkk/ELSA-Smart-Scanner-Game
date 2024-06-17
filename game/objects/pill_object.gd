@@ -4,9 +4,11 @@ extends Node2D
 @export var lower_rating_limits: Array[int]
 @export var upper_rating_limits: Array[int]
 @export var colors_for_limits: Array[Color]
+@export var pill_level_index: int
 
 signal value_changed
 signal pill_analysed
+signal pill_simulated(pill_index: int)
 
 var current_patient_index: int = 0
 var has_been_analyzed = false
@@ -49,21 +51,26 @@ func _on_value_changed():
 		
 	current_rating_display.add_theme_color_override("default_color", colors_for_limits[current_patient_index])
 	current_rating_display.text = "{" + str(lower_rating_limits[current_patient_index]) + ";" + str(upper_rating_limits[current_patient_index]) + "}"
-	current_rating_display.visible = true
+	
 
 func close_button_menu():
 	Global.current_pill = ""
 	Global.button_on = false
 	z_index = 3
 	database_analysis_button.visible = false
-	close_button.visible = false
 	black_background.visible = false
+	close_button.visible = false
+	
 
+func post_analysis_results():
+	black_background.visible = false
+	current_rating_display.visible = true
 
 func _on_database_analysis_button_pressed():
 	current_patient_index += 1
 	set_rating()
 	has_been_analyzed = true
 	pill_analysed.emit()
+	pill_simulated.emit()
 	current_rating_display.visible = true
 	close_button_menu()

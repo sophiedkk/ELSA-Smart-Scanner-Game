@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://rh38s4mnlbr7"]
+[gd_scene load_steps=13 format=3 uid="uid://rh38s4mnlbr7"]
 
 [ext_resource type="Script" path="res://game/levels/level_3.gd" id="1_fjahl"]
 [ext_resource type="Resource" uid="uid://c3gkrqx6x4d5" path="res://game/objects/patient_resources/hans_de_vries.tres" id="2_1b10a"]
@@ -11,6 +11,14 @@
 [ext_resource type="PackedScene" uid="uid://c3mugfn21a5gi" path="res://game/controllers/pill_controller.tscn" id="8_o0t8o"]
 [ext_resource type="PackedScene" uid="uid://c6krxbgvvkckn" path="res://submit_button.tscn" id="9_1tlu3"]
 [ext_resource type="PackedScene" uid="uid://cbpwitupu0t6b" path="res://game/objects/pill_object.tscn" id="11_pot8g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4lmcd"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
 
 [node name="Level_3" type="Node2D" node_paths=PackedStringArray("hand_in_buttons")]
 script = ExtResource("1_fjahl")
@@ -49,18 +57,41 @@ texture = ExtResource("5_j3ba3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PatientInformation" type="VBoxContainer" parent="CanvasLayer"]
+[node name="AnalysisStatus" type="Label" parent="CanvasLayer"]
 unique_name_in_owner = true
 visible = false
+offset_left = 30.0
+offset_top = 7.0
+offset_right = 319.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+text = "CURRENT_STATUS"
+
+[node name="AllPatientInformation" type="Node2D" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+
+[node name="InformationBackground" type="Button" parent="CanvasLayer/AllPatientInformation"]
+offset_left = 28.0
+offset_top = 6.0
+offset_right = 319.0
+offset_bottom = 69.0
+mouse_filter = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_4lmcd")
+
+[node name="PatientInformation" type="VBoxContainer" parent="CanvasLayer/AllPatientInformation"]
+unique_name_in_owner = true
 offset_left = 37.0
 offset_top = 13.0
 offset_right = 320.0
 offset_bottom = 60.0
 
-[node name="FirstRowContainer" type="HBoxContainer" parent="CanvasLayer/PatientInformation"]
+[node name="FirstRowContainer" type="HBoxContainer" parent="CanvasLayer/AllPatientInformation/PatientInformation"]
 layout_mode = 2
 
-[node name="PatientName" type="Label" parent="CanvasLayer/PatientInformation/FirstRowContainer"]
+[node name="PatientName" type="Label" parent="CanvasLayer/AllPatientInformation/PatientInformation/FirstRowContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 0
@@ -71,11 +102,11 @@ theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
 text = "Name:"
 
-[node name="Control1" type="Control" parent="CanvasLayer/PatientInformation/FirstRowContainer"]
+[node name="Control1" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/FirstRowContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="PatientAge" type="Label" parent="CanvasLayer/PatientInformation/FirstRowContainer"]
+[node name="PatientAge" type="Label" parent="CanvasLayer/AllPatientInformation/PatientInformation/FirstRowContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 0
@@ -86,11 +117,11 @@ theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
 text = "Age:"
 
-[node name="Control2" type="Control" parent="CanvasLayer/PatientInformation/FirstRowContainer"]
+[node name="Control2" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/FirstRowContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="PatientGender" type="Label" parent="CanvasLayer/PatientInformation/FirstRowContainer"]
+[node name="PatientGender" type="Label" parent="CanvasLayer/AllPatientInformation/PatientInformation/FirstRowContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 0
@@ -101,11 +132,11 @@ theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
 text = "Gender:"
 
-[node name="Control3" type="Control" parent="CanvasLayer/PatientInformation/FirstRowContainer"]
+[node name="Control3" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/FirstRowContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="PatientLastGPVisit" type="Label" parent="CanvasLayer/PatientInformation/FirstRowContainer"]
+[node name="PatientLastGPVisit" type="Label" parent="CanvasLayer/AllPatientInformation/PatientInformation/FirstRowContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 0
@@ -116,18 +147,18 @@ theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
 text = "Last GP visit:"
 
-[node name="Control4" type="Control" parent="CanvasLayer/PatientInformation/FirstRowContainer"]
+[node name="Control4" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/FirstRowContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Control1" type="Control" parent="CanvasLayer/PatientInformation"]
+[node name="Control1" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="SecondRowContainer" type="HBoxContainer" parent="CanvasLayer/PatientInformation"]
+[node name="SecondRowContainer" type="HBoxContainer" parent="CanvasLayer/AllPatientInformation/PatientInformation"]
 layout_mode = 2
 
-[node name="ChronicConditions" type="Label" parent="CanvasLayer/PatientInformation/SecondRowContainer"]
+[node name="ChronicConditions" type="Label" parent="CanvasLayer/AllPatientInformation/PatientInformation/SecondRowContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -136,11 +167,11 @@ theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
 text = "Chronic conditions:"
 
-[node name="Control1" type="Control" parent="CanvasLayer/PatientInformation/SecondRowContainer"]
+[node name="Control1" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/SecondRowContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="RecentSurgeries" type="Label" parent="CanvasLayer/PatientInformation/SecondRowContainer"]
+[node name="RecentSurgeries" type="Label" parent="CanvasLayer/AllPatientInformation/PatientInformation/SecondRowContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -149,19 +180,19 @@ theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
 text = "Recent surgeries:"
 
-[node name="Control2" type="Control" parent="CanvasLayer/PatientInformation/SecondRowContainer"]
+[node name="Control2" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/SecondRowContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.5
 
-[node name="Control2" type="Control" parent="CanvasLayer/PatientInformation"]
+[node name="Control2" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ThirdRowContainer" type="HBoxContainer" parent="CanvasLayer/PatientInformation"]
+[node name="ThirdRowContainer" type="HBoxContainer" parent="CanvasLayer/AllPatientInformation/PatientInformation"]
 layout_mode = 2
 
-[node name="KnownAllergies" type="Label" parent="CanvasLayer/PatientInformation/ThirdRowContainer"]
+[node name="KnownAllergies" type="Label" parent="CanvasLayer/AllPatientInformation/PatientInformation/ThirdRowContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -170,11 +201,11 @@ theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
 text = "Known allergies:"
 
-[node name="Control1" type="Control" parent="CanvasLayer/PatientInformation/ThirdRowContainer"]
+[node name="Control1" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/ThirdRowContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="CurrentlyPregnant" type="Label" parent="CanvasLayer/PatientInformation/ThirdRowContainer"]
+[node name="CurrentlyPregnant" type="Label" parent="CanvasLayer/AllPatientInformation/PatientInformation/ThirdRowContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -183,7 +214,7 @@ theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
 text = "Pregnant:"
 
-[node name="Control2" type="Control" parent="CanvasLayer/PatientInformation/ThirdRowContainer"]
+[node name="Control2" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/ThirdRowContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.5
@@ -221,21 +252,25 @@ position = Vector2(51, 142)
 lower_rating_limits = Array[int]([0, 0])
 upper_rating_limits = Array[int]([0, 6])
 colors_for_limits = Array[Color]([Color(1, 1, 1, 1), Color(1, 0.956863, 0.0745098, 1)])
+pill_level_index = 1
 
 [node name="PillObject2" parent="PillController" instance=ExtResource("11_pot8g")]
 position = Vector2(122, 143)
 lower_rating_limits = Array[int]([0, -2])
 upper_rating_limits = Array[int]([0, 15])
 colors_for_limits = Array[Color]([Color(1, 1, 1, 1), Color(0, 0.282353, 0, 1)])
+pill_level_index = 2
 
 [node name="PillObject3" parent="PillController" instance=ExtResource("11_pot8g")]
 position = Vector2(192, 142)
 lower_rating_limits = Array[int]([0, 3])
 upper_rating_limits = Array[int]([0, 13])
 colors_for_limits = Array[Color]([Color(1, 1, 1, 1), Color(0, 0.639216, 0, 1)])
+pill_level_index = 3
 
 [node name="PillObject4" parent="PillController" instance=ExtResource("11_pot8g")]
 position = Vector2(263, 142)
 lower_rating_limits = Array[int]([0, -10])
 upper_rating_limits = Array[int]([0, 20])
 colors_for_limits = Array[Color]([Color(1, 1, 1, 1), Color(0.454902, 0, 0, 1)])
+pill_level_index = 4
