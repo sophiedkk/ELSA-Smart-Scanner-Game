@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dkin357h60654"]
 
 [ext_resource type="Script" path="res://game/objects/constructed_decision_tree.gd" id="1_di0sn"]
-[ext_resource type="Texture2D" uid="uid://f73w72mynhon" path="res://assets/images/tree_circle.png" id="1_fsm04"]
-[ext_resource type="Texture2D" uid="uid://bmi4dkin64m76" path="res://assets/images/tree_arrow.png" id="2_lg282"]
+[ext_resource type="Texture2D" uid="uid://f73w72mynhon" path="res://assets/images/objects_and_cards/tree_circle.png" id="1_fsm04"]
+[ext_resource type="Texture2D" uid="uid://bmi4dkin64m76" path="res://assets/images/objects_and_cards/tree_arrow.png" id="2_lg282"]
 [ext_resource type="PackedScene" uid="uid://cxoqmml3b1cqd" path="res://game/objects/object_rectangle.tscn" id="4_vd220"]
 
 [node name="ConstructedDecisionTree" type="Node2D" node_paths=PackedStringArray("tree_roots")]

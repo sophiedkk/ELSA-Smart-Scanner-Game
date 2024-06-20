@@ -14,12 +14,17 @@ var accuracy_warning_triggered: bool
 @onready var engineer: Engineer = %Engineer
 @onready var central_point: Marker2D = %CentralPoint
 @onready var end_point: Marker2D = %EndPoint
+
+#region UI elements
 @onready var reject_button: Button = %RejectButton
 @onready var accept_button: Button = %AcceptButton
 @onready var accuracy_label: RichTextLabel = %AccuracyLabel
 @onready var object_type_label: Label = %ObjectTypeLabel
 @onready var robot_stats: BoxContainer = %RobotStats
+@onready var correct_response_message = %CorrectResponse
+@onready var wrong_response_message = %WrongResponse
 
+#endregion
 
 #func _ready():
 	#objects_scanned_in_total = 0
@@ -61,9 +66,17 @@ func _making_a_choice(_players_choice):
 		print("You are correct!")
 		correct_choice = true
 		objects_scanned_correctly += 1
+		if (objects_scanned_in_total > 2):
+			correct_response_message.visible = true
+			await get_tree().create_timer(1.0).timeout
+			correct_response_message.visible = false
 	else:
 		print("Wrong answer!")
 		correct_choice = false
+		if (objects_scanned_in_total > 2):
+			wrong_response_message.visible = true
+			await get_tree().create_timer(1.0).timeout
+			wrong_response_message.visible = false
 	match objects_scanned_in_total:
 		7:
 			if correct_choice:
@@ -77,6 +90,7 @@ func _introducing_next_object():
 	_reject_button_activated(false)
 	_object_info_updated()
 	object_controller.current_object_moving = true
+	object_type_label.text = "AWAITING_NEXT"
 	chosen_point = end_point
 	await get_tree().create_timer(3.0).timeout
 	chosen_point = central_point
@@ -120,6 +134,7 @@ func _object_info_updated():
 
 func _show_object_type():
 	if object_controller.current_object_moving == true:
+		object_type_label.text = "AWAITING_NEXT"
 		await get_tree().create_timer(0.2).timeout
 		_show_object_type()
 	else:
@@ -180,8 +195,8 @@ func _reject_button_activated(activated: bool):
 
 func _stats_activated(activated: bool):
 	robot_stats.visible = activated
-	if (objects_scanned_in_total == 2):
-		object_controller.show_object_palette()
+	#if (objects_scanned_in_total == 2):
+		#object_controller.show_object_palette()
 #endregion
 
 #Miscellaneous

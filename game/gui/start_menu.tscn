@@ -1,11 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://bx0p7ribsnw20"]
+[gd_scene load_steps=5 format=3 uid="uid://bx0p7ribsnw20"]
 
 [ext_resource type="Script" path="res://game/gui/start_menu.gd" id="1_n41ig"]
 [ext_resource type="PackedScene" uid="uid://dq7sh851jfvlq" path="res://game/levels/level_1.tscn" id="2_4woin"]
+[ext_resource type="Texture2D" uid="uid://31s6102lttxn" path="res://assets/images/start_menu_header.png" id="3_1r8u3"]
+[ext_resource type="Texture2D" uid="uid://c33g8flo1vuqo" path="res://assets/images/smart_scanner_logo.png" id="4_w6wou"]
 
 [node name="StartMenu" type="Node"]
 script = ExtResource("1_n41ig")
 next_level = ExtResource("2_4woin")
+
+[node name="BackgroundRect" type="ColorRect" parent="."]
+offset_right = 320.0
+offset_bottom = 180.0
+
+[node name="StartMenuHeader" type="Sprite2D" parent="."]
+position = Vector2(160, 47)
+scale = Vector2(0.270059, 0.270059)
+texture = ExtResource("3_1r8u3")
+
+[node name="SmartScannerLogo" type="Sprite2D" parent="."]
+position = Vector2(69, 124)
+scale = Vector2(0.147716, 0.147716)
+texture = ExtResource("4_w6wou")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchors_preset = 8
@@ -13,10 +29,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -58.0
-offset_top = -30.0
-offset_right = 58.0
-offset_bottom = 30.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 122.0
+offset_bottom = 66.0
 grow_horizontal = 2
 grow_vertical = 2
 

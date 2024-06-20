@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AnalysisObjectData" load_steps=3 format=3 uid="uid://be1j8hhuvpn4k"]
 
-[ext_resource type="Texture2D" uid="uid://c05gr7w2q77rb" path="res://assets/images/pear1.png" id="1_2b7kd"]
+[ext_resource type="Texture2D" uid="uid://c05gr7w2q77rb" path="res://assets/images/objects_and_cards/pear1.png" id="1_2b7kd"]
 [ext_resource type="Script" path="res://game/objects/analysis_object_data.gd" id="1_ob7nw"]
 
 [resource]

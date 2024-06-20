@@ -13,39 +13,39 @@ Dr. Rensselaer: Let's see the results of their work. [ID:t5ff8e4df69]
 => END
 
 ~ introduction_to_decision_trees
-Dr. Rensselaer (over the speakers): What you see here is a decision tree. [ID:t71a59a1531]
-Dr. Rensselaer (over the speakers): This one is from the early stage, so it's very simple. [ID:tc02e9860bf]
-Dr. Rensselaer (over the speakers): Basically, our scanner looks at unique properties such as colors or weight to split our objects into small branches. [ID:ta846778a51]
-Dr. Rensselaer (over the speakers): Every branch ends with just ONE object that fits the description the best. That's how the scanner knows what it is. [ID:t64a8887b3b]
-Dr. Rensselaer (over the speakers): Now, check this out. [ID:tfb81b0048f]
+Dr. Rensselaer: What you see here is a decision tree. [ID:t71a59a1531]
+Dr. Rensselaer: This one is from the early stage, so it's very simple. [ID:tc02e9860bf]
+Dr. Rensselaer: Basically, our scanner looks at unique properties such as colors or weight to split our objects into small branches. [ID:ta846778a51]
+Dr. Rensselaer: Every branch ends with just ONE object that fits the description the best. That's how the scanner knows what it is. [ID:t64a8887b3b]
+Dr. Rensselaer: Now, check this out. [ID:tfb81b0048f]
 => END
 
 ~ cards_introduced
-Dr. Rensselaer (over the speakers): These cards obviously show different types of objects that our scanner knows. [ID:tdaef4724b4]
-Dr. Rensselaer (over the speakers): Our tree figured out how to distinguish them. You can repeat that process by dragging the cards onto those unknown panels. [ID:t668f552d00]
-Dr. Rensselaer (over the speakers): So, do you think you can fit them all correctly? [ID:tb79d43150f]
+Dr. Rensselaer: These cards obviously show different types of objects that our scanner knows. [ID:tdaef4724b4]
+Dr. Rensselaer: Our tree figured out how to distinguish them. You can repeat that process by dragging the cards onto those unknown panels. [ID:t668f552d00]
+Dr. Rensselaer: So, do you think you can fit them all correctly? [ID:tb79d43150f]
 => END
 
 ~ tree_not_filled
-Dr. Rensselaer (over the speakers): Not all objects have been put into the tree yet! [ID:tfa07a1d7b5]
-Dr. Rensselaer (over the speakers): Search for rectangles with question marks! [ID:t606a248a30]
+Dr. Rensselaer: Not all objects have been put into the tree yet! [ID:tfa07a1d7b5]
+Dr. Rensselaer: Search for rectangles with question marks! [ID:t606a248a30]
 => END
 
 ~ tree_filled_incorrectly
-Dr. Rensselaer (over the speakers): Hmm, that doesn't look right. [ID:t82850b2067]
-Dr. Rensselaer (over the speakers): Look at the tree again. [ID:t1b7eb37139]
+Dr. Rensselaer: Hmm, that doesn't look right. [ID:t82850b2067]
+Dr. Rensselaer: Look at the tree again. [ID:t1b7eb37139]
 => END
 
 ~ tree_filled_correctly
-Dr. Rensselaer (over the speakers): Good! [ID:tfbde40d96c]
-Dr. Rensselaer (over the speakers): Onto the next one! [ID:t763f96847c]
+Dr. Rensselaer: Good! [ID:tfbde40d96c]
+Dr. Rensselaer: Onto the next one! [ID:t763f96847c]
 => END
 
 ~ tree_filled_correctly_first_time
-Dr. Rensselaer (over the speakers): Good! [ID:t5a40372398]
-Dr. Rensselaer (over the speakers): Seems like you got the gist of it! [ID:t4b0d720c7f]
-Dr. Rensselaer (over the speakers): The trees will get more complex from now on. [ID:tbec09c1a41]
-Dr. Rensselaer (over the speakers): Let's see how. [ID:tc7e458aae0]
+Dr. Rensselaer: Good! [ID:t5a40372398]
+Dr. Rensselaer: Seems like you got the gist of it! [ID:t4b0d720c7f]
+Dr. Rensselaer: The trees will get more complex from now on. [ID:tbec09c1a41]
+Dr. Rensselaer: Let's see how. [ID:tc7e458aae0]
 => END
 
 ~ all_trees_finished

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxoqmml3b1cqd"]
 
 [ext_resource type="Script" path="res://game/objects/object_rectangle.gd" id="1_1x7jl"]
-[ext_resource type="Texture2D" uid="uid://8r8fjbtljqde" path="res://assets/images/tree_rectangle.png" id="2_hl20r"]
+[ext_resource type="Texture2D" uid="uid://8r8fjbtljqde" path="res://assets/images/objects_and_cards/tree_rectangle.png" id="2_hl20r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3aflm"]
 size = Vector2(1074, 308)

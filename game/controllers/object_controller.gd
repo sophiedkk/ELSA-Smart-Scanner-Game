@@ -24,20 +24,20 @@ var color_palette_squares: Array[PaletteSquare]
 func show_new_object():
 	if current_object != null:
 		current_object.queue_free()
-
+		
 	var new_object_properties = level_objects.pop_front()
 	if new_object_properties:
 		current_object = level_object_scene.instantiate()
 		current_object.object_properties = new_object_properties
 		add_child(current_object)
-		if (current_object_index >= 2):
-			clear_previous_palette()
-			show_new_object_palette()
+		#if (current_object_index >= 2):
+			#clear_previous_palette()
+			#show_new_object_palette()
 		current_object_acceptable = current_object.suitable
 		current_object_index = current_object_index + 1
 		current_object_moving = true
 	else:
-		clear_previous_palette()
+		#clear_previous_palette()
 		all_objects_passed.emit()
 
 
@@ -52,28 +52,27 @@ func move_current_object(delta, intended_destination: Node, move_speed: int, mid
 			for palette in color_palette_squares:
 				palette.visible = true
 
-func show_new_object_palette():
-	if (current_object_index == 2):
-		return
-	else:
-		await get_tree().create_timer(2.5).timeout
-	show_object_palette()
+#func show_new_object_palette():
+	#if (current_object_index == 2):
+		#return
+	#else:
+		#await get_tree().create_timer(2.5).timeout
+	#show_object_palette()
 
-func show_object_palette():
-	if current_object != null:
-		color_palette = current_object.colors
-		print(color_palette)
-		for i in color_palette.size():
-			color_palette_square = color_palette_object.instantiate()
-			add_child(color_palette_square)
-			color_palette_square.create_design(color_palette[i])
-			#Will reorganize into a grid later
-			color_palette_square.global_position = Vector2(65 + (i * 25), 50)
-			color_palette_squares.push_back(color_palette_square)
-
-func clear_previous_palette():
-	if color_palette_squares != null:
-		for square in color_palette_squares:
-			square.queue_free()
-		color_palette.clear()
-		color_palette_squares.clear()
+#func show_object_palette():
+	#if current_object != null:
+		#color_palette = current_object.colors
+		#print(color_palette)
+		#for i in color_palette.size():
+			#color_palette_square = color_palette_object.instantiate()
+			#add_child(color_palette_square)
+			#color_palette_square.create_design(color_palette[i])
+			#color_palette_square.global_position = Vector2(65 + (i * 25), 50)
+			#color_palette_squares.push_back(color_palette_square)
+#
+#func clear_previous_palette():
+	#if color_palette_squares != null:
+		#for square in color_palette_squares:
+			#square.queue_free()
+		#color_palette.clear()
+		#color_palette_squares.clear()

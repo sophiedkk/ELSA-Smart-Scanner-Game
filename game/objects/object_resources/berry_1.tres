@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="AnalysisObjectData" load_steps=3 format=3 uid="uid://03db2b1dpbgm"]
 
 [ext_resource type="Script" path="res://game/objects/analysis_object_data.gd" id="1_e701u"]
-[ext_resource type="Texture2D" uid="uid://xv5421ogxvct" path="res://assets/images/berries1.png" id="1_mid87"]
+[ext_resource type="Texture2D" uid="uid://xv5421ogxvct" path="res://assets/images/objects_and_cards/berries1.png" id="1_mid87"]
 
 [resource]
 script = ExtResource("1_e701u")

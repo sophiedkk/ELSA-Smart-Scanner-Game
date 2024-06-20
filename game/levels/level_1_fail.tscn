@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://cw7wm882vfgjs" path="res://assets/images/scientist_lady_disappointed.png" id="2_6lcke"]
 [ext_resource type="PackedScene" uid="uid://bx0p7ribsnw20" path="res://game/gui/start_menu.tscn" id="2_c5ko0"]
 [ext_resource type="Texture2D" uid="uid://davhmb2bsrbef" path="res://assets/images/hospital_cafeteria.jpg" id="3_cmc7q"]
-[ext_resource type="Texture2D" uid="uid://c3erhs7lj76jg" path="res://assets/images/carrot2.png" id="5_7myci"]
-[ext_resource type="Texture2D" uid="uid://bmgp0xt0180gl" path="res://assets/images/apple2.png" id="6_mdwct"]
-[ext_resource type="Texture2D" uid="uid://ja3nivi4hdxx" path="res://assets/images/banana2.png" id="6_mm5xq"]
+[ext_resource type="Texture2D" uid="uid://c3erhs7lj76jg" path="res://assets/images/objects_and_cards/carrot2.png" id="5_7myci"]
+[ext_resource type="Texture2D" uid="uid://bmgp0xt0180gl" path="res://assets/images/objects_and_cards/apple2.png" id="6_mdwct"]
+[ext_resource type="Texture2D" uid="uid://ja3nivi4hdxx" path="res://assets/images/objects_and_cards/banana2.png" id="6_mm5xq"]
 
 [node name="Level_1_Fail" type="Node2D"]
 script = ExtResource("1_ni8wd")

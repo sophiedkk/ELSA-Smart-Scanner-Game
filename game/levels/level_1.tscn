@@ -1,10 +1,12 @@
-[gd_scene load_steps=24 format=3 uid="uid://dq7sh851jfvlq"]
+[gd_scene load_steps=26 format=3 uid="uid://dq7sh851jfvlq"]
 
 [ext_resource type="Script" path="res://game/levels/level_1.gd" id="1_x73tg"]
 [ext_resource type="PackedScene" uid="uid://dx58g7kuqi3dh" path="res://game/levels/level_2.tscn" id="2_d6ww7"]
-[ext_resource type="Resource" uid="uid://dkj4gu88bwnih" path="res://game/dialogue/level_one.dialogue" id="3_02gh0"]
+[ext_resource type="Resource" uid="uid://dvml401vq5j65" path="res://game/dialogue/level_one.dialogue" id="3_02gh0"]
 [ext_resource type="Texture2D" uid="uid://ceaayvfocuib5" path="res://assets/images/labeling_background.png" id="4_f6t4d"]
+[ext_resource type="Texture2D" uid="uid://4tn7s77yac7q" path="res://assets/images/correct_response_eng.png" id="4_rdght"]
 [ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://game/controllers/engineer.tscn" id="5_7skt4"]
+[ext_resource type="Texture2D" uid="uid://c52ev7slwyawr" path="res://assets/images/wrong_response_eng.png" id="5_kxm54"]
 [ext_resource type="Texture2D" uid="uid://b1psoqn81m04h" path="res://assets/images/conveyor_belt.png" id="6_7vf66"]
 [ext_resource type="PackedScene" uid="uid://bdpufsrllrvpw" path="res://game/controllers/object_controller.tscn" id="7_rvy4h"]
 [ext_resource type="PackedScene" uid="uid://besa1vfpoeqek" path="res://game/objects/base_analysis_object.tscn" id="8_bqbmy"]
@@ -58,9 +60,9 @@ level_dialogue = ExtResource("3_02gh0")
 [node name="RobotStats" type="BoxContainer" parent="CanvasLayer"]
 unique_name_in_owner = true
 visible = false
-offset_left = 1.0
+offset_left = 4.0
 offset_top = 2.0
-offset_right = 127.0
+offset_right = 130.0
 offset_bottom = 72.0
 alignment = 1
 vertical = true
@@ -89,6 +91,7 @@ bbcode_enabled = true
 text = "ACCURACY_EMPTY"
 
 [node name="ColorStats" type="VBoxContainer" parent="CanvasLayer/RobotStats"]
+visible = false
 layout_mode = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/RobotStats/ColorStats"]
@@ -99,6 +102,20 @@ text = "COLORS"
 [node name="Filler" type="Control" parent="CanvasLayer/RobotStats"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="CorrectResponse" type="Sprite2D" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(160, 86)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_rdght")
+
+[node name="WrongResponse" type="Sprite2D" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(161, 86)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_kxm54")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(161, 76)

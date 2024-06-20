@@ -14,6 +14,7 @@ SPACE_TO_CONT,Space to continue,Space om door te gaan
 SUBMIT_TREE,SUBMIT TREE,CONTROLEER
 TO_DATABASE, ANALYSE DATABASE, DATABASE ANALYSEER
 GO_BACK, GO BACK, GA TERUG
+AWAITING_NEXT, Waiting for object..., Wachten op voorwerp...
 SUBMIT_PILL, HAND IN, INLEVER
 ANALYSING_DATABASE, Analysing database..., Analyseren...
 PREDICTED_OUTCOME, Predicted outcome:, Voorspelde resultaat:
