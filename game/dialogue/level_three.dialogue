@@ -16,54 +16,117 @@ Dr Van Bommel: I will ask you to help once we figure out the diagnosis.
 ~ hans_de_vries_intro
 Dr Van Bommel: Hmm, okay. I see.
 Dr Van Bommel: I think I have a pretty good idea about your diagnosis.
-Dr Van Bommel: However, for the best results I would like to consult our Smart Scanner here.
-Dr Van Bommel: Is it okay if it processes your healthcare data for better results?
+Dr Van Bommel: However, I have a proposal.
+Dr Van Bommel: There is a device here called Smart Scanner.
+Dr Van Bommel: It will assist me in helping to choose the best medication for you.
+Dr Van Bommel: But for now, it doesn't have any data to make its assumptions from.
+Dr Van Bommel: Can we use your parameters to begin training it?
 Hans De Vries: Uh, yeah, sure.
 Dr Van Bommel: Great! Fill in this consent form then, and we can proceed.
 Hans De Vries: ...
 Hans De Vries: ...
 Hans De Vries: There you go. I didn't even know that analysing patients was a thing that AI can do.
 Hans De Vries: People mostly talk about making images or chatbots. That's interesting.
-Dr Van Bommel: I understand that!
-Dr Van Bommel: AI can actually be used for a lot of things, we just need to be careful with how we use it.
+Dr Van Bommel: AI can actually be used for a lot of things, including those, we just need to be careful with how we use it.
 Dr Van Bommel: That's why I needed you to fill in the consent form.
-Dr Van Bommel: Smart Scanner, get up! Help us choose the best medication for Hans!
+Dr Van Bommel: Smart Scanner, get up!
+Dr Van Bommel: Let's see what it considers to be the best medication for you.
 => END
 
-~ hans_de_vries_expected_result_1
-Hans De Vries: I feel so-so, to be honest.
-Hans De Vries: It helped just a tiny bit.
-=> END
-
-~ hans_de_vries_expected_result_2
-Hans De Vries: I feel noticeably better, but there are still some side effects.
-=> END
-
-~ hans_de_vries_expected_result_3
-Hans De Vries: I feel much, much better! The illness is fully gone!
-=> END
-
-~ hans_de_vries_expected_result_4
-Hans De Vries: When I started taking pills, I felt even worse.
-Hans De Vries: This is horrible.
-=> END
+#~ hans_de_vries_expected_result_1
+#Hans De Vries: I feel so-so, to be honest.
+#Hans De Vries: It helped just a tiny bit.
+#=> END
+#
+#~ hans_de_vries_expected_result_2
+#Hans De Vries: I feel noticeably better, but there are still some side effects.
+#=> END
+#
+#~ hans_de_vries_expected_result_3
+#Hans De Vries: I feel much, much better! The illness is fully gone!
+#=> END
+#
+#~ hans_de_vries_expected_result_4
+#Hans De Vries: When I started taking pills, I felt even worse.
+#Hans De Vries: This is horrible.
+#=> END
 
 ~ hans_de_vries_choice_1
-Hans De Vries: Wrong choice!
-Dr Van Bommel: Oops!
+Dr Van Bommel: Hm...
+Hans De Vries: Is something wrong?
+Dr Van Bommel: Well, it choose the first pill, which could help with migraines...
+Dr Van Bommel: But actually has nothing to do with flu.
+Hans De Vries: Oh, that's unfortunate.
+Dr Van Bommel: No worries. That's why we're training it.
+Dr Van Bommel: I'll prescribe the correct medicine for you and your flu, which is #3.
 => END
 
 ~ hans_de_vries_choice_2
-Hans De Vries: Also wrong!
-Dr Van Bommel: Oh no!
+Dr Van Bommel: That doesn't seem right.
+Hans De Vries: What did the scanner say?
+Dr Van Bommel: It did choose medication that tackles flu...
+Dr Van Bommel: But this one is for very severe cases. It's almost as strong as antibiotics.
+Hans De Vries: Do you think that's what I need?
+Dr Van Bommel: No, your case is milder, so we're going with #3 instead. This one is used to tackle most of the flus.
+Dr Van Bommel: Seems like our scanner still has more to learn.
 => END
 
 ~ hans_de_vries_choice_3
-Hans De Vries: This one is right!
-Dr Van Bommel: I'm, in fact, very smart.
+Dr Van Bommel: Oh wow.
+Hans De Vries: What is it?
+Dr Van Bommel: It actually chose the same medication as I did!
+Hans De Vries: Wow, really? I didn't know it could get smart that quickly.
+Dr Van Bommel: I don't think that's the case here.
+Dr Van Bommel: The most likely thing is that the scanner just... guessed it correctly.
+Dr Van Bommel: It doesn't have enough data to draw any meaningful conclusions yet.
+Dr Van Bommel: But anyways, #3 is the right choice for flu. Let me prescribe it to you.
 => END
 
 ~ hans_de_vries_choice_4
-Hans De Vries: Wrong! Doctor, why??
-Dr Van Bommel: I don't know but I can offer you alternative medicine.
+Dr Van Bommel: Wrong answer. Well, that's expected.
+Hans De Vries: What did the scanner say?
+Dr Van Bommel: I think it saw the cough part and chose the medicine that focuses on your throat recovery.
+Dr Van Bommel: That would help you with your symptoms, but the flu wouldn't go away.
+Hans De Vries: What would be the best option then?
+Dr Van Bommel: #3. It deals with flu pretty well. Let me write down the prescription for you.
+=> END
+
+~ karin_smits_intro
+Dr Van Bommel: Okay, Karin. Thank you for filling the form.
+Dr Van Bommel: I'll turn on the Scanner.
+Karin Smits: I'm interested, how does it even work?
+Karin Smits: Do you teach it biology and stuff?
+Karin Smits: Can a machine even know what kind of illness I'm suffering from?
+Dr Van Bommel: Our scanner here doesn't work like that.
+Dr Van Bommel: It doesn't know anything about sicknesses or curing people.
+Dr Van Bommel: What the scanner does is analyses its previous results.
+Dr Van Bommel: It tries to make a balance between different numbers in its code. It thinks: how did the doctor get those results? What were the important details?
+Dr Van Bommel: And with every patient, there's a bigger chance of success because it gets more precise.
+Karin Smits: Because more patients means more doctor examples?
+Dr Van Bommel: Exactly!
+Dr Van Bommel: Of course, I make sure that the scanner doesn't recommend anything dangerous.
+Dr Van Bommel: But it does get better just like a doctor, but it learns with numbers, not books.
+Karin Smits: Wow, sounds cool.
+Dr Van Bommel: Smart Scanner, wake up!
+Dr Van Bommel: Let's see what it recommends for you.
+=> END
+
+~ karin_smits_choice_1
+Karin Smits: Wrong choice!
+Dr Van Bommel: Oops!
+=> END
+
+~ karin_smits_choice_2
+Karin Smits: Also wrong!
+Dr Van Bommel: Oh no!
+=> END
+
+~ karin_smits_choice_3
+Karin Smits: This one is right!
+Dr Van Bommel: I'm, in fact, very smart.
+=> END
+
+~ karin_smits_choice_4
+Karin Smits: Wrong choice!
+Dr Van Bommel: Oops!
 => END

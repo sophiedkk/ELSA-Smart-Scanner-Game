@@ -18,6 +18,7 @@ signal new_tree_construction
 signal initial_patient_dialogue
 signal spawn_the_pills
 signal restore_UI
+signal show_result_menu(correct_result: bool)
 
 #These variables control the flow of the dialogue
 var dialogue_in_progress := false
@@ -87,24 +88,27 @@ func _on_dialogue_finished() -> void:
 				"hans_de_vries_intro":
 					await LevelTransition.fade_from_black()
 					spawn_the_pills.emit()
+				"karin_smits_intro":
+					await LevelTransition.fade_from_black()
+					spawn_the_pills.emit()
 				#This can definitely be refactored
-				"hans_de_vries_expected_result_1":
-					restore_UI.emit()
-				"hans_de_vries_expected_result_2":
-					restore_UI.emit()
-				"hans_de_vries_expected_result_3":
-					restore_UI.emit()
-				"hans_de_vries_expected_result_4":
-					restore_UI.emit()
+				#"hans_de_vries_expected_result_1":
+					#restore_UI.emit()
+				#"hans_de_vries_expected_result_2":
+					#restore_UI.emit()
+				#"hans_de_vries_expected_result_3":
+					#restore_UI.emit()
+				#"hans_de_vries_expected_result_4":
+					#restore_UI.emit()
 				#This as well
 				"hans_de_vries_choice_1":
-					await LevelTransition.fade_from_black()
+					show_result_menu.emit(false)
 				"hans_de_vries_choice_2":
-					await LevelTransition.fade_from_black()
+					show_result_menu.emit(false)
 				"hans_de_vries_choice_3":
-					await LevelTransition.fade_from_black()
+					show_result_menu.emit(true)
 				"hans_de_vries_choice_4":
-					await LevelTransition.fade_from_black()
+					show_result_menu.emit(false)
 	dialogue_in_progress = false
 
 

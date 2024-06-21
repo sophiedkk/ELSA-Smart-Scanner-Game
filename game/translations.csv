@@ -15,9 +15,13 @@ SUBMIT_TREE,SUBMIT TREE,CONTROLEER
 TO_DATABASE, ANALYSE DATABASE, DATABASE ANALYSEER
 GO_BACK, GO BACK, GA TERUG
 AWAITING_NEXT, Waiting for object..., Wachten op voorwerp...
+NEXT_PATIENT, AWAIT THE NEXT PATIENT, WACHTEN OP DE VOLGENDE PATIENT
 SUBMIT_PILL, HAND IN, INLEVER
 ANALYSING_DATABASE, Analysing database..., Analyseren...
 PREDICTED_OUTCOME, Predicted outcome:, Voorspelde resultaat:
+NO_RESULT, No Result, Geen Resultaat
+GOOD_RESULT, You were correct!, Je had gelijk!
+BAD_RESULT, You were wrong!, Je had het mis!
 Apple,Apple,Appel
 Pear,Pear,Peer
 Banana,Banana,Banaan

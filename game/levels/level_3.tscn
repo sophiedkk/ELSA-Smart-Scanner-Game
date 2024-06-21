@@ -1,16 +1,24 @@
-[gd_scene load_steps=13 format=3 uid="uid://rh38s4mnlbr7"]
+[gd_scene load_steps=15 format=3 uid="uid://rh38s4mnlbr7"]
 
 [ext_resource type="Script" path="res://game/levels/level_3.gd" id="1_fjahl"]
 [ext_resource type="Resource" uid="uid://c3gkrqx6x4d5" path="res://game/objects/patient_resources/hans_de_vries.tres" id="2_1b10a"]
 [ext_resource type="Texture2D" uid="uid://b5xuo1ieioomd" path="res://assets/images/adviser-background.jpg" id="2_5dagn"]
 [ext_resource type="Resource" uid="uid://bmo8vgxmwevk3" path="res://game/dialogue/level_three.dialogue" id="2_6rwa6"]
 [ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://game/controllers/engineer.tscn" id="3_efjwc"]
+[ext_resource type="Resource" uid="uid://beadajg1rmk5l" path="res://game/objects/patient_resources/karin_smits.tres" id="3_raxkr"]
 [ext_resource type="PackedScene" uid="uid://b160vht0s571l" path="res://game/objects/base_patient.tscn" id="3_t7r23"]
 [ext_resource type="Texture2D" uid="uid://cqoucnromrvix" path="res://assets/images/wooden_table.png" id="5_j3ba3"]
 [ext_resource type="Texture2D" uid="uid://cj18mvjn8jvhq" path="res://assets/images/techy_screen.jpg" id="5_j5k32"]
 [ext_resource type="PackedScene" uid="uid://c3mugfn21a5gi" path="res://game/controllers/pill_controller.tscn" id="8_o0t8o"]
 [ext_resource type="PackedScene" uid="uid://c6krxbgvvkckn" path="res://submit_button.tscn" id="9_1tlu3"]
 [ext_resource type="PackedScene" uid="uid://cbpwitupu0t6b" path="res://game/objects/pill_object.tscn" id="11_pot8g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_piln0"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4lmcd"]
 bg_color = Color(0, 0, 0, 1)
@@ -22,12 +30,12 @@ border_color = Color(1, 1, 1, 1)
 
 [node name="Level_3" type="Node2D" node_paths=PackedStringArray("hand_in_buttons")]
 script = ExtResource("1_fjahl")
-level_patients = Array[Resource("res://game/objects/patient_data.gd")]([null, ExtResource("2_1b10a"), null])
+level_patients = Array[Resource("res://game/objects/patient_data.gd")]([null, ExtResource("2_1b10a"), ExtResource("3_raxkr")])
 hand_in_buttons = [NodePath("CanvasLayer/SubmitButton1"), NodePath("CanvasLayer/SubmitButton2"), NodePath("CanvasLayer/SubmitButton3"), NodePath("CanvasLayer/SubmitButton4")]
 level_patient_object = ExtResource("3_t7r23")
 level_dialogue = ExtResource("2_6rwa6")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="HospitalBackground" type="Sprite2D" parent="."]
 position = Vector2(161, 91)
 scale = Vector2(0.126117, 0.127005)
 texture = ExtResource("2_5dagn")
@@ -39,13 +47,51 @@ position = Vector2(158, 92)
 scale = Vector2(0.171206, 0.171206)
 texture = ExtResource("5_j5k32")
 
+[node name="ResultBackground" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="BlackBackground" type="ColorRect" parent="ResultBackground"]
+offset_right = 323.0
+offset_bottom = 183.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="NextPatient" type="Button" parent="ResultBackground"]
+offset_left = 67.0
+offset_top = 130.0
+offset_right = 247.0
+offset_bottom = 158.0
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_piln0")
+text = "NEXT_PATIENT"
+icon_alignment = 1
+
+[node name="PredictedOutcomeLabel" type="Label" parent="ResultBackground"]
+offset_left = 65.0
+offset_top = 40.0
+offset_right = 251.0
+offset_bottom = 60.0
+text = "PREDICTED_OUTCOME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ActualOutcome" type="RichTextLabel" parent="ResultBackground"]
+unique_name_in_owner = true
+offset_left = 64.0
+offset_top = 69.0
+offset_right = 251.0
+offset_bottom = 109.0
+theme_override_font_sizes/normal_font_size = 10
+text = "NO_RESULT"
+
 [node name="Engineer" parent="." instance=ExtResource("3_efjwc")]
 unique_name_in_owner = true
 position = Vector2(-85, 89)
 
 [node name="SpawnPosition" type="Node2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(56, 95)
+position = Vector2(38, 107)
 
 [node name="PillTable" type="Sprite2D" parent="."]
 unique_name_in_owner = true
@@ -74,19 +120,19 @@ unique_name_in_owner = true
 visible = false
 
 [node name="InformationBackground" type="Button" parent="CanvasLayer/AllPatientInformation"]
-offset_left = 28.0
+offset_left = 55.0
 offset_top = 6.0
-offset_right = 319.0
-offset_bottom = 69.0
+offset_right = 315.0
+offset_bottom = 102.0
 mouse_filter = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_4lmcd")
 
 [node name="PatientInformation" type="VBoxContainer" parent="CanvasLayer/AllPatientInformation"]
 unique_name_in_owner = true
-offset_left = 37.0
+offset_left = 63.0
 offset_top = 13.0
-offset_right = 320.0
-offset_bottom = 60.0
+offset_right = 310.0
+offset_bottom = 93.0
 
 [node name="FirstRowContainer" type="HBoxContainer" parent="CanvasLayer/AllPatientInformation/PatientInformation"]
 layout_mode = 2
@@ -153,71 +199,58 @@ size_flags_horizontal = 3
 
 [node name="Control1" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation"]
 layout_mode = 2
-size_flags_vertical = 3
 
-[node name="SecondRowContainer" type="HBoxContainer" parent="CanvasLayer/AllPatientInformation/PatientInformation"]
-layout_mode = 2
-
-[node name="ChronicConditions" type="Label" parent="CanvasLayer/AllPatientInformation/PatientInformation/SecondRowContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 5
-theme_override_font_sizes/font_size = 7
-text = "Chronic conditions:"
-
-[node name="Control1" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/SecondRowContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RecentSurgeries" type="Label" parent="CanvasLayer/AllPatientInformation/PatientInformation/SecondRowContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 5
-theme_override_font_sizes/font_size = 7
-text = "Recent surgeries:"
-
-[node name="Control2" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/SecondRowContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.5
-
-[node name="Control2" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation"]
+[node name="FourthSectionContainer" type="VBoxContainer" parent="CanvasLayer/AllPatientInformation/PatientInformation"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ThirdRowContainer" type="HBoxContainer" parent="CanvasLayer/AllPatientInformation/PatientInformation"]
-layout_mode = 2
-
-[node name="KnownAllergies" type="Label" parent="CanvasLayer/AllPatientInformation/PatientInformation/ThirdRowContainer"]
+[node name="Complaints" type="Label" parent="CanvasLayer/AllPatientInformation/PatientInformation/FourthSectionContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
-text = "Known allergies:"
+text = "Complaints:"
 
-[node name="Control1" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/ThirdRowContainer"]
+[node name="Control1" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/FourthSectionContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="CurrentlyPregnant" type="Label" parent="CanvasLayer/AllPatientInformation/PatientInformation/ThirdRowContainer"]
+[node name="DurationOfSymptoms" type="Label" parent="CanvasLayer/AllPatientInformation/PatientInformation/FourthSectionContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
-text = "Pregnant:"
+text = "Duration of symptoms"
 
-[node name="Control2" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/ThirdRowContainer"]
+[node name="Control2" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/FourthSectionContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.5
+size_flags_vertical = 3
+
+[node name="SymptomIntensity" type="Label" parent="CanvasLayer/AllPatientInformation/PatientInformation/FourthSectionContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 7
+text = "Symptom intensity:"
+
+[node name="Control3" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/FourthSectionContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InferredDiagnosis" type="Label" parent="CanvasLayer/AllPatientInformation/PatientInformation/FourthSectionContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 7
+text = "Inferred diagnosis:"
 
 [node name="SubmitButton1" parent="CanvasLayer" instance=ExtResource("9_1tlu3")]
 visible = false
@@ -274,3 +307,74 @@ lower_rating_limits = Array[int]([0, -10])
 upper_rating_limits = Array[int]([0, 20])
 colors_for_limits = Array[Color]([Color(1, 1, 1, 1), Color(0.454902, 0, 0, 1)])
 pill_level_index = 4
+
+[node name="Dump" type="Node2D" parent="."]
+visible = false
+position = Vector2(37, 26)
+
+[node name="SecondRowContainer" type="HBoxContainer" parent="Dump"]
+visible = false
+
+[node name="ChronicConditions" type="Label" parent="Dump/SecondRowContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 7
+text = "Chronic conditions:"
+
+[node name="Control1" type="Control" parent="Dump/SecondRowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RecentSurgeries" type="Label" parent="Dump/SecondRowContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 7
+text = "Recent surgeries:"
+
+[node name="Control2" type="Control" parent="Dump/SecondRowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.5
+
+[node name="Control2" type="Control" parent="Dump"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_vertical = 3
+
+[node name="ThirdRowContainer" type="HBoxContainer" parent="Dump"]
+visible = false
+
+[node name="KnownAllergies" type="Label" parent="Dump/ThirdRowContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 7
+text = "Known allergies:"
+
+[node name="Control1" type="Control" parent="Dump/ThirdRowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CurrentlyPregnant" type="Label" parent="Dump/ThirdRowContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 7
+text = "Pregnant:"
+
+[node name="Control2" type="Control" parent="Dump/ThirdRowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.5
+
+[connection signal="pressed" from="ResultBackground/NextPatient" to="." method="_on_next_patient_pressed"]

@@ -15,6 +15,9 @@ extends Level
 @onready var spawn_position = %SpawnPosition
 @onready var pill_controller: PillController = %PillController
 @onready var analysis_status_UI = %AnalysisStatus
+@onready var result_background = %ResultBackground
+@onready var actual_outcome = %ActualOutcome
+
 
 #region Patient Data UI
 @onready var patient_name = %PatientName
@@ -25,6 +28,10 @@ extends Level
 @onready var recent_surgeries = %RecentSurgeries
 @onready var known_allergies = %KnownAllergies
 @onready var currently_pregnant = %CurrentlyPregnant
+@onready var complaints = %Complaints
+@onready var duration_of_symptoms = %DurationOfSymptoms
+@onready var symptom_intensity = %SymptomIntensity
+@onready var inferred_diagnosis = %InferredDiagnosis
 #endregion
 
 var current_patient_index: int = 0
@@ -46,35 +53,36 @@ func _ready():
 func _connect_signals():
 	engineer.initial_patient_dialogue.connect(_patient_pre_assessment_dialogue)
 	engineer.spawn_the_pills.connect(_show_the_pills.bind(true))
-	engineer.restore_UI.connect(restore_UI_elements)
-	pill_controller.all_pills_analysed.connect(_show_the_hand_ins.bind(true))
-	pill_controller.trigger_pill_dialogue.connect(_show_pill_analysis_dialogue)
+	#engineer.restore_UI.connect(restore_UI_elements)
+	engineer.show_result_menu.connect(show_result_menu)
+	#pill_controller.all_pills_analysed.connect(_show_the_hand_ins.bind(true))
+	#pill_controller.trigger_pill_dialogue.connect(_show_pill_analysis_dialogue)
 	for button in hand_in_buttons:
 		button.relay_index.connect(make_a_pill_choice.bind(button.button_index))
 	
 func _patient_pre_assessment_dialogue():
 	current_patient_index += 1
+	print("Current patient index is ", current_patient_index)
 	if current_patient != null:
 		current_patient.queue_free()
 	analysis_background.visible = true
 	pill_table.visible = true
-	
 	current_patient = level_patient_object.instantiate()
 	current_patient.patient_information = level_patients[current_patient_index]
 	current_patient.position = spawn_position.position
 	add_child(current_patient)
-	
 	update_patient_card(current_patient.patient_information)
-	
 	await get_tree().create_timer(2.0).timeout
 	all_patient_information.visible = true
 	match current_patient_index:
 		1:
 			await engineer.show_normal_dialogue(level_dialogue, "hans_de_vries_intro")
-	pass
+		2: 
+			await engineer.show_normal_dialogue(level_dialogue, "karin_smits_intro")
 
 func _show_the_pills(status: bool):
 	pill_controller.visible = status
+	_show_the_hand_ins(status)
 
 func _show_the_hand_ins(status: bool):
 	if (status):
@@ -82,33 +90,39 @@ func _show_the_hand_ins(status: bool):
 	for button in hand_in_buttons:
 		button.visible = status
 
-func _show_pill_analysis_dialogue(analysed_pill_index: int):
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	all_patient_information.visible = false
-	analysis_status_UI.text = "ANALYSING_DATABASE"
-	analysis_status_UI.visible = true
-	await get_tree().create_timer(2.5).timeout
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	analysis_status_UI.text = "PREDICTED_OUTCOME"
-	for pill in pill_controller.children_pill_objects:
-		if pill.pill_level_index == analysed_pill_index:
-			pill.post_analysis_results()
-	match current_patient_index:
-		1:
-			match analysed_pill_index:
-				#Refactor, possibly through string concatenation
-				1:
-					await engineer.show_normal_dialogue(level_dialogue,"hans_de_vries_expected_result_1")
-				2:
-					await engineer.show_normal_dialogue(level_dialogue,"hans_de_vries_expected_result_2")
-				3:
-					await engineer.show_normal_dialogue(level_dialogue,"hans_de_vries_expected_result_3")
-				4:
-					await engineer.show_normal_dialogue(level_dialogue,"hans_de_vries_expected_result_4")
+#func _show_pill_analysis_dialogue(analysed_pill_index: int):
+	##Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	##all_patient_information.visible = false
+	###analysis_status_UI.text = "ANALYSING_DATABASE"
+	###analysis_status_UI.visible = true
+	###await get_tree().create_timer(2.5).timeout
+	###Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	##analysis_status_UI.text = "PREDICTED_OUTCOME"
+	##for pill in pill_controller.children_pill_objects:
+		##if pill.pill_level_index == analysed_pill_index:
+			##pill.post_analysis_results()
+	#match current_patient_index:
+		#1:
+			#match analysed_pill_index:
+				##Refactor, possibly through string concatenation
+				#1:
+					#await engineer.show_normal_dialogue(level_dialogue,"hans_de_vries_expected_result_1")
+				#2:
+					#await engineer.show_normal_dialogue(level_dialogue,"hans_de_vries_expected_result_2")
+				#3:
+					#await engineer.show_normal_dialogue(level_dialogue,"hans_de_vries_expected_result_3")
+				#4:
+					#await engineer.show_normal_dialogue(level_dialogue,"hans_de_vries_expected_result_4")
 
-func restore_UI_elements():
-	analysis_status_UI.visible = false
-	all_patient_information.visible = true
+#func restore_UI_elements():
+	#analysis_status_UI.visible = false
+	#all_patient_information.visible = true
+	#pass
+
+func show_result_menu(correct_result: bool):
+	actual_outcome.text = "GOOD_RESULT" if correct_result else "BAD_RESULT"
+	result_background.visible = true
+	await LevelTransition.fade_from_black()
 	pass
 
 func _refresh_sprite():
@@ -117,8 +131,8 @@ func _refresh_sprite():
 
 func make_a_pill_choice(chosen_button_index: int):
 	await LevelTransition.fade_to_black()
-	for pill in pill_controller.children_pill_objects:
-		pill.current_rating_display.visible = false
+	#for pill in pill_controller.children_pill_objects:
+		#pill.current_rating_display.visible = false
 	_show_the_pills(false)
 	_show_the_hand_ins(false)
 	await get_tree().create_timer(1.5).timeout
@@ -148,3 +162,12 @@ func update_patient_card(current_data: PatientData):
 	known_allergies.text = "Known allergies: " + current_data.known_allergies
 	var eval_pregnancy: String = "yes" if current_data.currently_pregnant == 0 else "no"
 	currently_pregnant.text = "Currently pregnant: " + eval_pregnancy
+	complaints.text = "Complaints: " + current_data.patient_complaints
+	duration_of_symptoms.text = "Duration of symptoms: " + current_data.symptoms_duration
+	symptom_intensity.text = "Symptom intensity: " + current_data.assessed_intensity
+	inferred_diagnosis.text = "Inferred diagnosis: " + current_data.inferred_diagnosis
+
+func _on_next_patient_pressed():
+	await LevelTransition.fade_to_black()
+	result_background.visible = false
+	_patient_pre_assessment_dialogue()
