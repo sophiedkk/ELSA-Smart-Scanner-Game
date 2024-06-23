@@ -33,24 +33,6 @@ Dr Van Bommel: Smart Scanner, get up!
 Dr Van Bommel: Let's see what it considers to be the best medication for you.
 => END
 
-#~ hans_de_vries_expected_result_1
-#Hans De Vries: I feel so-so, to be honest.
-#Hans De Vries: It helped just a tiny bit.
-#=> END
-#
-#~ hans_de_vries_expected_result_2
-#Hans De Vries: I feel noticeably better, but there are still some side effects.
-#=> END
-#
-#~ hans_de_vries_expected_result_3
-#Hans De Vries: I feel much, much better! The illness is fully gone!
-#=> END
-#
-#~ hans_de_vries_expected_result_4
-#Hans De Vries: When I started taking pills, I felt even worse.
-#Hans De Vries: This is horrible.
-#=> END
-
 ~ hans_de_vries_choice_1
 Dr Van Bommel: Hm...
 Hans De Vries: Is something wrong?
@@ -129,4 +111,25 @@ Dr Van Bommel: I'm, in fact, very smart.
 ~ karin_smits_choice_4
 Karin Smits: Wrong choice!
 Dr Van Bommel: Oops!
+=> END
+
+~ doctor_closing_lines
+Dr Van Bommel: Well, it's been a pleasure.
+Dr Van Bommel: I think we're done here.
+Dr Van Bommel: You've done a great job helping us.
+Dr Van Bommel: We're almost ready to wrap up, but I need to call someone in first.
+=> END
+
+~ engineer_closing_lines
+Dr Rensselaer: Hi!
+Dr Rensselaer: Did you miss me?
+Dr Rensselaer: Anyways, we're done with our journey for now.
+Dr Rensselaer: I think our progress has been very noticeable.
+Dr Rensselaer: We started off with straightforward data labeling, which is the first step in training any sort of AI.
+Dr Rensselaer: Then, we looked at how the machine creates decision trees, which serve as a middle point between simple algorithms and actual machine learning.
+Dr Rensselaer: And finally, we came to reinforcement learning, where the machine analyses different inputs to figure out the conclusions.
+Dr Rensselaer: This, of course, is a very simple way of explaining it.
+Dr Rensselaer: I skimmed over a lot of details, which you'd probably find boring.
+Dr Rensselaer: If you ever get interested in computer science, I'd be very happy to see you in our field!
+Dr Rensselaer: And for now, farewell!
 => END

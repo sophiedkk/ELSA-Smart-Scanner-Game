@@ -20,10 +20,6 @@ func expose_new_tree():
 	print("tree roots size is", tree_roots.size())
 	if current_root >= tree_roots.size():
 		return
-	#This causes an error when it goes out of bounds, will fix later
-	#if tree_roots[current_root] == null:
-		#current_root -= 1
-		#return
 	tree_roots[current_root].visible = true
 	tree_kids = tree_roots[current_root].get_children()
 	for tree_element in tree_kids:

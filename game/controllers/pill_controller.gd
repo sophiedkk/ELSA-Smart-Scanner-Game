@@ -9,12 +9,6 @@ signal trigger_pill_dialogue(pill_level_index: int)
 var current_patient_index: int = 0
 var total_pills_analysed: int = 0
 
-#func _ready():
-	#for pill in children_pill_objects:
-		#pill.pill_analysed.connect(check_pills_status)
-		#pill.pill_simulated.connect(display_simulation_results.bind(pill.pill_level_index))
-
-#Definitely controls whether all of the pills have been checked
 func check_pills_status():
 	total_pills_analysed = 0
 	for pill in children_pill_objects:

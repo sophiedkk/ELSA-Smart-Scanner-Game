@@ -9,10 +9,8 @@ func _ready() -> void:
 	TranslationServer.set_locale(Global.current_locale)
 	_connect_signals()
 
-
 func _connect_signals() -> void:
 	pass
-
 
 func _end_level():
 	if not next_level:

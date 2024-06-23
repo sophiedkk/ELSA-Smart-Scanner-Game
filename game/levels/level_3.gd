@@ -7,19 +7,24 @@ extends Level
 #Patient container
 @export var level_patient_object: PackedScene
 
+#Controllers
 @onready var engineer: Engineer = %Engineer
-@onready var pill_table = %PillTable
-@onready var analysis_background = %AnalysisBackground
-@onready var all_patient_information = %AllPatientInformation
-@onready var patient_information = %PatientInformation
-@onready var spawn_position = %SpawnPosition
 @onready var pill_controller: PillController = %PillController
+
+@onready var pill_table = %PillTable
+@onready var spawn_position = %SpawnPosition
+
+#region result/analysis UI
+@onready var analysis_background = %AnalysisBackground
 @onready var analysis_status_UI = %AnalysisStatus
 @onready var result_background = %ResultBackground
 @onready var actual_outcome = %ActualOutcome
-
+#endregion
 
 #region Patient Data UI
+@onready var all_patient_information = %AllPatientInformation
+@onready var patient_information = %PatientInformation
+
 @onready var patient_name = %PatientName
 @onready var patient_age = %PatientAge
 @onready var patient_gender = %PatientGender
@@ -40,29 +45,28 @@ var current_patient: Patient
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	super._ready()
-	_refresh_sprite()
 	await LevelTransition.fade_from_black()
 	await get_tree().create_timer(0.5).timeout
 	await engineer.show_normal_dialogue(level_dialogue, "doctor_opening_lines")
+	_refresh_sprite(true)
 	engineer.engineer_coming_in()
 
-#func _process(_delta):
-	#if Input.is_action_just_released("skip_level"):
-		#_end_level()
+#region Game Logic
 
 func _connect_signals():
 	engineer.initial_patient_dialogue.connect(_patient_pre_assessment_dialogue)
 	engineer.spawn_the_pills.connect(_show_the_pills.bind(true))
-	#engineer.restore_UI.connect(restore_UI_elements)
 	engineer.show_result_menu.connect(show_result_menu)
-	#pill_controller.all_pills_analysed.connect(_show_the_hand_ins.bind(true))
-	#pill_controller.trigger_pill_dialogue.connect(_show_pill_analysis_dialogue)
+	engineer.call_the_engineer.connect(_final_engineer_dialogue)
+	engineer.level_finished.connect(_end_level)
 	for button in hand_in_buttons:
 		button.relay_index.connect(make_a_pill_choice.bind(button.button_index))
-	
+
 func _patient_pre_assessment_dialogue():
 	current_patient_index += 1
-	print("Current patient index is ", current_patient_index)
+	if level_patients.size() <= current_patient_index:
+		_final_doctor_dialogue()
+		return
 	if current_patient != null:
 		current_patient.queue_free()
 	analysis_background.visible = true
@@ -80,6 +84,56 @@ func _patient_pre_assessment_dialogue():
 		2: 
 			await engineer.show_normal_dialogue(level_dialogue, "karin_smits_intro")
 
+func make_a_pill_choice(chosen_button_index: int):
+	await LevelTransition.fade_to_black()
+	_show_the_pills(false)
+	_show_the_hand_ins(false)
+	await get_tree().create_timer(1.5).timeout
+	var dialogue_name
+	match current_patient_index:
+		1:
+			dialogue_name = "hans_de_vries_choice_" + str(chosen_button_index)
+		2:
+			dialogue_name = "karin_smits_choice_" + str(chosen_button_index)
+	await engineer.show_normal_dialogue(level_dialogue, dialogue_name)
+	analysis_background.visible = false
+	pill_table.visible = false
+	all_patient_information.visible = false
+	current_patient.queue_free()
+
+func _on_next_patient_pressed():
+	await LevelTransition.fade_to_black()
+	result_background.visible = false
+	_patient_pre_assessment_dialogue()
+
+func _refresh_sprite(is_doctor: bool):
+	var new_texture = load("res://assets/images/doctor_lady.png") if is_doctor else load("res://assets/images/scientist_lady.png")
+	engineer.current_sprite.texture = new_texture
+#endregion
+	
+#region Level story
+func _final_doctor_dialogue():
+	await LevelTransition.fade_from_black()
+	engineer.engineer_coming_in()
+	await get_tree().create_timer(1.5).timeout
+	await engineer.show_normal_dialogue(level_dialogue, "doctor_closing_lines")
+	
+func _final_engineer_dialogue():
+	await get_tree().create_timer(3.5).timeout
+	_refresh_sprite(false)
+	engineer.engineer_coming_in()
+	await engineer.show_normal_dialogue(level_dialogue, "engineer_closing_lines")
+
+func end_the_level():
+	_end_level()	
+#endregion
+
+#region GUI
+func show_result_menu(correct_result: bool):
+	actual_outcome.text = "GOOD_RESULT" if correct_result else "BAD_RESULT"
+	result_background.visible = true
+	await LevelTransition.fade_from_black()
+
 func _show_the_pills(status: bool):
 	pill_controller.visible = status
 	_show_the_hand_ins(status)
@@ -89,68 +143,6 @@ func _show_the_hand_ins(status: bool):
 		await get_tree().create_timer(1.5).timeout
 	for button in hand_in_buttons:
 		button.visible = status
-
-#func _show_pill_analysis_dialogue(analysed_pill_index: int):
-	##Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	##all_patient_information.visible = false
-	###analysis_status_UI.text = "ANALYSING_DATABASE"
-	###analysis_status_UI.visible = true
-	###await get_tree().create_timer(2.5).timeout
-	###Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	##analysis_status_UI.text = "PREDICTED_OUTCOME"
-	##for pill in pill_controller.children_pill_objects:
-		##if pill.pill_level_index == analysed_pill_index:
-			##pill.post_analysis_results()
-	#match current_patient_index:
-		#1:
-			#match analysed_pill_index:
-				##Refactor, possibly through string concatenation
-				#1:
-					#await engineer.show_normal_dialogue(level_dialogue,"hans_de_vries_expected_result_1")
-				#2:
-					#await engineer.show_normal_dialogue(level_dialogue,"hans_de_vries_expected_result_2")
-				#3:
-					#await engineer.show_normal_dialogue(level_dialogue,"hans_de_vries_expected_result_3")
-				#4:
-					#await engineer.show_normal_dialogue(level_dialogue,"hans_de_vries_expected_result_4")
-
-#func restore_UI_elements():
-	#analysis_status_UI.visible = false
-	#all_patient_information.visible = true
-	#pass
-
-func show_result_menu(correct_result: bool):
-	actual_outcome.text = "GOOD_RESULT" if correct_result else "BAD_RESULT"
-	result_background.visible = true
-	await LevelTransition.fade_from_black()
-	pass
-
-func _refresh_sprite():
-	var new_texture = load("res://assets/images/doctor_lady.png")
-	engineer.current_sprite.texture = new_texture
-
-func make_a_pill_choice(chosen_button_index: int):
-	await LevelTransition.fade_to_black()
-	#for pill in pill_controller.children_pill_objects:
-		#pill.current_rating_display.visible = false
-	_show_the_pills(false)
-	_show_the_hand_ins(false)
-	await get_tree().create_timer(1.5).timeout
-	match current_patient_index:
-		1:
-			match chosen_button_index:
-				1:
-					await engineer.show_normal_dialogue(level_dialogue, "hans_de_vries_choice_1")
-				2:
-					await engineer.show_normal_dialogue(level_dialogue, "hans_de_vries_choice_2")
-				3:
-					await engineer.show_normal_dialogue(level_dialogue, "hans_de_vries_choice_3")
-				4:
-					await engineer.show_normal_dialogue(level_dialogue, "hans_de_vries_choice_4")
-	analysis_background.visible = false
-	pill_table.visible = false
-	all_patient_information.visible = false
-	current_patient.queue_free()
 
 func update_patient_card(current_data: PatientData):
 	patient_name.text = tr("PATIENT_NAME") + current_data.patient_name
@@ -166,8 +158,4 @@ func update_patient_card(current_data: PatientData):
 	duration_of_symptoms.text = tr("PATIENT_SYMPTOM_DURATION") + current_data.symptoms_duration
 	symptom_intensity.text = tr("PATIENT_SYMPTOM_INTENSITY") + current_data.assessed_intensity
 	inferred_diagnosis.text = tr("PATIENT_INFERRED_DIAGNOSIS") + current_data.inferred_diagnosis
-
-func _on_next_patient_pressed():
-	await LevelTransition.fade_to_black()
-	result_background.visible = false
-	_patient_pre_assessment_dialogue()
+#endregion

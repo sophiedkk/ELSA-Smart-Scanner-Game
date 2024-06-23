@@ -9,7 +9,6 @@ extends Node2D
 #signal value_changed
 #signal pill_analysed
 #signal pill_simulated(pill_index: int)
-#
 #var current_patient_index: int = 0
 #var has_been_analyzed = false
 #

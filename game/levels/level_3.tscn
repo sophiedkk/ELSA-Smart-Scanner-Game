@@ -117,6 +117,7 @@ text = "CURRENT_STATUS"
 
 [node name="AllPatientInformation" type="Node2D" parent="CanvasLayer"]
 unique_name_in_owner = true
+visible = false
 
 [node name="InformationBackground" type="Button" parent="CanvasLayer/AllPatientInformation"]
 offset_left = 55.0

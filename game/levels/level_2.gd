@@ -22,11 +22,9 @@ func _ready():
 	await engineer.show_normal_dialogue(level_dialogue, "rensselaer_opening_lines")
 	engineer.engineer_coming_in()
 
-
 func _process(_delta):
 	if Input.is_action_just_released("skip_level"):
 		_end_level()
-
 
 #region Game logic
 func _connect_signals():
@@ -34,7 +32,6 @@ func _connect_signals():
 	engineer.deck_introduced.connect(_show_first_deck)
 	engineer.new_tree_construction.connect(_reconstruction)
 	engineer.level_finished.connect(_end_level)
-
 	decision_tree.tree_not_filled.connect(_missing_rectangles)
 	decision_tree.tree_filled_correctly.connect(_tree_fill_success)
 	decision_tree.tree_filled_incorrectly.connect(_tree_fill_failure)

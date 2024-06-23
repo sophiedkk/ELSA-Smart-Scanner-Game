@@ -26,12 +26,6 @@ var accuracy_warning_triggered: bool
 
 #endregion
 
-#func _ready():
-	#objects_scanned_in_total = 0
-	#objects_scanned_correctly = 0
-	#accuracy_rate = 0
-	#robot_stats.visible = false
-
 func _process(_delta):
 	mid_point_reached = chosen_point == central_point
 	object_controller.move_current_object(_delta, chosen_point, 80, mid_point_reached)
@@ -45,7 +39,6 @@ func _connect_signals():
 	engineer.current_sprite.texture = new_texture
 	engineer.robot_boot.connect(_booting_up_the_robot)
 	engineer.accept_introduced.connect(_accept_button_activated.bind(true))
-	#engineer.reject_introduced.connect(_reject_button_activated.bind(true))
 	engineer.stats_introduced.connect(_stats_activated.bind(true))
 
 	engineer.level_finished.connect(_end_level)
@@ -111,13 +104,10 @@ func _object_analysis_finished():
 	if accuracy_rate >= accuracy_threshold:
 		await engineer.show_normal_dialogue(level_dialogue, "all_objects_analyzed_correctly")
 	else:
-		#A placeholder that sends player back to main menu
 		await engineer.show_normal_dialogue(level_dialogue, "all_objects_analyzed_incorrectly")
 
 func _object_info_updated():
-	#var _accuracy_color: Color = Color.WEB_GREEN
 	accuracy_rate = int(round((float(objects_scanned_correctly) / objects_scanned_in_total) * 100))
-	#This should probably be refractored to use colors from the function.
 	if accuracy_rate > accuracy_threshold:
 		accuracy_label.text = tr("ACCURACY_RATE") + "[color=green]%s%%[/color]" % accuracy_rate
 	elif accuracy_rate == accuracy_threshold:
