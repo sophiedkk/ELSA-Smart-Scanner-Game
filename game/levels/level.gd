@@ -6,7 +6,7 @@ extends Node
 
 
 func _ready() -> void:
-	TranslationServer.set_locale("nl")  # TODO: implement proper localization selection
+	TranslationServer.set_locale(Global.current_locale)
 	_connect_signals()
 
 

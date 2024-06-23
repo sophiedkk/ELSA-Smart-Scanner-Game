@@ -23,15 +23,16 @@ texture = ExtResource("1_fsm04")
 
 [node name="1_0_1_label" type="Label" parent="TreeBeginning/Tree1Root"]
 visible = false
-offset_left = -200.0
+offset_left = -400.0
 offset_top = -85.7143
-offset_right = 244.0
+offset_right = 383.0
 offset_bottom = 63.2857
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "VORM"
+text = "TREE_FORM"
+horizontal_alignment = 1
 
 [node name="1_1_1_arrow" type="Sprite2D" parent="TreeBeginning/Tree1Root"]
 visible = false
@@ -41,16 +42,16 @@ texture = ExtResource("2_lg282")
 
 [node name="1_1_1_label" type="Label" parent="TreeBeginning/Tree1Root"]
 visible = false
-offset_left = -857.143
-offset_top = 600.0
-offset_right = -375.143
-offset_bottom = 749.0
+offset_left = -885.714
+offset_top = 628.571
+offset_right = 2.28558
+offset_bottom = 777.571
 rotation = -0.872665
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "CIRKEL"
+text = "TREE_CIRCLE"
 
 [node name="1_1_2_arrow" type="Sprite2D" parent="TreeBeginning/Tree1Root"]
 visible = false
@@ -60,16 +61,17 @@ texture = ExtResource("2_lg282")
 
 [node name="1_1_2_label" type="Label" parent="TreeBeginning/Tree1Root"]
 visible = false
-offset_left = 485.714
-offset_top = 228.571
-offset_right = 967.714
-offset_bottom = 377.571
+offset_left = 428.572
+offset_top = 85.7143
+offset_right = 1287.57
+offset_bottom = 234.714
 rotation = 0.872665
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "CURVE"
+text = "TREE_CURVE"
+horizontal_alignment = 1
 
 [node name="1_2_1_rect" parent="TreeBeginning/Tree1Root" instance=ExtResource("4_vd220")]
 visible = false
@@ -90,15 +92,16 @@ texture = ExtResource("1_fsm04")
 
 [node name="2_0_1_label" type="Label" parent="TreeBeginning/Tree2Root"]
 visible = false
-offset_left = -200.0
+offset_left = -400.0
 offset_top = -85.7143
-offset_right = 244.0
+offset_right = 383.0
 offset_bottom = 63.2857
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "VORM"
+text = "TREE_FORM"
+horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="2_1_1_arrow" type="Sprite2D" parent="TreeBeginning/Tree2Root"]
@@ -118,7 +121,8 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "CIRKEL"
+text = "TREE_CIRCLE"
+horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="2_1_2_arrow" type="Sprite2D" parent="TreeBeginning/Tree2Root"]
@@ -129,16 +133,17 @@ texture = ExtResource("2_lg282")
 
 [node name="2_1_2_label" type="Label" parent="TreeBeginning/Tree2Root"]
 visible = false
-offset_left = 514.286
-offset_top = 228.571
-offset_right = 996.286
-offset_bottom = 377.571
+offset_left = 400.0
+offset_top = 85.7143
+offset_right = 1259.0
+offset_bottom = 234.714
 rotation = 0.872665
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "CURVE"
+text = "TREE_CURVE"
+horizontal_alignment = 1
 
 [node name="2_2_1_circle" type="Sprite2D" parent="TreeBeginning/Tree2Root"]
 visible = false
@@ -147,15 +152,16 @@ texture = ExtResource("1_fsm04")
 
 [node name="2_2_1_label" type="Label" parent="TreeBeginning/Tree2Root"]
 visible = false
-offset_left = -1114.29
+offset_left = -1314.29
 offset_top = 1285.71
-offset_right = -755.286
+offset_right = -615.286
 offset_bottom = 1434.71
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "MAAT"
+text = "TREE_SIZE"
+horizontal_alignment = 1
 
 [node name="2_2_2_rect" parent="TreeBeginning/Tree2Root" instance=ExtResource("4_vd220")]
 visible = false
@@ -170,16 +176,17 @@ texture = ExtResource("2_lg282")
 
 [node name="2_3_1_label" type="Label" parent="TreeBeginning/Tree2Root"]
 visible = false
-offset_left = -1771.43
-offset_top = 1971.43
-offset_right = -1289.43
-offset_bottom = 2120.43
+offset_left = -1942.86
+offset_top = 2171.43
+offset_right = -921.857
+offset_bottom = 2320.43
 rotation = -0.872665
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "KLEINER"
+text = "TREE_SMALLER"
+horizontal_alignment = 1
 
 [node name="2_3_2_arrow" type="Sprite2D" parent="TreeBeginning/Tree2Root"]
 visible = false
@@ -189,16 +196,17 @@ texture = ExtResource("2_lg282")
 
 [node name="2_3_2_label" type="Label" parent="TreeBeginning/Tree2Root"]
 visible = false
-offset_left = -400.0
-offset_top = 1628.57
-offset_right = 82.0004
-offset_bottom = 1777.57
+offset_left = -542.857
+offset_top = 1457.14
+offset_right = 374.143
+offset_bottom = 1606.14
 rotation = 0.872665
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "GROTER"
+text = "TREE_BIGGER"
+horizontal_alignment = 1
 
 [node name="2_4_1_rect" parent="TreeBeginning/Tree2Root" instance=ExtResource("4_vd220")]
 visible = false
@@ -219,15 +227,15 @@ texture = ExtResource("1_fsm04")
 
 [node name="3_0_1_label" type="Label" parent="TreeBeginning/Tree3Root"]
 visible = false
-offset_left = -200.0
+offset_left = -228.571
 offset_top = -85.7143
-offset_right = 244.0
+offset_right = 554.429
 offset_bottom = 63.2857
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "VORM"
+text = "TREE_FORM"
 
 [node name="3_1_1_arrow" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
 visible = false
@@ -246,7 +254,8 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "CIRKEL"
+text = "TREE_CIRCLE"
+horizontal_alignment = 1
 
 [node name="3_1_2_arrow" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
 visible = false
@@ -265,7 +274,8 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "CURVE"
+text = "TREE_CURVE"
+horizontal_alignment = 1
 
 [node name="3_2_1_circle" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
 visible = false
@@ -274,15 +284,16 @@ texture = ExtResource("1_fsm04")
 
 [node name="3_2_1_label" type="Label" parent="TreeBeginning/Tree3Root"]
 visible = false
-offset_left = -1171.43
+offset_left = -1400.0
 offset_top = 1285.71
-offset_right = -711.429
+offset_right = -534.0
 offset_bottom = 1434.71
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "KLEUR"
+text = "TREE_COLOR"
+horizontal_alignment = 1
 
 [node name="3_2_2_circle" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
 visible = false
@@ -291,15 +302,16 @@ texture = ExtResource("1_fsm04")
 
 [node name="3_2_2_label" type="Label" parent="TreeBeginning/Tree3Root"]
 visible = false
-offset_left = 771.429
+offset_left = 542.857
 offset_top = 1285.71
-offset_right = 1231.43
+offset_right = 1408.86
 offset_bottom = 1434.71
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "KLEUR"
+text = "TREE_COLOR"
+horizontal_alignment = 1
 
 [node name="3_3_1_arrow" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
 visible = false
@@ -309,17 +321,17 @@ texture = ExtResource("2_lg282")
 
 [node name="3_3_1_label" type="Label" parent="TreeBeginning/Tree3Root"]
 visible = false
-offset_left = -2085.71
-offset_top = 1857.14
-offset_right = -1317.71
-offset_bottom = 2158.14
+offset_left = -2400.0
+offset_top = 2171.43
+offset_right = -941.0
+offset_bottom = 2472.43
 rotation = -0.694225
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "ROOD OF
-GROEN"
+text = "TREE_RED_OR_GREEN"
+horizontal_alignment = 1
 
 [node name="3_3_2_arrow" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
 visible = false
@@ -329,16 +341,17 @@ texture = ExtResource("2_lg282")
 
 [node name="3_3_2_label" type="Label" parent="TreeBeginning/Tree3Root"]
 visible = false
-offset_left = -571.429
-offset_top = 1742.86
-offset_right = -50.4287
-offset_bottom = 1891.86
+offset_left = -628.571
+offset_top = 1571.43
+offset_right = 298.429
+offset_bottom = 1720.43
 rotation = 1.10068
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "PAARS"
+text = "TREE_PURPLE"
+horizontal_alignment = 1
 
 [node name="3_3_3_arrow" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
 visible = false
@@ -348,16 +361,17 @@ texture = ExtResource("2_lg282")
 
 [node name="3_3_3_label" type="Label" parent="TreeBeginning/Tree3Root"]
 visible = false
-offset_left = 600.0
-offset_top = 2200.0
-offset_right = 1121.0
-offset_bottom = 2349.0
+offset_left = 571.429
+offset_top = 2371.43
+offset_right = 1249.43
+offset_bottom = 2520.43
 rotation = -1.40737
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "ROOD"
+text = "TREE_RED"
+horizontal_alignment = 1
 
 [node name="3_3_4_arrow" type="Sprite2D" parent="TreeBeginning/Tree3Root"]
 visible = false
@@ -368,15 +382,15 @@ texture = ExtResource("2_lg282")
 [node name="3_3_4_label" type="Label" parent="TreeBeginning/Tree3Root"]
 visible = false
 offset_left = 1485.71
-offset_top = 1571.43
-offset_right = 2253.71
-offset_bottom = 1720.43
+offset_top = 1542.86
+offset_right = 2427.71
+offset_bottom = 1691.86
 rotation = 0.79976
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "GEEL"
+text = "TREE_YELLOW"
 
 [node name="3_4_1_rect" parent="TreeBeginning/Tree3Root" instance=ExtResource("4_vd220")]
 visible = false
@@ -407,15 +421,16 @@ texture = ExtResource("1_fsm04")
 
 [node name="4_0_1_label" type="Label" parent="TreeBeginning/Tree4Root"]
 visible = false
-offset_left = -228.571
+offset_left = -457.143
 offset_top = -85.7143
-offset_right = 215.429
+offset_right = 408.857
 offset_bottom = 63.2857
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "KLEUR"
+text = "TREE_COLOR"
+horizontal_alignment = 1
 
 [node name="4_1_1_arrow" type="Sprite2D" parent="TreeBeginning/Tree4Root"]
 visible = false
@@ -434,7 +449,8 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "BRUIN"
+text = "TREE_BROWN"
+horizontal_alignment = 1
 
 [node name="4_1_2_arrow" type="Sprite2D" parent="TreeBeginning/Tree4Root"]
 visible = false
@@ -442,19 +458,32 @@ position = Vector2(-158.137, 841.864)
 rotation = 0.147048
 texture = ExtResource("2_lg282")
 
-[node name="4_1_2_label" type="Label" parent="TreeBeginning/Tree4Root"]
+[node name="4_1_2_1_label" type="Label" parent="TreeBeginning/Tree4Root"]
 visible = false
-offset_left = -514.286
-offset_top = 485.714
-offset_right = 371.714
-offset_bottom = 786.714
+offset_left = -742.857
+offset_top = 457.143
+offset_right = 641.143
+offset_bottom = 758.143
 rotation = 0.154386
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "GEEL
-NOOIT PAARS"
+text = "TREE_SOMS_YELLOW"
+horizontal_alignment = 1
+
+[node name="4_1_2_2_label" type="Label" parent="TreeBeginning/Tree4Root"]
+visible = false
+offset_left = -800.0
+offset_top = 628.572
+offset_right = 638.0
+offset_bottom = 929.572
+rotation = 0.154386
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 60
+theme_override_font_sizes/font_size = 128
+text = "TREE_NEVER_PURPLE"
 horizontal_alignment = 1
 
 [node name="4_1_3_arrow" type="Sprite2D" parent="TreeBeginning/Tree4Root"]
@@ -465,16 +494,17 @@ texture = ExtResource("2_lg282")
 
 [node name="4_1_3_label" type="Label" parent="TreeBeginning/Tree4Root"]
 visible = false
-offset_left = 514.286
-offset_top = 228.571
-offset_right = 996.286
-offset_bottom = 377.571
+offset_left = 457.143
+offset_top = 171.429
+offset_right = 1135.14
+offset_bottom = 320.429
 rotation = 0.872665
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "ROOD"
+text = "TREE_RED"
+horizontal_alignment = 1
 
 [node name="4_2_1_rect" parent="TreeBeginning/Tree4Root" instance=ExtResource("4_vd220")]
 visible = false
@@ -488,15 +518,16 @@ texture = ExtResource("1_fsm04")
 
 [node name="4_2_2_label" type="Label" parent="TreeBeginning/Tree4Root"]
 visible = false
-offset_left = -428.571
+offset_left = -628.571
 offset_top = 1571.43
-offset_right = 31.4292
+offset_right = 154.429
 offset_bottom = 1720.43
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "VORM"
+text = "TREE_FORM"
+horizontal_alignment = 1
 
 [node name="4_2_3_circle" type="Sprite2D" parent="TreeBeginning/Tree4Root"]
 visible = false
@@ -505,15 +536,16 @@ texture = ExtResource("1_fsm04")
 
 [node name="4_2_3_label" type="Label" parent="TreeBeginning/Tree4Root"]
 visible = false
-offset_left = 857.143
+offset_left = 657.143
 offset_top = 1228.57
-offset_right = 1317.14
+offset_right = 1440.14
 offset_bottom = 1377.57
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "VORM"
+text = "TREE_FORM"
+horizontal_alignment = 1
 
 [node name="4_3_1_arrow" type="Sprite2D" parent="TreeBeginning/Tree4Root"]
 visible = false
@@ -523,16 +555,17 @@ texture = ExtResource("2_lg282")
 
 [node name="4_3_1_label" type="Label" parent="TreeBeginning/Tree4Root"]
 visible = false
-offset_left = -1142.86
-offset_top = 2085.71
-offset_right = -606.857
-offset_bottom = 2386.71
+offset_left = -1314.29
+offset_top = 2200.0
+offset_right = -426.286
+offset_bottom = 2501.0
 rotation = -0.73206
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "CIRKEL"
+text = "TREE_CIRCLE"
+horizontal_alignment = 1
 
 [node name="4_3_2_arrow" type="Sprite2D" parent="TreeBeginning/Tree4Root"]
 visible = false
@@ -542,16 +575,17 @@ texture = ExtResource("2_lg282")
 
 [node name="4_3_2_label" type="Label" parent="TreeBeginning/Tree4Root"]
 visible = false
-offset_left = 113.601
-offset_top = 1942.17
-offset_right = 649.602
-offset_bottom = 2243.17
+offset_left = 85.7149
+offset_top = 1857.14
+offset_right = 944.715
+offset_bottom = 2158.14
 rotation = 1.18715
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "CURVE"
+text = "TREE_CURVE"
+horizontal_alignment = 1
 
 [node name="4_3_3_arrow" type="Sprite2D" parent="TreeBeginning/Tree4Root"]
 visible = false
@@ -561,16 +595,17 @@ texture = ExtResource("2_lg282")
 
 [node name="4_3_3_label" type="Label" parent="TreeBeginning/Tree4Root"]
 visible = false
-offset_left = 1400.0
-offset_top = 1714.29
-offset_right = 1936.0
-offset_bottom = 2015.29
-rotation = 1.14916
+offset_left = 1342.86
+offset_top = 1514.29
+offset_right = 2230.86
+offset_bottom = 1815.29
+rotation = 1.17833
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "CIRKEL"
+text = "TREE_CIRCLE"
+horizontal_alignment = 1
 
 [node name="4_3_4_arrow" type="Sprite2D" parent="TreeBeginning/Tree4Root"]
 visible = false
@@ -580,16 +615,17 @@ texture = ExtResource("2_lg282")
 
 [node name="4_3_4_label" type="Label" parent="TreeBeginning/Tree4Root"]
 visible = false
-offset_left = 1657.14
-offset_top = 1342.86
-offset_right = 2193.14
-offset_bottom = 1643.86
-rotation = 0.516738
+offset_left = 1514.29
+offset_top = 1228.57
+offset_right = 2373.29
+offset_bottom = 1529.57
+rotation = 0.546892
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 60
 theme_override_font_sizes/font_size = 128
-text = "CURVE"
+text = "TREE_CURVE"
+horizontal_alignment = 1
 
 [node name="4_4_1_rect" parent="TreeBeginning/Tree4Root" instance=ExtResource("4_vd220")]
 visible = false

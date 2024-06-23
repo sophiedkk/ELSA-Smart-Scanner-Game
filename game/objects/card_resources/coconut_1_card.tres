@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://bhxohrb8avaie"]
 
-[ext_resource type="Texture2D" uid="uid://p6jp0s7y5abv" path="res://assets/images/objects_and_cards/card_cocount_nl.png" id="1_ae7ca"]
+[ext_resource type="Texture2D" uid="uid://0ysymi1tqbge" path="res://assets/images/objects_and_cards/card_coconut.png" id="1_0acxk"]
 [ext_resource type="Script" path="res://game/objects/card_data.gd" id="2_gvxq5"]
 
 [resource]
 script = ExtResource("2_gvxq5")
-card_texture = ExtResource("1_ae7ca")
+card_texture = ExtResource("1_0acxk")
 card_type = 12

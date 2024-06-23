@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://da32mb8uixdp7"]
 
-[ext_resource type="Texture2D" uid="uid://dtnyn71x8kcjx" path="res://assets/images/objects_and_cards/card_apple_nl.png" id="1_bjqmq"]
+[ext_resource type="Texture2D" uid="uid://b0q8arslajgyg" path="res://assets/images/objects_and_cards/card_apple.png" id="1_bm7cl"]
 [ext_resource type="Script" path="res://game/objects/card_data.gd" id="1_dhoje"]
 
 [resource]
 script = ExtResource("1_dhoje")
-card_texture = ExtResource("1_bjqmq")
+card_texture = ExtResource("1_bm7cl")
 card_type = 1

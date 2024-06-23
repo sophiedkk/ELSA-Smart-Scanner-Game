@@ -19,8 +19,8 @@ scale = Vector2(0.270059, 0.270059)
 texture = ExtResource("3_1r8u3")
 
 [node name="SmartScannerLogo" type="Sprite2D" parent="."]
-position = Vector2(69, 124)
-scale = Vector2(0.147716, 0.147716)
+position = Vector2(69, 101)
+scale = Vector2(0.0884017, 0.0884017)
 texture = ExtResource("4_w6wou")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -29,10 +29,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 6.0
-offset_top = 6.0
-offset_right = 122.0
-offset_bottom = 66.0
+offset_left = 17.0
+offset_top = 17.0
+offset_right = 133.0
+offset_bottom = 77.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -45,5 +45,16 @@ text = "START_GAME"
 layout_mode = 2
 text = "QUIT_GAME"
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+offset_left = 14.0
+offset_top = 139.0
+offset_right = 141.0
+offset_bottom = 167.0
+
+[node name="SwitchLanguage" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+text = "SWITCH_LANG"
+
 [connection signal="pressed" from="VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitGameButton" to="." method="_on_quit_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/SwitchLanguage" to="." method="_on_switch_language_pressed"]

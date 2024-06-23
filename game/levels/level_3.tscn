@@ -117,7 +117,6 @@ text = "CURRENT_STATUS"
 
 [node name="AllPatientInformation" type="Node2D" parent="CanvasLayer"]
 unique_name_in_owner = true
-visible = false
 
 [node name="InformationBackground" type="Button" parent="CanvasLayer/AllPatientInformation"]
 offset_left = 55.0
@@ -146,7 +145,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
-text = "Name:"
+text = "PATIENT_NAME"
 
 [node name="Control1" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/FirstRowContainer"]
 layout_mode = 2
@@ -161,7 +160,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
-text = "Age:"
+text = "PATIENT_AGE"
 
 [node name="Control2" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/FirstRowContainer"]
 layout_mode = 2
@@ -176,7 +175,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
-text = "Gender:"
+text = "PATIENT_GENDER"
 
 [node name="Control3" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/FirstRowContainer"]
 layout_mode = 2
@@ -184,6 +183,7 @@ size_flags_horizontal = 3
 
 [node name="PatientLastGPVisit" type="Label" parent="CanvasLayer/AllPatientInformation/PatientInformation/FirstRowContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -191,9 +191,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
-text = "Last GP visit:"
+text = "PATIENT_GP_VISIT"
 
 [node name="Control4" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/FirstRowContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -211,7 +212,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
-text = "Complaints:"
+text = "PATIENT_COMPLAINTS"
 
 [node name="Control1" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/FourthSectionContainer"]
 layout_mode = 2
@@ -224,7 +225,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
-text = "Duration of symptoms"
+text = "PATIENT_SYMPTOM_DURATION"
 
 [node name="Control2" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/FourthSectionContainer"]
 layout_mode = 2
@@ -237,7 +238,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
-text = "Symptom intensity:"
+text = "PATIENT_SYMPTOM_INTENSITY"
 
 [node name="Control3" type="Control" parent="CanvasLayer/AllPatientInformation/PatientInformation/FourthSectionContainer"]
 layout_mode = 2
@@ -250,7 +251,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 7
-text = "Inferred diagnosis:"
+text = "PATIENT_INFERRED_DIAGNOSIS"
 
 [node name="SubmitButton1" parent="CanvasLayer" instance=ExtResource("9_1tlu3")]
 visible = false

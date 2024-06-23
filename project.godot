@@ -75,10 +75,17 @@ trigger_function_2={
 
 locale/translation_remaps={
 "res://assets/images/correct_response_eng.png": PackedStringArray("res://assets/images/correct_response_ned.png:nl"),
+"res://assets/images/objects_and_cards/card_apple.png": PackedStringArray("res://assets/images/objects_and_cards/card_apple_nl.png:nl"),
+"res://assets/images/objects_and_cards/card_banana.png": PackedStringArray("res://assets/images/objects_and_cards/card_banana_nl.png:nl"),
+"res://assets/images/objects_and_cards/card_chili.png": PackedStringArray("res://assets/images/objects_and_cards/card_chili_nl.png:nl"),
+"res://assets/images/objects_and_cards/card_coconut.png": PackedStringArray("res://assets/images/objects_and_cards/card_cocount_nl.png:nl"),
+"res://assets/images/objects_and_cards/card_grapes.png": PackedStringArray("res://assets/images/objects_and_cards/card_grapes_nl.png:nl"),
 "res://assets/images/wrong_response_eng.png": PackedStringArray("res://assets/images/wrong_response_ned.png:nl")
 }
 locale/translations=PackedStringArray("res://game/dialogue/level_one.nl.translation", "res://game/dialogue/level_one.en.translation", "res://game/dialogue/level_two.en.translation", "res://game/dialogue/level_two.nl.translation", "res://game/translations.en.translation", "res://game/translations.nl.translation")
 locale/translations_pot_files=PackedStringArray("res://game/dialogue/level_one.dialogue", "res://game/dialogue/level_two.dialogue", "res://game/levels/level_two.tscn", "res://game/controllers/engineer.tscn", "res://game/dialogue/level_three.dialogue")
+locale/language_filter=["nl"]
+locale/locale_filter_mode=1
 
 [rendering]
 

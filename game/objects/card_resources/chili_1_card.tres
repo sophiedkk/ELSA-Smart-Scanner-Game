@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://dt071tjkjgwjh"]
 
-[ext_resource type="Texture2D" uid="uid://circ7j6t2d3jv" path="res://assets/images/objects_and_cards/card_chili_nl.png" id="1_2b0wa"]
+[ext_resource type="Texture2D" uid="uid://bcplivdcx1fpu" path="res://assets/images/objects_and_cards/card_chili.png" id="1_sg3wr"]
 [ext_resource type="Script" path="res://game/objects/card_data.gd" id="2_hkc8f"]
 
 [resource]
 script = ExtResource("2_hkc8f")
-card_texture = ExtResource("1_2b0wa")
+card_texture = ExtResource("1_sg3wr")
 card_type = 11

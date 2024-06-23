@@ -15,3 +15,11 @@ func _on_start_game_button_pressed():
 
 func _on_quit_game_button_pressed():
 	get_tree().quit()
+
+
+func _on_switch_language_pressed():
+	if Global.current_locale == "nl":
+		Global.current_locale = "en"
+	elif Global.current_locale == "en":
+		Global.current_locale = "nl"
+	TranslationServer.set_locale(Global.current_locale)

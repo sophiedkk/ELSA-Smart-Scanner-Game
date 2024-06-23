@@ -1,27 +1,6 @@
 keys,en,nl
-GOOD,Good,Goed
-BAD,Bad,Slecht
-COLORS,Color(s):,Kleur(en):
-VERSION_LABEL,Version 0.9 [BETA],Versie 0.9 [BETA]
-ACCURACY_EMPTY,Accuracy rate: no data yet!,Accuratie: nog geen data!
-ACCURACY_RATE,Accuracy rate: ,Accuratie: 
-OBJECT_TYPE_EMPTY,Object type: Apple,Object type: Appel
 START_GAME,Start Game,Start Spel
 QUIT_GAME,Quit Game,Stop Spel
-LEVEL_FAIL,Level Failed!,Spel Verloren!
-TO_MENU,To Main Menu,Naar Hoofdmenu
-SPACE_TO_CONT,Space to continue,Space om door te gaan
-SUBMIT_TREE,SUBMIT TREE,CONTROLEER
-TO_DATABASE, ANALYSE DATABASE, DATABASE ANALYSEER
-GO_BACK, GO BACK, GA TERUG
-AWAITING_NEXT, Waiting for object..., Wachten op voorwerp...
-NEXT_PATIENT, AWAIT THE NEXT PATIENT, WACHTEN OP DE VOLGENDE PATIENT
-SUBMIT_PILL, HAND IN, INLEVER
-ANALYSING_DATABASE, Analysing database..., Analyseren...
-PREDICTED_OUTCOME, Predicted outcome:, Voorspelde resultaat:
-NO_RESULT, No Result, Geen Resultaat
-GOOD_RESULT, You were correct!, Je had gelijk!
-BAD_RESULT, You were wrong!, Je had het mis!
 Apple,Apple,Appel
 Pear,Pear,Peer
 Banana,Banana,Banaan
@@ -33,3 +12,53 @@ Sandwich,Sandwich,Sandwich
 Juice,Juice,Sap
 Chili,Chili,Chilipeper
 Coconut,Coconut,Kokosnoot
+GOOD,Good,Goed
+BAD,Bad,Slecht
+COLORS,Color(s):,Kleur(en):
+VERSION_LABEL,Version 0.9 [BETA],Versie 0.9 [BETA]
+ACCURACY_EMPTY,Accuracy rate: no data yet!,Accuratie: nog geen data!
+ACCURACY_RATE,Accuracy rate: ,Accuratie: 
+OBJECT_TYPE_EMPTY,Object type: Apple,Object type: Appel
+SWITCH_LANG, Taal wijzigen, Switch language
+LEVEL_FAIL,Level Failed!,Spel Verloren!
+TO_MENU,To Main Menu,Naar Hoofdmenu
+SPACE_TO_CONT,Space to continue,Space om door te gaan
+TREE_FORM, FORM, VORM
+TREE_CIRCLE, CIRCLE, CIRKEL
+TREE_CURVE, CURVE, BOCHT
+TREE_SIZE, SIZE, MAAT
+TREE_SMALLER, SMALLER, KLEINER
+TREE_BIGGER, BIGGER, GROTER
+TREE_RED_OR_GREEN, RED OR GREEN, ROOD OF GROEN
+TREE_PURPLE, PURPLE, PAARS
+TREE_RED, RED, ROOD
+TREE_YELLOW, YELLOW, GEEL
+TREE_SOMS_YELLOW, MAY BE YELLOW, SOMS GEEL
+TREE_NEVER_PURPLE, NEVER PURPLE, NOOIT PAARS
+TREE_BROWN, BROWN, BRUIN
+TREE_COLOR, COLOR, KLEUR
+SUBMIT_TREE,SUBMIT TREE,CONTROLEER
+PATIENT_NAME, Name: , Naam: 
+PATIENT_AGE, Age: , Leeftijd: 
+PATIENT_GENDER, Gender: , Gender: 
+PATIENT_GP_VISIT, Last GP visit: , Laatste huisarts bezoek: 
+PATIENT_CHRONIC_CONDITIONS, Chronic conditions: , Chronische aandoeningen: 
+PATIENT_RECENT_SURGERIES, Recent surgeries: , Recente operaties: 
+PATIENT_KNOWN_ALLERGIES, Known allergies: , Bekende allergieën: 
+PATIENT_YES, yes, ja
+PATIENT_NO, no, no
+PATIENT_CURRENTLY_PREGNANT, Currently pregnant: , Momenteel zwanger: 
+PATIENT_COMPLAINTS, Complaints: , Klachten: 
+PATIENT_SYMPTOM_DURATION, Duration of symptoms: , Duur van de symptomen: 
+PATIENT_SYMPTOM_INTENSITY, Symptom intensity: , Symptoomlast: 
+PATIENT_INFERRED_DIAGNOSIS, Likely diagnosis: , Waarschijnlijke diagnose: 
+TO_DATABASE, ANALYSE DATABASE, DATABASE ANALYSEER
+GO_BACK, GO BACK, GA TERUG
+AWAITING_NEXT, Waiting for object..., Wachten op voorwerp...
+NEXT_PATIENT, AWAIT THE NEXT PATIENT, WACHTEN OP DE VOLGENDE PATIENT
+SUBMIT_PILL, HAND IN, INLEVER
+ANALYSING_DATABASE, Analysing database..., Analyseren...
+PREDICTED_OUTCOME, Predicted outcome:, Voorspelde resultaat:
+NO_RESULT, No Result, Geen Resultaat
+GOOD_RESULT, You were correct!, Je had gelijk!
+BAD_RESULT, You were wrong!, Je had het mis!

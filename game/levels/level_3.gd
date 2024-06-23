@@ -153,19 +153,19 @@ func make_a_pill_choice(chosen_button_index: int):
 	current_patient.queue_free()
 
 func update_patient_card(current_data: PatientData):
-	patient_name.text = "Name: " + current_data.patient_name
-	patient_age.text = "Age: " + str(current_data.patient_age)
-	patient_gender.text = "Gender: " + current_data.patient_gender
-	patient_last_gp_visit.text = "Last GP visit: " + current_data.last_gp_visit
-	chronic_conditions.text = "Chronic conditions: " + current_data.chronic_conditions
-	recent_surgeries.text = "Recent surgeries: " + current_data.recent_sugeries
-	known_allergies.text = "Known allergies: " + current_data.known_allergies
-	var eval_pregnancy: String = "yes" if current_data.currently_pregnant == 0 else "no"
-	currently_pregnant.text = "Currently pregnant: " + eval_pregnancy
-	complaints.text = "Complaints: " + current_data.patient_complaints
-	duration_of_symptoms.text = "Duration of symptoms: " + current_data.symptoms_duration
-	symptom_intensity.text = "Symptom intensity: " + current_data.assessed_intensity
-	inferred_diagnosis.text = "Inferred diagnosis: " + current_data.inferred_diagnosis
+	patient_name.text = tr("PATIENT_NAME") + current_data.patient_name
+	patient_age.text = tr("PATIENT_AGE") + str(current_data.patient_age)
+	patient_gender.text = tr("PATIENT_GENDER") + current_data.patient_gender
+	patient_last_gp_visit.text = tr("PATIENT_GP_VISIT") + current_data.last_gp_visit
+	chronic_conditions.text = tr("PATIENT_CHRONIC_CONDITIONS") + current_data.chronic_conditions
+	recent_surgeries.text = tr("PATIENT_RECENT_SURGERIES") + current_data.recent_sugeries
+	known_allergies.text = tr("PATIENT_KNOWN_ALLERGIES") + current_data.known_allergies
+	var eval_pregnancy: String = tr("PATIENT_YES") if current_data.currently_pregnant == 0 else tr("PATIENT_NO")
+	currently_pregnant.text = tr("PATIENT_CURRENTLY_PREGNANT") + eval_pregnancy
+	complaints.text = tr("PATIENT_COMPLAINTS") + current_data.patient_complaints
+	duration_of_symptoms.text = tr("PATIENT_SYMPTOM_DURATION") + current_data.symptoms_duration
+	symptom_intensity.text = tr("PATIENT_SYMPTOM_INTENSITY") + current_data.assessed_intensity
+	inferred_diagnosis.text = tr("PATIENT_INFERRED_DIAGNOSIS") + current_data.inferred_diagnosis
 
 func _on_next_patient_pressed():
 	await LevelTransition.fade_to_black()
