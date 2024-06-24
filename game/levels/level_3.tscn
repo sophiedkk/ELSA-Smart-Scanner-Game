@@ -288,6 +288,7 @@ lower_rating_limits = Array[int]([0, 0])
 upper_rating_limits = Array[int]([0, 6])
 colors_for_limits = Array[Color]([Color(1, 1, 1, 1), Color(1, 0.956863, 0.0745098, 1)])
 pill_level_index = 1
+pill_rec_for_patient = Array[String](["", "", "PILL_1_2", "BAD!", "BAD!"])
 
 [node name="PillObject2" parent="PillController" instance=ExtResource("11_pot8g")]
 position = Vector2(122, 143)
@@ -295,6 +296,7 @@ lower_rating_limits = Array[int]([0, -2])
 upper_rating_limits = Array[int]([0, 15])
 colors_for_limits = Array[Color]([Color(1, 1, 1, 1), Color(0, 0.282353, 0, 1)])
 pill_level_index = 2
+pill_rec_for_patient = Array[String](["", "", "PILL_2_2", "BAD!", "BAD!"])
 
 [node name="PillObject3" parent="PillController" instance=ExtResource("11_pot8g")]
 position = Vector2(192, 142)
@@ -302,6 +304,7 @@ lower_rating_limits = Array[int]([0, 3])
 upper_rating_limits = Array[int]([0, 13])
 colors_for_limits = Array[Color]([Color(1, 1, 1, 1), Color(0, 0.639216, 0, 1)])
 pill_level_index = 3
+pill_rec_for_patient = Array[String](["", "", "PILL_3_2", "PILL_3_2", ""])
 
 [node name="PillObject4" parent="PillController" instance=ExtResource("11_pot8g")]
 position = Vector2(263, 142)
@@ -309,6 +312,7 @@ lower_rating_limits = Array[int]([0, -10])
 upper_rating_limits = Array[int]([0, 20])
 colors_for_limits = Array[Color]([Color(1, 1, 1, 1), Color(0.454902, 0, 0, 1)])
 pill_level_index = 4
+pill_rec_for_patient = Array[String](["", "", "PILL_4_2", "BAD!", "BAD!"])
 
 [node name="Dump" type="Node2D" parent="."]
 visible = false

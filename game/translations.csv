@@ -63,6 +63,10 @@ TR_DIZZINESS, dizziness, duizeligheid
 TR_MIGRAINE, migraines, hoofdpijn
 TR_2_3_WEEKS, 2-3 weeks, 2-3 weken
 TR_CATS, cats, katten
+PILL_1_2, Helps against migraines?, Helpt tegen hoofdpijn?
+PILL_2_2, Use in severe cases?, Voor ernstige gevallen?
+PILL_3_2, Against usual flu?, Tegen typische griep?
+PILL_4_2, Mainly for throat?, Vooral tegen keelpijn
 TO_DATABASE, ANALYSE DATABASE, DATABASE ANALYSEER
 GO_BACK, GO BACK, GA TERUG
 AWAITING_NEXT, Waiting for object..., Wachten op voorwerp...

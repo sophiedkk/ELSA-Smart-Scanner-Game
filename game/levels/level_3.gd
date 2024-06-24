@@ -88,8 +88,14 @@ func make_a_pill_choice(chosen_button_index: int):
 	await LevelTransition.fade_to_black()
 	_show_the_pills(false)
 	_show_the_hand_ins(false)
+	
+	#A very convoluted but accessible way to get a prompt for the next round
+	var pill = pill_controller.children_pill_objects[chosen_button_index-1]
+	pill.current_rating_display.text = "[center]%s[/center]" % tr(pill.pill_rec_for_patient[current_patient_index+1])
+	pill.current_rating_display.visible = true
+	
 	await get_tree().create_timer(1.5).timeout
-	var dialogue_name
+	var dialogue_name: String = ""
 	match current_patient_index:
 		1:
 			dialogue_name = "hans_de_vries_choice_" + str(chosen_button_index)

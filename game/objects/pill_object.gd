@@ -5,6 +5,7 @@ extends Node2D
 @export var upper_rating_limits: Array[int]
 @export var colors_for_limits: Array[Color]
 @export var pill_level_index: int
+@export var pill_rec_for_patient: Array[String]
 
 #signal value_changed
 #signal pill_analysed
@@ -12,7 +13,7 @@ extends Node2D
 #var current_patient_index: int = 0
 #var has_been_analyzed = false
 #
-#@onready var current_rating_display = %CurrentRatingDisplay
+@onready var current_rating_display = %CurrentRatingDisplay
 #@onready var database_analysis_button = %DatabaseAnalysisButton
 #@onready var close_button = %CloseButton
 #@onready var black_background = %BlackBackground
