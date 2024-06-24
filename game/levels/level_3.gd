@@ -145,17 +145,23 @@ func _show_the_hand_ins(status: bool):
 		button.visible = status
 
 func update_patient_card(current_data: PatientData):
+	var complaints_string: String = ""
+	complaints_string.left(0)
 	patient_name.text = tr("PATIENT_NAME") + current_data.patient_name
 	patient_age.text = tr("PATIENT_AGE") + str(current_data.patient_age)
-	patient_gender.text = tr("PATIENT_GENDER") + current_data.patient_gender
+	patient_gender.text = tr("PATIENT_GENDER") + tr(current_data.patient_gender)
 	patient_last_gp_visit.text = tr("PATIENT_GP_VISIT") + current_data.last_gp_visit
 	chronic_conditions.text = tr("PATIENT_CHRONIC_CONDITIONS") + current_data.chronic_conditions
 	recent_surgeries.text = tr("PATIENT_RECENT_SURGERIES") + current_data.recent_sugeries
-	known_allergies.text = tr("PATIENT_KNOWN_ALLERGIES") + current_data.known_allergies
+	known_allergies.text = tr("PATIENT_KNOWN_ALLERGIES") + tr(current_data.known_allergies)
 	var eval_pregnancy: String = tr("PATIENT_YES") if current_data.currently_pregnant == 0 else tr("PATIENT_NO")
 	currently_pregnant.text = tr("PATIENT_CURRENTLY_PREGNANT") + eval_pregnancy
-	complaints.text = tr("PATIENT_COMPLAINTS") + current_data.patient_complaints
-	duration_of_symptoms.text = tr("PATIENT_SYMPTOM_DURATION") + current_data.symptoms_duration
+	for complaint in current_data.patient_complaints:
+		var complaint_translated = tr(complaint)
+		complaints_string += complaint_translated + ", "
+	complaints_string = complaints_string.left(complaints_string.length() - 2)
+	complaints.text = tr("PATIENT_COMPLAINTS") + complaints_string
+	duration_of_symptoms.text = tr("PATIENT_SYMPTOM_DURATION") + "~" + tr(current_data.symptoms_duration)
 	symptom_intensity.text = tr("PATIENT_SYMPTOM_INTENSITY") + current_data.assessed_intensity
-	inferred_diagnosis.text = tr("PATIENT_INFERRED_DIAGNOSIS") + current_data.inferred_diagnosis
+	inferred_diagnosis.text = tr("PATIENT_INFERRED_DIAGNOSIS") + tr(current_data.inferred_diagnosis)
 #endregion

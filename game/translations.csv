@@ -41,21 +41,32 @@ SUBMIT_TREE,SUBMIT TREE,CONTROLEER
 PATIENT_NAME, Name: , Naam: 
 PATIENT_AGE, Age: , Leeftijd: 
 PATIENT_GENDER, Gender: , Gender: 
+PATIENT_GENDER_M, M, M
+PATIENT_GENDER_F, F, V
 PATIENT_GP_VISIT, Last GP visit: , Laatste huisarts bezoek: 
 PATIENT_CHRONIC_CONDITIONS, Chronic conditions: , Chronische aandoeningen: 
 PATIENT_RECENT_SURGERIES, Recent surgeries: , Recente operaties: 
 PATIENT_KNOWN_ALLERGIES, Known allergies: , Bekende allergieën: 
 PATIENT_YES, yes, ja
 PATIENT_NO, no, no
-PATIENT_CURRENTLY_PREGNANT, Currently pregnant: , Momenteel zwanger: 
-PATIENT_COMPLAINTS, Complaints: , Klachten: 
-PATIENT_SYMPTOM_DURATION, Duration of symptoms: , Duur van de symptomen: 
-PATIENT_SYMPTOM_INTENSITY, Symptom intensity: , Symptoomlast: 
-PATIENT_INFERRED_DIAGNOSIS, Likely diagnosis: , Waarschijnlijke diagnose: 
+PATIENT_CURRENTLY_PREGNANT, Currently pregnant:, Momenteel zwanger:
+PATIENT_COMPLAINTS, Complaints:, Klachten:
+PATIENT_SYMPTOM_DURATION, Duration of symptoms:, Duur van de symptomen:
+PATIENT_SYMPTOM_INTENSITY, Symptom intensity:, Symptoomlast:
+PATIENT_INFERRED_DIAGNOSIS, Likely diagnosis:, Waarschijnlijke diagnose:
+PATIENT_FLU_COMPLICATIONS, Type C flu with some complications, Type C griep met enkele complicaties
+PATIENT_FLU_NO_COMPLICATIONS, Type C flu with no complications, Type C griep zonder complicaties
+TR_CHILLS, chills, koude rillingen
+TR_COUGHING, coughing, hoesten
+TR_NAUSEA, nausea, misselijkheid
+TR_DIZZINESS, dizziness, duizeligheid
+TR_MIGRAINE, migraines, hoofdpijn
+TR_2_3_WEEKS, 2-3 weeks, 2-3 weken
+TR_CATS, cats, katten
 TO_DATABASE, ANALYSE DATABASE, DATABASE ANALYSEER
 GO_BACK, GO BACK, GA TERUG
 AWAITING_NEXT, Waiting for object..., Wachten op voorwerp...
-NEXT_PATIENT, AWAIT THE NEXT PATIENT, WACHTEN OP DE VOLGENDE PATIENT
+NEXT_PATIENT, WAIT FOR THE NEXT PATIENT, WACHTEN OP DE VOLGENDE PATIENT
 SUBMIT_PILL, HAND IN, INLEVER
 ANALYSING_DATABASE, Analysing database..., Analyseren...
 PREDICTED_OUTCOME, Predicted outcome:, Voorspelde resultaat:

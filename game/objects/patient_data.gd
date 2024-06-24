@@ -16,7 +16,7 @@ enum YesNoStatus {yes, no}
 @export var patient_sprite: Texture2D
 
 #Sickness / complaints
-@export var patient_complaints: String
+@export var patient_complaints: Array[String]
 @export var symptoms_duration: String
 @export var assessed_intensity: String
 @export var surgery_required: YesNoStatus
