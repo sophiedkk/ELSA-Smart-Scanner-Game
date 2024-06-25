@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://rh38s4mnlbr7"]
+[gd_scene load_steps=16 format=3 uid="uid://rh38s4mnlbr7"]
 
 [ext_resource type="Script" path="res://game/levels/level_3.gd" id="1_fjahl"]
 [ext_resource type="Resource" uid="uid://c3gkrqx6x4d5" path="res://game/objects/patient_resources/hans_de_vries.tres" id="2_1b10a"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b450aeeec3w2r" path="res://game/controllers/engineer.tscn" id="3_efjwc"]
 [ext_resource type="Resource" uid="uid://beadajg1rmk5l" path="res://game/objects/patient_resources/karin_smits.tres" id="3_raxkr"]
 [ext_resource type="PackedScene" uid="uid://b160vht0s571l" path="res://game/objects/base_patient.tscn" id="3_t7r23"]
+[ext_resource type="Resource" uid="uid://b4bmsq6mv8tup" path="res://game/objects/patient_resources/inge_yassin.tres" id="4_wsinp"]
 [ext_resource type="Texture2D" uid="uid://cqoucnromrvix" path="res://assets/images/wooden_table.png" id="5_j3ba3"]
 [ext_resource type="Texture2D" uid="uid://cj18mvjn8jvhq" path="res://assets/images/techy_screen.jpg" id="5_j5k32"]
 [ext_resource type="PackedScene" uid="uid://c3mugfn21a5gi" path="res://game/controllers/pill_controller.tscn" id="8_o0t8o"]
@@ -30,7 +31,7 @@ border_color = Color(1, 1, 1, 1)
 
 [node name="Level_3" type="Node2D" node_paths=PackedStringArray("hand_in_buttons")]
 script = ExtResource("1_fjahl")
-level_patients = Array[Resource("res://game/objects/patient_data.gd")]([null, ExtResource("2_1b10a"), ExtResource("3_raxkr")])
+level_patients = Array[Resource("res://game/objects/patient_data.gd")]([null, ExtResource("2_1b10a"), ExtResource("3_raxkr"), ExtResource("4_wsinp")])
 hand_in_buttons = [NodePath("CanvasLayer/SubmitButton1"), NodePath("CanvasLayer/SubmitButton2"), NodePath("CanvasLayer/SubmitButton3"), NodePath("CanvasLayer/SubmitButton4")]
 level_patient_object = ExtResource("3_t7r23")
 level_dialogue = ExtResource("2_6rwa6")
@@ -288,7 +289,7 @@ lower_rating_limits = Array[int]([0, 0])
 upper_rating_limits = Array[int]([0, 6])
 colors_for_limits = Array[Color]([Color(1, 1, 1, 1), Color(1, 0.956863, 0.0745098, 1)])
 pill_level_index = 1
-pill_rec_for_patient = Array[String](["", "", "PILL_1_2", "BAD!", "BAD!"])
+pill_rec_for_patient = Array[String](["", "", "PILL_1_2", "PILL_1_3", "BAD!"])
 
 [node name="PillObject2" parent="PillController" instance=ExtResource("11_pot8g")]
 position = Vector2(122, 143)
@@ -296,7 +297,7 @@ lower_rating_limits = Array[int]([0, -2])
 upper_rating_limits = Array[int]([0, 15])
 colors_for_limits = Array[Color]([Color(1, 1, 1, 1), Color(0, 0.282353, 0, 1)])
 pill_level_index = 2
-pill_rec_for_patient = Array[String](["", "", "PILL_2_2", "BAD!", "BAD!"])
+pill_rec_for_patient = Array[String](["", "", "PILL_2_2", "PILL_2_3", "PILL_2_3"])
 
 [node name="PillObject3" parent="PillController" instance=ExtResource("11_pot8g")]
 position = Vector2(192, 142)
@@ -304,7 +305,7 @@ lower_rating_limits = Array[int]([0, 3])
 upper_rating_limits = Array[int]([0, 13])
 colors_for_limits = Array[Color]([Color(1, 1, 1, 1), Color(0, 0.639216, 0, 1)])
 pill_level_index = 3
-pill_rec_for_patient = Array[String](["", "", "PILL_3_2", "PILL_3_2", ""])
+pill_rec_for_patient = Array[String](["", "", "PILL_3_2", "PILL_3_3", ""])
 
 [node name="PillObject4" parent="PillController" instance=ExtResource("11_pot8g")]
 position = Vector2(263, 142)
@@ -312,7 +313,7 @@ lower_rating_limits = Array[int]([0, -10])
 upper_rating_limits = Array[int]([0, 20])
 colors_for_limits = Array[Color]([Color(1, 1, 1, 1), Color(0.454902, 0, 0, 1)])
 pill_level_index = 4
-pill_rec_for_patient = Array[String](["", "", "PILL_4_2", "BAD!", "BAD!"])
+pill_rec_for_patient = Array[String](["", "", "PILL_4_2", "PILL_4_3", "BAD!"])
 
 [node name="Dump" type="Node2D" parent="."]
 visible = false

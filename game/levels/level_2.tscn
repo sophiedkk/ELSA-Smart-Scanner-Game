@@ -39,8 +39,9 @@ texture = ExtResource("2_tnefq")
 unique_name_in_owner = true
 position = Vector2(-57, 78)
 
-[node name="ConstructedDecisionTree" parent="." instance=ExtResource("17_w4pm3")]
+[node name="ConstructedDecisionTree" parent="." node_paths=PackedStringArray("tree_roots") instance=ExtResource("17_w4pm3")]
 unique_name_in_owner = true
+tree_roots = [null, NodePath("TreeBeginning/Tree1Root"), NodePath("TreeBeginning/Tree2Root"), NodePath("TreeBeginning/Tree3Root"), NodePath("TreeBeginning/Tree4Root")]
 
 [node name="CardSpawnLocation" type="Marker2D" parent="."]
 unique_name_in_owner = true

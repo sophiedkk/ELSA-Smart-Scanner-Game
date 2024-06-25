@@ -83,6 +83,8 @@ func _patient_pre_assessment_dialogue():
 			await engineer.show_normal_dialogue(level_dialogue, "hans_de_vries_intro")
 		2: 
 			await engineer.show_normal_dialogue(level_dialogue, "karin_smits_intro")
+		3:
+			await engineer.show_normal_dialogue(level_dialogue, "inge_yassin_intro")
 
 func make_a_pill_choice(chosen_button_index: int):
 	await LevelTransition.fade_to_black()
@@ -101,6 +103,8 @@ func make_a_pill_choice(chosen_button_index: int):
 			dialogue_name = "hans_de_vries_choice_" + str(chosen_button_index)
 		2:
 			dialogue_name = "karin_smits_choice_" + str(chosen_button_index)
+		3:
+			dialogue_name = "inge_yassin_choice_" + str(chosen_button_index)
 	await engineer.show_normal_dialogue(level_dialogue, dialogue_name)
 	analysis_background.visible = false
 	pill_table.visible = false

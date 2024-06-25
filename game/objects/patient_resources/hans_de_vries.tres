@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PatientData" load_steps=3 format=3 uid="uid://c3gkrqx6x4d5"]
 
+[ext_resource type="Texture2D" uid="uid://bx7v63cu7fhkd" path="res://assets/images/patients/hans_de_vries.png" id="1_7rr1r"]
 [ext_resource type="Script" path="res://game/objects/patient_data.gd" id="1_gjwkk"]
-[ext_resource type="Texture2D" uid="uid://bx7v63cu7fhkd" path="res://assets/images/hans_de_vries.png" id="1_tc0a8"]
 
 [resource]
 script = ExtResource("1_gjwkk")
@@ -13,10 +13,10 @@ chronic_conditions = "PATIENT_NO"
 recent_sugeries = "carpal tunnel release, 52 days ago"
 known_allergies = "PATIENT_NO"
 currently_pregnant = 1
-patient_sprite = ExtResource("1_tc0a8")
+patient_sprite = ExtResource("1_7rr1r")
 patient_complaints = Array[String](["TR_CHILLS", "TR_COUGHING", "TR_MIGRAINE", "TR_DIZZINESS"])
 symptoms_duration = "TR_2_3_WEEKS"
 assessed_intensity = "4/10"
 surgery_required = 1
 exotic_or_rare_signs = 1
-inferred_diagnosis = "PATIENT_FLU_COMPLICATIONS"
+inferred_diagnosis = "PATIENT_FLU_C_COMPLICATIONS"

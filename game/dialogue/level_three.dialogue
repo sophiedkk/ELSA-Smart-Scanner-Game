@@ -1,5 +1,5 @@
 ~ doctor_opening_lines
-Dr Van Bommel: Hallo!
+Dr Van Bommel: Hello!
 Dr Van Bommel: My name is Doctor Van Bommel.
 Dr Van Bommel: It's nice to see you, Smart Scanner.
 Dr Van Bommel: Dr. Rensselaer updated your code, so now you can help me with actual patients. Here is how.
@@ -36,8 +36,9 @@ Dr Van Bommel: Let's see what it considers to be the best medication for you.
 ~ hans_de_vries_choice_1
 Dr Van Bommel: Hm...
 Hans De Vries: Is something wrong?
-Dr Van Bommel: Well, it choose the first pill, which could help with migraines...
-Dr Van Bommel: But actually has nothing to do with flu.
+Dr Van Bommel: Well, it choose the first pill, which can help in your case...
+Dr Van Bommel: But it's mostly for people who suffer from intense migraines when they're sick.
+Dr Van Bommel: It can help with other symptoms, but it focuses on that.
 Hans De Vries: Oh, that's unfortunate.
 Dr Van Bommel: No worries. That's why we're training it.
 Dr Van Bommel: I'll prescribe the correct medicine for you and your flu, which is #3.
@@ -47,7 +48,7 @@ Dr Van Bommel: I'll prescribe the correct medicine for you and your flu, which i
 Dr Van Bommel: That doesn't seem right.
 Hans De Vries: What did the scanner say?
 Dr Van Bommel: It did choose medication that tackles flu...
-Dr Van Bommel: But this one is for very severe cases. It's almost as strong as antibiotics.
+Dr Van Bommel: But this one is for very severe cases. It's antibiotics.
 Hans De Vries: Do you think that's what I need?
 Dr Van Bommel: No, your case is milder, so we're going with #3 instead. This one is used to tackle most of the flus.
 Dr Van Bommel: Seems like our scanner still has more to learn.
@@ -68,9 +69,9 @@ Dr Van Bommel: But anyways, #3 is the right choice for flu. Let me prescribe it 
 Dr Van Bommel: Wrong answer. Well, that's expected.
 Hans De Vries: What did the scanner say?
 Dr Van Bommel: I think it saw the cough part and chose the medicine that focuses on your throat recovery.
-Dr Van Bommel: That would help you with your symptoms, but the flu wouldn't go away.
+Dr Van Bommel: That would help you with your symptoms, but the flu wouldn't go away. It can actually have some side effects in your case, too.
 Hans De Vries: What would be the best option then?
-Dr Van Bommel: #3. It deals with flu pretty well. Let me write down the prescription for you.
+Dr Van Bommel: #3. It deals with your flu pretty well. Let me write down the prescription for you.
 => END
 
 ~ karin_smits_intro
@@ -94,23 +95,103 @@ Dr Van Bommel: Let's see what it recommends for you.
 => END
 
 ~ karin_smits_choice_1
-Karin Smits: Wrong choice!
-Dr Van Bommel: Oops!
+Dr Van Bommel: Hm...
+Dr Van Bommel: I wonder if this is a malfunction...
+Karin Smits: What is it?
+Dr Van Bommel: The scanner chose #1, even though this one is primarily used against migraines.
+Karin Smits: How did it even arrive at that conclusion? I don't have one.
+Dr Van Bommel: Well, like I said, the scanner doesn't use medical logic. It uses numbers to basically guess the same conclusions as me and the other doctors.
+Karin Smits: Seems that the numbers could use some improvement.
+Dr Van Bommel: It certainly does.
+Dr Van Bommel: Anyways, let me prescribe you the correct choice, which is #3.
 => END
 
 ~ karin_smits_choice_2
-Karin Smits: Also wrong!
-Dr Van Bommel: Oh no!
+Dr Van Bommel: Well, that's not right.
+Karin Smits: What happened?
+Dr Van Bommel: It chose #2, which is a very strong antibiotic.
+Karin Smits: Um...
+Karin Smits: I don't feel that bad, so do I really need it?
+Dr Van Bommel: No. Your symptoms indicate Type C flu, which usually doesn't require antibiotics.
+Dr Van Bommel: This medication is usually for Type B, which can be more severe.
+Karin Smits: So which one do I go with then?
+Dr Van Bommel: #3 is the way to go. I'll prescribe it to you now.
 => END
 
 ~ karin_smits_choice_3
-Karin Smits: This one is right!
-Dr Van Bommel: I'm, in fact, very smart.
+Dr Van Bommel: Oh, it arrived at the same conclusion as I did.
+Karin Smits: What did it say?
+Dr Van Bommel: It chose medication #3, which is a usual choice against Type C flu.
+Karin Smits: And that applies to me as well?
+Dr Van Bommel: That was my conclusion as well, yes.
+Karin Smits: I'm not a doctor, I'm just curious.
+Karin Smits: You said "usual"? 
+Dr Van Bommel: There are a couple of cases where #3 should not be used.
+Dr Van Bommel: For example, if you have a stomach ache, some of the side effects may make it even worse.
+Dr Van Bommel: But that's not the case here. Let me fill in the prescription.
 => END
 
 ~ karin_smits_choice_4
-Karin Smits: Wrong choice!
-Dr Van Bommel: Oops!
+Dr Van Bommel: It's on the right track, but it seems unbalanced.
+Karin Smits: What did it say?
+Dr Van Bommel: Well, you did mention coughing, so it chose a medication that focuses on that.
+Dr Van Bommel: The problem, however, is that you also have headaches, and this medication has side effects that affect your head.
+Karin Smits: ...
+Karin Smits: I would rather not have that, yes.
+Dr Van Bommel: Understandable.
+Karin Smits: I'll prescribe #3 to you, which helps with mild cases like yours.
+=> END
+
+~ inge_yassin_intro
+Dr Van Bommel: Okay, Inge, thank you for filling the form.
+Dr Van Bommel: I will see what the scanner suggests.
+Dr Van Bommel: However, given the severity of your illness, I think that there's only one pill that's going to work for you.
+Inge Yassin: Are you sure that it can be trusted? I'm very nervous.
+Dr Van Bommel: Don't worry, at the end of the day it's just a device for suggestions.
+Dr Van Bommel: I'm a licensed doctor, so I will be the one making the final verdict.
+Inge Yassin: Thank you. I got sick out of nowhere and it feels very bad, so I'm nervous.
+Dr Van Bommel: We will get you back on track.
+Dr Van Bommel: Smart Scanner, get up!
+=> END
+
+~ inge_yassin_choice_1
+Dr Van Bommel: Hm. That doesn't seem right.
+Inge Yassin: What happened?
+Dr Van Bommel: It chose #1, which is usually used against migraines, but you don't even have one.
+Dr Van Bommel: It's also not used against type B flu, so there's that.
+Inge Yassin: Oh, that's unfortunate.
+Inge Yassin: But you know what medication to choose, right?
+Dr Van Bommel: Yes. We're going with #2, which is used for severe flu, which is what you have.
+=> END
+
+~ inge_yassin_choice_2
+Dr Van Bommel: It chose the right one.
+Inge Yassin: Oh, that's wonderful news. I'm glad that it agrees.
+Dr Van Bommel: It's more of a confirmation, really.
+Dr Van Bommel: It's the only medicine here that is used for severe type B flu, which is what you have.
+Dr Van Bommel: Usually, going for a stronger option may actually be more dangerous, but it's good for you.
+Dr Van Bommel: Let me prescribe it for you.
+=> END
+
+~ inge_yassin_choice_3
+Dr Van Bommel: That's incorrect.
+Inge Yassin: How so?
+Dr Van Bommel: This one is only used for type C flu, so it's an entire different category altogether.
+Inge Yassin: Is there really such a big disparity? What if I have the same symptoms?
+Dr Van Bommel: Even if it were type C, I wouldn't use it.
+Dr Van Bommel: It's not really good with stomach aches, which is what you have.
+Inge Yassin: Oh, I see.
+Dr Van Bommel: Let me prescribe #2 for you. That's the right choice.
+=> END
+
+~ inge_yassin_choice_4
+Dr Van Bommel: Close, but not quite.
+Inge Yassin: What did it choose?
+Dr Van Bommel: Well, #4 can be used against type B flu.
+Dr Van Bommel: The problem is, it's not strong enough in your case.
+Dr Van Bommel: So it would only be partially effective.
+Inge Yassin: I see. Which one are we going with, then?
+Dr Van Bommel: #2. It's strong and is commonly used against type B flu.
 => END
 
 ~ doctor_closing_lines

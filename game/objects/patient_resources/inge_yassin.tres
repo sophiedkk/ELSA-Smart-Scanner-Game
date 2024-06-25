@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="PatientData" load_steps=3 format=3 uid="uid://b4bmsq6mv8tup"]
+
+[ext_resource type="Texture2D" uid="uid://c1ys3n5ipj1ix" path="res://assets/images/patients/inge_yassin.png" id="1_c3pn1"]
+[ext_resource type="Script" path="res://game/objects/patient_data.gd" id="1_om8uj"]
+
+[resource]
+script = ExtResource("1_om8uj")
+patient_name = "Inge Yassin"
+patient_age = 24
+patient_gender = "PATIENT_GENDER_F"
+last_gp_visit = "156 days ago"
+chronic_conditions = "PATIENT_NO"
+recent_sugeries = "PATIENT_NO"
+known_allergies = "PATIENT_NO"
+currently_pregnant = 1
+patient_sprite = ExtResource("1_c3pn1")
+patient_complaints = Array[String](["TR_INTENSE_FEVER", "TR_COUGHING", "TR_MUSCLE_PAIN", "TR_STOMACHACHE"])
+symptoms_duration = "TR_1_WEEK"
+assessed_intensity = "7/10"
+surgery_required = 1
+exotic_or_rare_signs = 1
+inferred_diagnosis = "PATIENT_FLU_B_SEVERE"

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PatientData" load_steps=3 format=3 uid="uid://beadajg1rmk5l"]
 
-[ext_resource type="Texture2D" uid="uid://c3shr6orptneg" path="res://assets/images/karin_smits.png" id="1_qjgf5"]
+[ext_resource type="Texture2D" uid="uid://c3shr6orptneg" path="res://assets/images/patients/karin_smits.png" id="1_h2r52"]
 [ext_resource type="Script" path="res://game/objects/patient_data.gd" id="2_n0e0e"]
 
 [resource]
@@ -13,10 +13,10 @@ chronic_conditions = "PATIENT_NO"
 recent_sugeries = "PATIENT_NO"
 known_allergies = "TR_CATS"
 currently_pregnant = 1
-patient_sprite = ExtResource("1_qjgf5")
+patient_sprite = ExtResource("1_h2r52")
 patient_complaints = Array[String](["TR_CHILLS", "TR_COUGHING", "TR_NAUSEA", "TR_DIZZINESS"])
 symptoms_duration = "TR_2_3_WEEKS"
 assessed_intensity = "3/10"
 surgery_required = 1
 exotic_or_rare_signs = 1
-inferred_diagnosis = "PATIENT_FLU_NO_COMPLICATIONS"
+inferred_diagnosis = "PATIENT_FLU_C_NO_COMPLICATIONS"

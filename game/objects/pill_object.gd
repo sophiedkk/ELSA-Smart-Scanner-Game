@@ -13,10 +13,14 @@ extends Node2D
 #var current_patient_index: int = 0
 #var has_been_analyzed = false
 #
+@onready var number_label = %NumberLabel
 @onready var current_rating_display = %CurrentRatingDisplay
 #@onready var database_analysis_button = %DatabaseAnalysisButton
 #@onready var close_button = %CloseButton
 #@onready var black_background = %BlackBackground
+
+func _ready():
+	number_label.text = "#" + str(pill_level_index)
 
 #func new_patient_index(new_value):
 	#current_patient_index = new_value

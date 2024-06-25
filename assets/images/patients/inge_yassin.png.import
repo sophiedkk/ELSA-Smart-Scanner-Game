@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3shr6orptneg"
-path="res://.godot/imported/karin_smits.png-73c3722818aa80a99c21054848b211d8.ctex"
+uid="uid://c1ys3n5ipj1ix"
+path="res://.godot/imported/inge_yassin.png-82c3a9d79dc3b4e5a686150f3242b4ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/karin_smits.png"
-dest_files=["res://.godot/imported/karin_smits.png-73c3722818aa80a99c21054848b211d8.ctex"]
+source_file="res://assets/images/patients/inge_yassin.png"
+dest_files=["res://.godot/imported/inge_yassin.png-82c3a9d79dc3b4e5a686150f3242b4ed.ctex"]
 
 [params]
 

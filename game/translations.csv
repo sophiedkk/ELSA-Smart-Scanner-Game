@@ -54,19 +54,29 @@ PATIENT_COMPLAINTS, Complaints:, Klachten:
 PATIENT_SYMPTOM_DURATION, Duration of symptoms:, Duur van de symptomen:
 PATIENT_SYMPTOM_INTENSITY, Symptom intensity:, Symptoomlast:
 PATIENT_INFERRED_DIAGNOSIS, Likely diagnosis:, Waarschijnlijke diagnose:
-PATIENT_FLU_COMPLICATIONS, Type C flu with some complications, Type C griep met enkele complicaties
-PATIENT_FLU_NO_COMPLICATIONS, Type C flu with no complications, Type C griep zonder complicaties
+PATIENT_FLU_C_COMPLICATIONS, Type C flu with some complications, Type C griep met enkele complicaties
+PATIENT_FLU_C_NO_COMPLICATIONS, Type C flu with no complications, Type C griep zonder complicaties
+PATIENT_FLU_B_SEVERE, Type B flu with aggravating circumstances, Type B griep met ernstige symptomen
 TR_CHILLS, chills, koude rillingen
+TR_INTENSE_FEVER, intense fever, hoge koorts
 TR_COUGHING, coughing, hoesten
 TR_NAUSEA, nausea, misselijkheid
 TR_DIZZINESS, dizziness, duizeligheid
+TR_STOMACHACHE, stomachache, buikpijn
 TR_MIGRAINE, migraines, hoofdpijn
+TR_MUSCLE_PAIN, muscle pain, spierpijn
+TR_SORE_THROAT, sore throat, keelontsteking
 TR_2_3_WEEKS, 2-3 weeks, 2-3 weken
+TR_1_WEEK, 1 week, 1 week
 TR_CATS, cats, katten
-PILL_1_2, Helps against migraines?, Helpt tegen hoofdpijn?
+PILL_1_2, Against flu with migraines?, Tegen griep met hoofdpijn?
 PILL_2_2, Use in severe cases?, Voor ernstige gevallen?
-PILL_3_2, Against usual flu?, Tegen typische griep?
-PILL_4_2, Mainly for throat?, Vooral tegen keelpijn
+PILL_3_2, Against mild flu?, Tegen milde griep?
+PILL_4_2, Mainly for throat?, Vooral tegen keelpijn?
+PILL_1_3, Type C flu + migraines?, Type C griep + hoofdpijn?
+PILL_2_3, Use against intense type B flu?, Tegen ernstige Type B griep?
+PILL_3_3, Mild Type C flu?, Milde Type C griep?
+PILL 4_3, Helps throat; side effects for head, Helpt met keel; bijwerkingen op hoofd
 TO_DATABASE, ANALYSE DATABASE, DATABASE ANALYSEER
 GO_BACK, GO BACK, GA TERUG
 AWAITING_NEXT, Waiting for object..., Wachten op voorwerp...
