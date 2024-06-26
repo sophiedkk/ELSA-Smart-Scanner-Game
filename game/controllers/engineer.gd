@@ -82,12 +82,12 @@ func _on_dialogue_finished() -> void:
 					engineer_going_out()
 					await LevelTransition.fade_to_black()
 					initial_patient_dialogue.emit()
-				"hans_de_vries_intro", "karin_smits_intro", "inge_yassin_intro":
+				"hans_de_vries_intro", "karin_smits_intro", "inge_yassin_intro", "jan_muller_intro":
 					await LevelTransition.fade_from_black()
 					spawn_the_pills.emit()
-				"hans_de_vries_choice_1", "hans_de_vries_choice_2", "hans_de_vries_choice_4", "karin_smits_choice_1", "karin_smits_choice_2", "karin_smits_choice_4", "inge_yassin_choice_1", "inge_yassin_choice_3", "inge_yassin_choice_4":
+				"hans_de_vries_choice_1", "hans_de_vries_choice_2", "hans_de_vries_choice_4", "karin_smits_choice_1", "karin_smits_choice_2", "karin_smits_choice_4", "inge_yassin_choice_1", "inge_yassin_choice_3", "inge_yassin_choice_4", "jan_muller_choice_1", "jan_muller_choice_3", "jan_muller_choice_4":
 					show_result_menu.emit(false)
-				"hans_de_vries_choice_3", "karin_smits_choice_3", "inge_yassin_choice_2":
+				"hans_de_vries_choice_3", "karin_smits_choice_3", "inge_yassin_choice_2", "jan_muller_choice_2":
 					show_result_menu.emit(true)
 				"doctor_closing_lines":
 					engineer_going_out()

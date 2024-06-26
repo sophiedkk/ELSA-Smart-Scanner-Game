@@ -7,11 +7,11 @@ t5fc25b650b,So now the scanner will be able to figure this out on its own.,De sc
 t9162797555,But did you notice something else?,Maar is je ook wat anders opgevallen?
 t3338a44e07,"Every object already had a type assigned, like a pear or an apple.","Het type van elk object was al toegewezen, zoals ‘peer’ of ‘appel’."
 tded7064fd7,Well... that's because there was actually one other person before you. That was their task.,Nou… dat komt omdat er eigenlijk een persoon voor jou bezig was. Dat was hun taak.
-tf0124bb9dd,"You helped the scanner distinguish between good and bad products, while the other person ""taught"" the rules for distinguishing different object types.","Jij hebt geholpen om goede en slechte producten te identificeren, terwijl de andere persoon de regels voor het kiezen van object types heeft geleerd."
+tf0124bb9dd,"You helped the scanner distinguish between good and bad products, while the other person ""taught"" the rules for distinguishing different object types.","Jij hebt geholpen om goede en slechte producten te kiezen, terwijl de andere persoon de regels voor het kiezen van object types heeft geleerd."
 t5ff8e4df69,Let's see the results of their work.,Laten we kijken naar het resultaat van hun werk.
 t71a59a1531,What you see here is a decision tree.,Hier zie je een beslisboom.
 tc02e9860bf,"This one is from the early stage, so it's very simple.","Deze is van een eerder stadium, dus het is een simpele."
-ta846778a51,"Basically, our scanner looks at unique properties such as colors or weight to split our objects into small branches.",Onze scanner kijkt naar unieke eigenschappen zoals kleuren en gewicht om de objecten in kleinere vertakkingen op te splitsen.
+ta846778a51,"Basically, our scanner looks at unique properties such as colors or weight to split our objects into small branches.",Onze scanner kijkt naar unieke eigenschappen zoals kleuren en gewicht om de objecten in kleinere groepen op te splitsen. Die heet 
 t64a8887b3b,Every branch ends with just ONE object that fits the description the best. That's how the scanner knows what it is.,Elke vertakking eindigd met slechts EEN object die bij die omschrijving past. Daardoor weet de scanner welk type het is.
 tfb81b0048f,"Now, check this out.",Kijk nu eens hiernaar.
 tdaef4724b4,These cards obviously show different types of objects that our scanner knows.,Deze kaarten tonen de verschillende soorten objecten die onze scanner kent.
@@ -25,7 +25,7 @@ tfbde40d96c,Good!,Goed!
 t763f96847c,Onto the next one!,Op naar de volgende!
 t5a40372398,Good!,Goed!
 t4b0d720c7f,Seems like you got the gist of it!,Het lijkt erop dat je het hebt begrepen!
-tbec09c1a41,The trees will get more complex from now on.,De bomen zullen vanaf nu complexer worden.
+tbec09c1a41,The trees will get more complex from now on.,De bomen zullen vanaf nu groter worden.
 tc7e458aae0,Let's see how.,Laten we eens kijken hoe.
 tab13a4c7fc,Hi again!,Hallo weer!
 t19ac4fd378,I hope that exercise helped you understand how decision trees work.,Ik hoop dat deze oefening je heeft geholpen te begrijpen hoe beslissingsbomen werken.

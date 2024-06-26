@@ -85,6 +85,8 @@ func _patient_pre_assessment_dialogue():
 			await engineer.show_normal_dialogue(level_dialogue, "karin_smits_intro")
 		3:
 			await engineer.show_normal_dialogue(level_dialogue, "inge_yassin_intro")
+		4:
+			await engineer.show_normal_dialogue(level_dialogue, "jan_muller_intro")
 
 func make_a_pill_choice(chosen_button_index: int):
 	await LevelTransition.fade_to_black()
@@ -105,6 +107,8 @@ func make_a_pill_choice(chosen_button_index: int):
 			dialogue_name = "karin_smits_choice_" + str(chosen_button_index)
 		3:
 			dialogue_name = "inge_yassin_choice_" + str(chosen_button_index)
+		4:
+			dialogue_name = "jan_muller_choice_" + str(chosen_button_index)
 	await engineer.show_normal_dialogue(level_dialogue, dialogue_name)
 	analysis_background.visible = false
 	pill_table.visible = false
@@ -161,7 +165,7 @@ func update_patient_card(current_data: PatientData):
 	patient_age.text = tr("PATIENT_AGE") + str(current_data.patient_age)
 	patient_gender.text = tr("PATIENT_GENDER") + tr(current_data.patient_gender)
 	patient_last_gp_visit.text = tr("PATIENT_GP_VISIT") + current_data.last_gp_visit
-	chronic_conditions.text = tr("PATIENT_CHRONIC_CONDITIONS") + current_data.chronic_conditions
+	chronic_conditions.text = tr("PATIENT_CHRONIC_CONDITIONS") + tr(current_data.chronic_conditions)
 	recent_surgeries.text = tr("PATIENT_RECENT_SURGERIES") + current_data.recent_sugeries
 	known_allergies.text = tr("PATIENT_KNOWN_ALLERGIES") + tr(current_data.known_allergies)
 	var eval_pregnancy: String = tr("PATIENT_YES") if current_data.currently_pregnant == 0 else tr("PATIENT_NO")

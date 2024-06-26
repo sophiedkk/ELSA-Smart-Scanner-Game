@@ -194,6 +194,66 @@ Inge Yassin: I see. Which one are we going with, then?
 Dr Van Bommel: #2. It's strong and is commonly used against type B flu.
 => END
 
+~ jan_muller_intro
+Dr Van Bommel: Thank you for your signature, Jan.
+Dr Van Bommel: I have a good idea for your case.
+Jan Muller: Really? Is it that obvious?
+Dr Van Bommel: I had a patient earlier who exhibited similar symptoms.
+Jan Muller: Did they also use the scanner?
+Dr Van Bommel: They did.
+Jan Muller: Do you think the results are going to be the same?
+Dr Van Bommel: I actually have no way of knowing. The machine uses its own logic with numbers to determine the best choice.
+Dr Van Bommel: I think that I wouldn't be able to understand it even if I tried.
+Jan Muller: Fascinating.
+Dr Van Bommel: Let's see what the scanner has to say.
+=> END
+
+~ jan_muller_choice_1
+Dr Van Bommel: Well, that doesn't make sense at all.
+Jan Muller: What is it?
+Dr Van Bommel: It chose #1, which focuses on Type A or Type C flu.
+Jan Muller: Don't I have type B?
+Dr Van Bommel: All signs point to that, yes.
+Dr Van Bommel: Let me prescribe the correct drug for you.
+Jan Muller: Which one is it then?
+Dr Van Bommel: #2, same as the previous patient.
+=> END
+
+~ jan_muller_choice_2
+Dr Van Bommel: Ah, okay, that makes sense.
+Jan Muller: Did it perform as you expected?
+Dr Van Bommel: Yes. This medicine can be used against intense flu if it has type A or B.
+Jan Muller: Are there other types?
+Dr Van Bommel: Yes, type C. There's also type D, but that one is very, very rare.
+Dr Van Bommel: In any case, you have type B, so let me fill in the recipe.
+=> END
+
+~ jan_muller_choice_3
+Dr Van Bommel: This is all wrong.
+Jan Muller: You sound shocked.
+Dr Van Bommel: Yeah, because...
+Dr Van Bommel: Not only did it choose medication for type C flu, which is not your case...
+Dr Van Bommel: But this one also has side effects on your stomach.
+Jan Muller: But I already have a stomachache...
+Dr Van Bommel: Precisely. That's why I was so surprised by the choice.
+Dr Van Bommel: #2 will work better for you. Let me write the details down.
+=> END
+
+~ jan_muller_choice_4
+Dr Van Bommel: Interesting.
+Jan Muller: Did it choose correctly?
+Dr Van Bommel: Well, this meicine can be helpful against type B or type C flu. You have type B, so that checks out.
+Dr Van Bommel: In fact, this medicine is also good against sore throat.
+Jan Muller: Well, that sounds perfect, right?
+Dr Van Bommel: Right, about that...
+Dr Van Bommel: It might have very severe side effects on your head.
+Dr Van Bommel: Given your history of chronic headaches, I would rather not try this one.
+Jan Muller: Oh, okay.
+Jan Muller: I thought that the scanner would see through this.
+Dr Van Bommel: Apparently it still needs more data.
+Dr Van Bommel: This is fine. #2 is a medicine that should help you. I'll fill in the details in your roster in a second.
+=> END
+
 ~ doctor_closing_lines
 Dr Van Bommel: Well, it's been a pleasure.
 Dr Van Bommel: I think we're done here.

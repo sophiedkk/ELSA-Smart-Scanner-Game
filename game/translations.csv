@@ -57,6 +57,7 @@ PATIENT_INFERRED_DIAGNOSIS, Likely diagnosis:, Waarschijnlijke diagnose:
 PATIENT_FLU_C_COMPLICATIONS, Type C flu with some complications, Type C griep met enkele complicaties
 PATIENT_FLU_C_NO_COMPLICATIONS, Type C flu with no complications, Type C griep zonder complicaties
 PATIENT_FLU_B_SEVERE, Type B flu with aggravating circumstances, Type B griep met ernstige symptomen
+PATIENT_FLU_B_COMPLICATIONS, Type B flu with additional chronic complications, Type B griep met chronische complicaties
 TR_CHILLS, chills, koude rillingen
 TR_INTENSE_FEVER, intense fever, hoge koorts
 TR_COUGHING, coughing, hoesten
@@ -64,11 +65,13 @@ TR_NAUSEA, nausea, misselijkheid
 TR_DIZZINESS, dizziness, duizeligheid
 TR_STOMACHACHE, stomachache, buikpijn
 TR_MIGRAINE, migraines, hoofdpijn
+TR_INTENSE_MIGRAINE, intense migraines, intense hoofdpijn
 TR_MUSCLE_PAIN, muscle pain, spierpijn
 TR_SORE_THROAT, sore throat, keelontsteking
 TR_2_3_WEEKS, 2-3 weeks, 2-3 weken
 TR_1_WEEK, 1 week, 1 week
 TR_CATS, cats, katten
+TR_CHRONIC_HEADACHES, chronic headaches, chronische hoofdpijn
 PILL_1_2, Against flu with migraines?, Tegen griep met hoofdpijn?
 PILL_2_2, Use in severe cases?, Voor ernstige gevallen?
 PILL_3_2, Against mild flu?, Tegen milde griep?
@@ -76,7 +79,11 @@ PILL_4_2, Mainly for throat?, Vooral tegen keelpijn?
 PILL_1_3, Type C flu + migraines?, Type C griep + hoofdpijn?
 PILL_2_3, Use against intense type B flu?, Tegen ernstige Type B griep?
 PILL_3_3, Mild Type C flu?, Milde Type C griep?
-PILL 4_3, Helps throat; side effects for head, Helpt met keel; bijwerkingen op hoofd
+PILL 4_3, Helps throat; side effects for head?, Helpt met keel; bijwerkingen op hoofd?
+PILL_1_4, Type A / C flu with migraines?, Type A / C griep met hoofdpijn?
+PILL_2_4, Intense type A / B flu?, Ernstige type A / B griep?
+PILL_3_4, Type C flu; bad for stomach, Type C griep; slecht foor buik
+PILL_4_4, Type B / C flu; bad for headaches, Type B / C griep; hoofd bijwerkingen
 TO_DATABASE, ANALYSE DATABASE, DATABASE ANALYSEER
 GO_BACK, GO BACK, GA TERUG
 AWAITING_NEXT, Waiting for object..., Wachten op voorwerp...

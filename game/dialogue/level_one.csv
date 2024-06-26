@@ -7,7 +7,7 @@ t197ccd47dd,"Okay, test, test.","Test, test."
 t31e81bac6f,Seems that it's working.,Het lijkt dat hij het doet.
 t3c75e53500,Recodring 1. Now in session.,Opname één. Nu bezig.
 tb03a522efd,"Greetings, this is Dr. Rensselaer.",Hallo! Ik ben Dr. Rensselaer.
-t3a84426980,"I am currently working on the Smart Scanner, Beta version.","Op dit moment werk ik aan de Slimme Scanner, het zit nog wel in de experimentele fase."
+t3a84426980,"I am currently working on the Smart Scanner, Beta version.","Op dit moment werk ik aan de Slimme Scanner, het zit nog wel in de eerste fase."
 t527c1d927c,This project was requested by the local hospital for help.,Het plaatselijke ziekenhuis heeft om dit project gevraagd.
 tf96513d022,The scanner's goal is to check the quality of the products at the hospital.,Het hoofddoel ervan is om de kwaliteit van verschillende producten te controleren die het ziekenhuis inkomen.
 t8dd8088487,"This way, we can ensure the health and safety of the patients.",Op deze manier kunnen we de gezondheid en veiligheid van patiënten garanderen.
@@ -15,8 +15,8 @@ tc11139e837,"Before we can start testing the scanner, however...",Voordat we ech
 t5cede7344b,We need to do some manual work.,Moeten we handmatig aan de slag.
 t510f87a953,Let me explain.,Ik zal het uitleggen.
 t7d0a05933d,"If we want an actual smart scanner, it needs to receive some input from us first. We need to establish the rules.",Een echt slimme scanner heeft wat hulp van ons nodig. We moeten de machine vertellen wat hij moet doen.
-td3a942c922,"So in this stage, we will label the data that the scanner will use to get smarter.",In de eerste fase labellen we de data die onze scanner zal gebruiken om slimmer te worden.
-t739b27a71f,Do you see that apple on the table? That's our current object.,Zie je die appel die op tafel ligt? Die gaan we analyseren!
+td3a942c922,"So in this stage, we will separate the objects into good and bad.","In de eerste fase verdelen we de voorwerpen in goede en slechte."
+t739b27a71f,Do you see that apple on the table? That's our current object.,Zie je die appel die op tafel ligt? Die is onze huidige voorwerp!
 t92e1029465,"It looks pretty normal, so let's tell the scanner that it can accept it.","Hij ziet er goed uit, dus laten we onze scanner vertellen dat het goed is."
 t9958fcea37,Good!,Mooi!
 t304e80bfec,The scanner will now know that this sort of apple was good.,De scanner weet nu dat deze appel goed was.
