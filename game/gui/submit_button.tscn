@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c6krxbgvvkckn"]
 
-[ext_resource type="Script" path="res://submit_button.gd" id="1_35ihw"]
+[ext_resource type="Script" path="res://game/gui/submit_button.gd" id="1_35ihw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7gux5"]
 bg_color = Color(0, 0, 0, 1)

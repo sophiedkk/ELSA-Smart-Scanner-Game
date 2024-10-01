@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cj18mvjn8jvhq" path="res://assets/images/techy_screen.jpg" id="5_j5k32"]
 [ext_resource type="Resource" uid="uid://e5sr06tkfhoe" path="res://game/objects/patient_resources/jan_muller.tres" id="5_o0guq"]
 [ext_resource type="PackedScene" uid="uid://c3mugfn21a5gi" path="res://game/controllers/pill_controller.tscn" id="8_o0t8o"]
-[ext_resource type="PackedScene" uid="uid://c6krxbgvvkckn" path="res://submit_button.tscn" id="9_1tlu3"]
+[ext_resource type="PackedScene" uid="uid://c6krxbgvvkckn" path="res://game/gui/submit_button.tscn" id="9_1tlu3"]
 [ext_resource type="PackedScene" uid="uid://cbpwitupu0t6b" path="res://game/objects/pill_object.tscn" id="11_pot8g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_piln0"]
